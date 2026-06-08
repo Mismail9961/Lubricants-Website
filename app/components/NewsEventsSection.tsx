@@ -1,0 +1,127 @@
+"use client";
+import React from 'react';
+import { motion, Variants } from 'framer-motion';
+
+export const NewsEventsSection: React.FC = () => {
+  // Safe TypeScript Framer Motion Variants for smooth fade-in entry
+  const cardVariants: Variants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { 
+      opacity: 1, 
+      y: 0, 
+      transition: { duration: 0.5, ease: 'easeOut' } 
+    }
+  };
+
+  return (
+    <div className="w-full bg-white font-sans selection:bg-red-500 selection:text-white">
+      {/* Main Content Area */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-12 md:py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+          
+          {/* LEFT SIDE: Heading Section */}
+          <div className="lg:col-span-4">
+            <h2 className="text-gray-800 text-3xl sm:text-4xl font-extrabold tracking-tight leading-tight lg:sticky lg:top-8">
+              News &<br />Events
+            </h2>
+          </div>
+
+          {/* RIGHT SIDE: News Cards Grid */}
+          <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-10">
+            
+            {/* CARD 1: AXION AutoCare */}
+            <motion.article 
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-50px" }}
+              variants={cardVariants}
+              className="flex flex-col group"
+            >
+              <div className="overflow-hidden rounded-2xl bg-gray-100 aspect-[4/3] w-full mb-4 shadow-sm">
+                <img 
+                  src="https://axionlubricants.com/Images/News1.webp" 
+                  alt="AXION AutoCare facility exterior at night" 
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103"
+                  onError={(e) => {
+                    // Fallback placeholder block if the production site source is locked/moved
+                    e.currentTarget.src = "https://images.unsplash.com/photo-1617886322238-b379fe082c78?auto=format&fit=crop&q=80&w=600";
+                  }}
+                />
+              </div>
+              <time className="text-xs text-gray-400 font-medium tracking-wide mb-2 block border-b border-red-500/20 pb-1">
+                16-7-25
+              </time>
+              <h3 className="text-black font-bold text-lg sm:text-xl mb-3 group-hover:text-red-600 transition-colors">
+                AXION AutoCare
+              </h3>
+              <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+                Experience premium oil change services at AXION Autocare — where advanced facilities, expert care, 
+                and high-performance lubricants keep your engine running at its best. Fast, reliable, and designed for 
+                today's vehicles.
+              </p>
+            </motion.article>
+
+            {/* CARD 2: AXION Industrial Grease */}
+            <motion.article 
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-50px" }}
+              variants={cardVariants}
+              className="flex flex-col group"
+            >
+              <div className="overflow-hidden rounded-2xl bg-gray-100 aspect-[4/3] w-full mb-4 shadow-sm">
+                <img 
+                  src="https://axionlubricants.com/Images/News2.webp" 
+                  alt="Industrial ball bearing with blue grease coating" 
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103"
+                  onError={(e) => {
+                    // Fallback placeholder block if the production site source is locked/moved
+                    e.currentTarget.src = "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&q=80&w=600";
+                  }}
+                />
+              </div>
+              <time className="text-xs text-gray-400 font-medium tracking-wide mb-2 block border-b border-red-500/20 pb-1">
+                16-7-25
+              </time>
+              <h3 className="text-black font-bold text-lg sm:text-xl mb-3 group-hover:text-red-600 transition-colors">
+                AXION Industrial Grease
+              </h3>
+              <div className="space-y-4 text-gray-600 text-sm sm:text-base leading-relaxed">
+                <p>
+                  AXION proudly launches its high-performance Industrial Grease, developed to meet 
+                  the rigorous demands of heavy-duty machinery and industrial applications.
+                </p>
+                <p>
+                  It is formulated with advanced anti-wear technology and superior thermal stability.
+                </p>
+              </div>
+            </motion.article>
+
+          </div>
+        </div>
+      </div>
+
+      {/* FOOTER SECTION: Separator Line + Facebook Branding */}
+      <footer className="w-full border-t border-gray-300 py-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 flex justify-end">
+          <a 
+            href="https://facebook.com" 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="text-black hover:text-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 rounded-md p-1"
+            aria-label="Follow AXION on Facebook"
+          >
+            <svg 
+              className="w-6 h-6 fill-current" 
+              viewBox="0 0 24 24"
+            >
+              <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+            </svg>
+          </a>
+        </div>
+      </footer>
+    </div>
+  );
+};
+
+export default NewsEventsSection;
