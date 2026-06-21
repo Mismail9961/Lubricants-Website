@@ -15,19 +15,19 @@ export const NewsEventsSection: React.FC = () => {
 
   return (
     <div className="w-full bg-white font-sans selection:bg-red-500 selection:text-white">
-      {/* Main Content Area */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 py-12 md:py-20">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
+      {/* Main Content Area - Full Width Design */}
+      <div className="w-full px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 py-12 md:py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
           
           {/* LEFT SIDE: Heading Section */}
-          <div className="lg:col-span-4">
-            <h2 className="text-gray-800 text-3xl sm:text-4xl font-extrabold tracking-tight leading-tight lg:sticky lg:top-8">
+          <div className="lg:col-span-3">
+            <h2 className="text-gray-800 text-3xl sm:text-4xl xl:text-5xl font-extrabold tracking-tight leading-tight lg:sticky lg:top-8">
               News &<br />Events
             </h2>
           </div>
 
           {/* RIGHT SIDE: News Cards Grid */}
-          <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-10">
+          <div className="lg:col-span-9 grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-12">
             
             {/* CARD 1: AXION AutoCare */}
             <motion.article 
@@ -35,26 +35,25 @@ export const NewsEventsSection: React.FC = () => {
               whileInView="visible"
               viewport={{ once: true, margin: "-50px" }}
               variants={cardVariants}
-              className="flex flex-col group"
+              className="flex flex-col group w-full"
             >
-              <div className="overflow-hidden rounded-2xl bg-gray-100 aspect-[4/3] w-full mb-4 shadow-sm">
+              <div className="overflow-hidden rounded-2xl bg-gray-100 aspect-[16/10] w-full mb-5 shadow-sm">
                 <img 
-                  src="https://axionlubricants.com/Images/News1.webp" 
+                  src="https://axionlubricants.com/Images/IndustrialGreaseNewsImage.webp" 
                   alt="AXION AutoCare facility exterior at night" 
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103"
                   onError={(e) => {
-                    // Fallback placeholder block if the production site source is locked/moved
-                    e.currentTarget.src = "https://images.unsplash.com/photo-1617886322238-b379fe082c78?auto=format&fit=crop&q=80&w=600";
+                    e.currentTarget.src = "https://images.unsplash.com/photo-1617886322238-b379fe082c78?auto=format&fit=crop&q=80&w=1200";
                   }}
                 />
               </div>
               <time className="text-xs text-gray-400 font-medium tracking-wide mb-2 block border-b border-red-500/20 pb-1">
                 16-7-25
               </time>
-              <h3 className="text-black font-bold text-lg sm:text-xl mb-3 group-hover:text-red-600 transition-colors">
+              <h3 className="text-black font-bold text-lg sm:text-xl xl:text-2xl mb-3 group-hover:text-red-600 transition-colors">
                 AXION AutoCare
               </h3>
-              <p className="text-gray-600 text-sm sm:text-base leading-relaxed">
+              <p className="text-gray-600 text-sm sm:text-base xl:text-lg leading-relaxed">
                 Experience premium oil change services at AXION Autocare — where advanced facilities, expert care, 
                 and high-performance lubricants keep your engine running at its best. Fast, reliable, and designed for 
                 today's vehicles.
@@ -67,26 +66,25 @@ export const NewsEventsSection: React.FC = () => {
               whileInView="visible"
               viewport={{ once: true, margin: "-50px" }}
               variants={cardVariants}
-              className="flex flex-col group"
+              className="flex flex-col group w-full"
             >
-              <div className="overflow-hidden rounded-2xl bg-gray-100 aspect-[4/3] w-full mb-4 shadow-sm">
+              <div className="overflow-hidden rounded-2xl bg-gray-100 aspect-[16/10] w-full mb-5 shadow-sm">
                 <img 
-                  src="https://axionlubricants.com/Images/News2.webp" 
+                  src="https://axionlubricants.com/Images/AutoCareNewsImage.webp" 
                   alt="Industrial ball bearing with blue grease coating" 
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103"
                   onError={(e) => {
-                    // Fallback placeholder block if the production site source is locked/moved
-                    e.currentTarget.src = "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&q=80&w=600";
+                    e.currentTarget.src = "https://axionlubricants.com/Images/AutoCareNewsImage.webp?auto=format&fit=crop&q=80&w=1200";
                   }}
                 />
               </div>
               <time className="text-xs text-gray-400 font-medium tracking-wide mb-2 block border-b border-red-500/20 pb-1">
                 16-7-25
               </time>
-              <h3 className="text-black font-bold text-lg sm:text-xl mb-3 group-hover:text-red-600 transition-colors">
+              <h3 className="text-black font-bold text-lg sm:text-xl xl:text-2xl mb-3 group-hover:text-red-600 transition-colors">
                 AXION Industrial Grease
               </h3>
-              <div className="space-y-4 text-gray-600 text-sm sm:text-base leading-relaxed">
+              <div className="space-y-4 text-gray-600 text-sm sm:text-base xl:text-lg leading-relaxed">
                 <p>
                   AXION proudly launches its high-performance Industrial Grease, developed to meet 
                   the rigorous demands of heavy-duty machinery and industrial applications.
@@ -101,9 +99,9 @@ export const NewsEventsSection: React.FC = () => {
         </div>
       </div>
 
-      {/* FOOTER SECTION: Separator Line + Facebook Branding */}
+      {/* FOOTER SECTION: Full Width Separator Line + Facebook Branding */}
       <footer className="w-full border-t border-gray-300 py-6">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 flex justify-end">
+        <div className="w-full px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 flex justify-end">
           <a 
             href="https://facebook.com" 
             target="_blank" 

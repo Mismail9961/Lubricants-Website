@@ -38,8 +38,8 @@ export const ProductGroup: React.FC = () => {
   };
 
   return (
-    <section className="bg-white py-16 px-4 sm:px-8 lg:px-12 font-sans overflow-hidden select-none">
-      <div className="max-w-[1400px] mx-auto">
+    <section className="w-full bg-white py-16 px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 font-sans overflow-hidden select-none">
+      <div className="w-full">
         
         {/* --- Top Layout Grid --- */}
         <motion.div 
@@ -50,20 +50,20 @@ export const ProductGroup: React.FC = () => {
           viewport={{ once: true, margin: "-80px" }}
         >
           <motion.div variants={itemVariants} className="md:col-span-4">
-            <h2 className="text-[32px] sm:text-[40px] font-black tracking-tight text-[#222] leading-[1.1] md:max-w-xs">
+            <h2 className="text-[32px] sm:text-[40px] xl:text-[48px] font-black tracking-tight text-[#222] leading-[1.1]">
               Product<br />Group
             </h2>
           </motion.div>
 
           <motion.div variants={itemVariants} className="md:col-span-4">
-            <p className="text-[14px] sm:text-[15px] text-[#555] font-normal leading-[1.6] md:pt-1">
+            <p className="text-[14px] sm:text-[15px] xl:text-[17px] text-[#555] font-normal leading-[1.6] md:pt-1">
               AXION delivers high-performance engine oils, lubricants, coolants, and greases 
               designed for modern vehicles and heavy-duty machinery.
             </p>
           </motion.div>
 
           <motion.div variants={itemVariants} className="md:col-span-4">
-            <p className="text-[14px] sm:text-[15px] text-[#555] font-normal leading-[1.6] md:pt-1">
+            <p className="text-[14px] sm:text-[15px] xl:text-[17px] text-[#555] font-normal leading-[1.6] md:pt-1">
               Built on innovation and reliability, our products ensure smooth operation, 
               maximum protection, and long-lasting performance.
             </p>
@@ -71,8 +71,8 @@ export const ProductGroup: React.FC = () => {
         </motion.div>
 
         {/* --- Lower Media Section --- */}
-        <div className="space-y-5">
-          <h3 className="text-xs sm:text-sm font-bold tracking-normal text-[#444] px-0.5">
+        <div className="space-y-5 w-full">
+          <h3 className="text-xs sm:text-sm xl:text-base font-bold tracking-normal text-[#444] px-0.5">
             Our Engine Oils
           </h3>
 
@@ -82,18 +82,19 @@ export const ProductGroup: React.FC = () => {
             onMouseMove={handleMouseMove}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
-            className="relative rounded-[24px] sm:rounded-[32px] overflow-hidden bg-[#0c0d0f] shadow-xl aspect-[320/215] sm:aspect-[16/10] md:aspect-[16/9] w-full max-h-[640px] sm:cursor-none"
+            className="relative rounded-[24px] sm:rounded-[32px] overflow-hidden bg-[#0c0d0f] shadow-xl aspect-[320/215] sm:aspect-[16/10] md:aspect-[16/9] w-full max-h-[720px] sm:cursor-none"
           >
             
-            {/* High-Contrast Vehicles Image Asset */}
-            <picture>
-              <source srcSet="https://images.unsplash.com/photo-1616422285623-13ff0162193c?q=80&w=1400" type="image/webp" />
-              <img 
-                src="https://images.unsplash.com/photo-1616422285623-13ff0162193c?q=80&w=1400" 
-                alt="AXION Commercial Fleet Lineup" 
-                className="w-full h-full object-cover object-center filter brightness-[0.82] contrast-[1.08] pointer-events-none"
-              />
-            </picture>
+            {/* High-Contrast Local Image Asset */}
+            <img 
+              src="/BannerSection.png" 
+              alt="AXION Commercial Fleet Lineup" 
+              className="w-full h-full object-cover object-center filter brightness-[0.82] contrast-[1.08] pointer-events-none"
+              onError={(e) => {
+                // Fallback architecture in case file structure changes down the road
+                e.currentTarget.src = "https://images.unsplash.com/photo-1616422285623-13ff0162193c?q=80&w=1400";
+              }}
+            />
 
             <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/10 pointer-events-none" />
 
@@ -133,7 +134,6 @@ export const ProductGroup: React.FC = () => {
             </motion.div>
 
             {/* Premium Cut-Corner Action Button */}
-            {/* Added 'z-40 sm:cursor-pointer' to make sure the custom cursor remains fully clickable on top of buttons */}
             <div className="absolute bottom-5 left-5 sm:bottom-8 sm:left-8 z-40">
               <motion.button
                 className="relative flex items-center gap-2.5 bg-[#1433D6] text-white pl-5 pr-4 py-2.5 sm:py-3 text-[11px] sm:text-xs font-bold uppercase tracking-wider transition-colors duration-300 sm:cursor-pointer group"

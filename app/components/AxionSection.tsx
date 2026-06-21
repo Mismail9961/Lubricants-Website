@@ -1,136 +1,180 @@
 "use client";
-import React from 'react';
-import { motion, Variants } from 'framer-motion';
-import { ShieldCheck } from 'lucide-react';
 
-export const AxionSection: React.FC = () => {
-  // Explicitly typing the variants to satisfy Framer Motion / TypeScript rules
-  const fadeInUp: Variants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: 'easeOut' } }
-  };
+import { motion } from "framer-motion";
 
+export default function AxionSection() {
   return (
-    <div className="w-full min-h-screen bg-white p-4 sm:p-6 md:p-8 flex items-center justify-center font-sans selection:bg-blue-500 selection:text-white">
-      {/* Main Grid Container - Responsive down to iPhone 5s (320px) */}
-      <motion.div 
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, margin: "-100px" }}
-        className="w-full max-w-7xl grid grid-cols-1 md:grid-cols-3 gap-4 auto-rows-auto"
-      >
-        
-        {/* TOP LEFT / MAIN HEADER BLOCK */}
-        <motion.div 
-          variants={fadeInUp}
-          whileHover={{ scale: 1.02 }}
-          transition={{ duration: 0.3 }}
-          className="relative md:col-span-2 h-64 sm:h-80 md:h-96 rounded-2xl overflow-hidden group shadow-md"
-        >
-          <img 
-            src="https://media.istockphoto.com/id/1126926765/photo/engine-start-and-stop-button.jpg?s=612x612&w=0&k=20&c=3cQ7-nXlz-K0P6EMYJ3BShsM6T05QBXOsH0W4gMZtf0=" 
-            alt="Engine Start Stop" 
-            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-          />
-          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/40 to-transparent p-6 sm:p-8 flex flex-col justify-end">
-            <h1 className="text-white text-3xl sm:text-4xl md:text-5xl font-black tracking-tight leading-none max-w-xs sm:max-w-md">
-              Start Your Journey with <span className="text-blue-400">AXION</span>
-            </h1>
-          </div>
-        </motion.div>
+    <section className="w-full bg-[#f3f3f3] py-4 md:py-8">
+      <div className="mx-auto max-w-[1500px] px-3 md:px-6">
 
-        {/* TOP RIGHT / MECHANIC BLOCK */}
-        <motion.div 
-          variants={fadeInUp}
-          whileHover={{ scale: 1.02 }}
-          transition={{ duration: 0.3 }}
-          className="h-48 sm:h-64 md:h-96 rounded-2xl overflow-hidden shadow-md group"
-        >
-          <img 
-            src="https://media.hswstatic.com/eyJidWNrZXQiOiJjb250ZW50Lmhzd3N0YXRpYy5jb20iLCJrZXkiOiJnaWZcLzYtdGlwcy1mb3Itc3RhcnRpbmctYW4tb2xkLWVuZ2luZTMuanBnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjo4Mjh9fX0=" 
-            alt="Mechanic working on engine" 
-            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-          />
-        </motion.div>
+        {/* Desktop Layout */}
+        <div
+          className="
+            grid gap-4 md:gap-6
 
-        {/* BOTTOM LEFT / VALUE PROP 1 */}
-        <motion.div 
-          variants={fadeInUp}
-          className="bg-gray-50 rounded-2xl p-6 sm:p-8 flex flex-col justify-between min-h-[280px] shadow-sm border border-gray-100"
+            grid-cols-1
+
+            lg:grid-cols-[1.6fr_1.6fr_1.15fr]
+            lg:grid-rows-[345px_450px]
+
+            lg:[grid-template-areas:'hero_hero_mechanic''info_text_power']
+          "
         >
-          {/* Animated Accent Circle */}
-          <motion.div 
-            animate={{ scale: [1, 1.1, 1] }}
-            transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-            className="w-12 h-12 rounded-full bg-rose-500 flex items-center justify-center text-white mb-6"
+          {/* HERO */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="
+              relative overflow-hidden
+
+              h-[220px]
+              sm:h-[320px]
+              lg:h-auto
+
+              lg:[grid-area:hero]
+            "
           >
-            <ShieldCheck size={24} />
-          </motion.div>
-          <div>
-            <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-4">
-              Choosing AXION means choosing reliability, performance, and innovation.
-            </p>
-            <p className="text-gray-900 text-sm sm:text-base font-medium leading-relaxed">
-              <strong className="font-bold text-black">Our products</strong> are engineered to meet the highest standards, ensuring optimal protection and efficiency for engines and machines across industries.
-            </p>
-          </div>
-        </motion.div>
-
-        {/* BOTTOM MIDDLE / VALUE PROP 2 */}
-        <motion.div 
-          variants={fadeInUp}
-          className="relative bg-gray-50 rounded-2xl p-6 sm:p-8 flex flex-col justify-between min-h-[280px] overflow-hidden shadow-sm border border-gray-100"
-        >
-          <p className="text-gray-700 text-sm sm:text-base leading-relaxed z-10 max-w-[85%]">
-            With a commitment to quality and a forward-thinking approach, AXION keeps you moving — today and into the future.
-          </p>
-          
-          {/* Decorative bubble graphic layered nicely */}
-          <div className="absolute right-[-20%] bottom-[-20%] w-48 h-48 sm:w-56 sm:h-56 pointer-events-none mix-blend-multiply opacity-90">
-            <img 
-              src="https://axionlubricants.com/Images/JounreyDiv4.webp" 
-              alt="Axion design element" 
-              className="w-full h-full object-contain animate-pulse"
-              style={{ animationDuration: '6s' }}
+            <img
+              src="https://media.istockphoto.com/id/1126926765/photo/engine-start-and-stop-button.jpg?s=612x612&w=0&k=20&c=3cQ7-nXlz-K0P6EMYJ3BShsM6T05QBXOsH0W4gMZtf0="
+              alt=""
+              className="h-full w-full object-cover"
             />
-          </div>
-        </motion.div>
 
-        {/* BOTTOM RIGHT / CONFIDENCE BLOCK */}
-        <motion.div 
-          variants={fadeInUp}
-          whileHover={{ scale: 1.02 }}
-          transition={{ duration: 0.3 }}
-          className="relative h-80 sm:h-96 md:h-auto rounded-2xl overflow-hidden group shadow-md"
-        >
-          <img 
-            src="https://www.cupra.com/content/dam/public/cupra-website/home-2025/hero-car-range/small/cupra-tavascan-century-bronze-matt.jpg" 
-            alt="Luxury Performance Car" 
-            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105 brightness-75"
-          />
-          
-          {/* Subtle neon light overlay effect */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent p-6 sm:p-8 flex flex-col justify-between">
-            {/* Minimal neon status indicator */}
-            <div className="flex items-center gap-2">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-rose-500 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-rose-600"></span>
-              </span>
+            <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/30 to-transparent">
+              <div className="absolute bottom-4 left-4 md:bottom-8 md:left-8">
+                <h1 className="max-w-[180px] sm:max-w-[300px] text-white font-bold leading-[0.95] text-[28px] sm:text-[42px] lg:text-[58px]">
+                  Start Your
+                  <br />
+                  Journey with
+                  <br />
+                  AXION
+                </h1>
+              </div>
             </div>
-            
-            <h2 className="text-white text-2xl sm:text-3xl font-bold tracking-tight leading-snug">
-              Power in Motion.<br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-gray-200 to-gray-400">
-                Confidence in Every Drop.
-              </span>
-            </h2>
-          </div>
-        </motion.div>
+          </motion.div>
 
-      </motion.div>
-    </div>
+          {/* TOP RIGHT IMAGE */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="
+              overflow-hidden
+
+              h-[180px]
+              sm:h-[260px]
+              lg:h-auto
+
+              lg:[grid-area:mechanic]
+            "
+          >
+            <img
+              src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?q=80&w=1200"
+              alt=""
+              className="h-full w-full object-cover"
+            />
+          </motion.div>
+
+          {/* LEFT CONTENT */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="
+              bg-[#f0f0f0]
+              p-5 md:p-8
+              lg:[grid-area:info]
+            "
+          >
+            <div className="mb-8 md:mb-12 h-[60px] w-[60px] md:h-[95px] md:w-[95px] rounded-full bg-[#ff0055]" />
+
+            <p className="mb-6 text-[14px] md:text-[18px] leading-relaxed text-[#444]">
+              Choosing AXION means choosing reliability,
+              performance, and innovation.
+            </p>
+
+            <p className="text-[14px] md:text-[18px] leading-relaxed text-[#444]">
+              <span className="font-semibold text-black">
+                Our products
+              </span>{" "}
+              are engineered to meet the highest standards,
+              ensuring optimal protection and efficiency for
+              engines and machines across industries.
+            </p>
+          </motion.div>
+
+          {/* CENTER CONTENT */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="
+              relative overflow-hidden
+              bg-[#f0f0f0]
+              p-5 md:p-8
+              min-h-[220px]
+
+              lg:[grid-area:text]
+            "
+          >
+            <p className="max-w-[470px] text-[14px] md:text-[18px] leading-relaxed text-[#444] relative z-10">
+              With a commitment to quality and a forward-thinking
+              approach, AXION keeps you moving — today and into
+              the future.
+            </p>
+
+            <img
+              src="https://axionlubricants.com/Images/JounreyDiv4.webp"
+              alt=""
+              className="
+                absolute
+                right-[-10px]
+                bottom-[-10px]
+
+                w-[180px]
+                sm:w-[250px]
+                md:w-[320px]
+                lg:w-[430px]
+              "
+            />
+          </motion.div>
+
+          {/* RIGHT BOTTOM */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="
+              relative overflow-hidden
+
+              h-[260px]
+              sm:h-[420px]
+              lg:h-auto
+
+              lg:[grid-area:power]
+            "
+          >
+            <img
+              src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1400"
+              alt=""
+              className="h-full w-full object-cover"
+            />
+
+            <div className="absolute inset-0 bg-black/25">
+              <div className="absolute top-5 left-5 md:top-8 md:left-8">
+                <h2 className="text-white font-bold leading-[1.05] text-[28px] sm:text-[42px] lg:text-[58px]">
+                  Power in Motion.
+                  <br />
+                  Confidence in
+                  <br />
+                  Every Drop.
+                </h2>
+              </div>
+            </div>
+          </motion.div>
+        </div>
+      </div>
+    </section>
   );
-};
-
-export default AxionSection;
+}
