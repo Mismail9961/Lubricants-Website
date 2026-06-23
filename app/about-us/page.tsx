@@ -5,6 +5,8 @@ import Header from "../components/Header";
 import BannerSection from "../components/BannerSection";
 import AxionLegacy from "../components/AxionLegacySection";
 import AxionCommitment from "../components/AxionCommitmentSection";
+import AixonValuesSection from "../components/AixonValuesSection";
+import NewsEventsSection from "../components/NewsEventsSection";
 export default function Home() {
   return (
     <div >
@@ -13,6 +15,9 @@ export default function Home() {
       <BannerSection/>
       <AxionLegacy/>
       <AxionCommitment/>
+      <AixonValuesSection/>
+      <NewsEventsSection/>
+      <Footer/>
     </div>
   );
 }
