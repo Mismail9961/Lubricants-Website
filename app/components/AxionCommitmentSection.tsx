@@ -1,0 +1,58 @@
+"use client";
+import React from "react";
+
+export default function AxionCommitment() {
+    return (
+        <section className="w-full bg-white text-black py-12 md:py-20 px-4 sm:px-8 md:px-12 lg:px-16 select-none overflow-hidden">
+            {/* Embedded Keyframes */}
+            <style dangerouslySetInnerHTML={{__html: `
+                @keyframes slideInLeftVariant {
+                    from { opacity: 0; transform: translateX(-40px); }
+                    to { opacity: 1; transform: translateX(0); }
+                }
+                @keyframes slideInRightVariant {
+                    from { opacity: 0; transform: translateX(40px); }
+                    to { opacity: 1; transform: translateX(0); }
+                }
+                .animate-slide-left-variant {
+                    animation: slideInLeftVariant 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+                }
+                .animate-slide-right-variant {
+                    animation: slideInRightVariant 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+                }
+            `}} />
+
+            <div className="max-w-[1750px] mx-auto w-full">
+                <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 lg:gap-16 items-center">
+                    
+                    {/* Left Column: Imagery Section (With custom top-right rounded corner from image_0b875d.jpg) */}
+                    <div className="col-span-1 md:col-span-6 lg:col-span-6 opacity-0 animate-slide-left-variant">
+                        <div className="w-full h-auto overflow-hidden rounded-bl-[16px] rounded-br-[16px] rounded-tl-[16px] rounded-tr-[40px] sm:rounded-tr-[64px] shadow-lg md:shadow-xl">
+                            <img
+                                src="https://axionlubricants.com/Images/AboutImage2.webp"
+                                alt="AXION Modern Storefront Showroom"
+                                className="w-full h-auto object-cover max-h-[300px] xs:max-h-[360px] sm:max-h-[480px] md:max-h-[520px]"
+                            />
+                        </div>
+                    </div>
+
+                    {/* Right Column: Commitment Text */}
+                    <div className="col-span-1 md:col-span-6 lg:col-span-6 flex flex-col gap-6 md:gap-8 opacity-0 animate-slide-right-variant [animation-delay:0.2s]">
+                        <div className="flex flex-col gap-4">
+                            <p className="text-[15px] xs:text-[16px] sm:text-[18px] lg:text-[20px] xl:text-[22px] leading-relaxed text-gray-800 font-normal tracking-wide">
+                                AXION isn’t just a product; it’s a commitment to endurance. Every formulation is crafted with meticulous attention to detail, tested under extreme conditions, and fine-tuned to protect engines in the world’s toughest terrains. Whether you're driving through city congestion or off-road extremes, AXION is built to keep your engine cleaner, cooler, and stronger—for longer.
+                            </p>
+                        </div>
+
+                        <div className="flex flex-col gap-4">
+                            <p className="text-[15px] xs:text-[16px] sm:text-[18px] lg:text-[20px] xl:text-[22px] leading-relaxed text-gray-800 font-normal tracking-wide">
+                                Backed by Carmetra’s engineering expertise and guided by the principles of persistence, local innovation, and purposeful progress, AXION continues the mission of enabling mobility, efficiency, and confidence on every road.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    );
+}
