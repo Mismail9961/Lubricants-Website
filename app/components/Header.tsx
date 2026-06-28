@@ -14,7 +14,7 @@ export const Header: React.FC = () => {
         
         {/* LEFT NAV LINKS (Hidden on mobile/iPhone 5s) */}
         <nav className="hidden md:flex items-center gap-8 text-white font-medium text-sm lg:text-base">
-          <a href="#about" className="hover:text-gray-300 transition-colors duration-200">
+          <a href="/about-us" className="hover:text-gray-300 transition-colors duration-200">
             About Us
           </a>
           <a href="#products" className="hover:text-gray-300 transition-colors duration-200">
@@ -32,7 +32,7 @@ export const Header: React.FC = () => {
         {/* RIGHT NAV & LANGUAGE SWITCHER */}
         <div className="flex items-center gap-4 sm:gap-6">
           <a 
-            href="#contact" 
+            href="/contact-us" 
             className="hidden md:block text-white font-medium text-sm lg:text-base hover:text-gray-300 transition-colors duration-200"
           >
             Contact Us
