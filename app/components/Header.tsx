@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import Image from 'next/image';
+import { Menu, X, ArrowRight, Globe } from 'lucide-react';
 
 export const Header: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -9,47 +10,54 @@ export const Header: React.FC = () => {
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
   return (
-    <header className="absolute top-0 left-0 w-full z-50 bg-transparent font-sans selection:bg-blue-600 selection:text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-8 h-20 flex items-center justify-between">
+    <header className="absolute top-0 left-0 w-full z-50 bg-transparent font-sans selection:bg-brand-primary selection:text-brand-light">
+      {/* Responsive padding: tighter on tiny screens like iPhone 5s (px-3) to prevent overlapping */}
+      <div className="max-w-7xl mx-auto px-3 sm:px-6 md:px-8 h-24 flex items-center justify-between relative">
         
-        {/* LEFT NAV LINKS (Hidden on mobile/iPhone 5s) */}
-        <nav className="hidden md:flex items-center gap-8 text-white font-medium text-sm lg:text-base">
-          <a href="/about-us" className="hover:text-gray-300 transition-colors duration-200">
+        {/* LEFT NAV LINKS (Desktop) */}
+        <nav className="hidden md:flex items-center gap-8 text-brand-light font-medium text-sm lg:text-base">
+          <a href="/about-us" className="hover:text-brand-accent transition-colors duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 hover:after:w-full after:bg-brand-accent after:transition-all after:duration-300">
             About Us
           </a>
-          <a href="#products" className="hover:text-gray-300 transition-colors duration-200">
+          <a href="#products" className="hover:text-brand-accent transition-colors duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 hover:after:w-full after:bg-brand-accent after:transition-all after:duration-300">
             Products
           </a>
         </nav>
 
-        {/* CENTER LOGO (Always visible) */}
+        {/* LOGO: Scaled intelligently down to w-32 on iPhone 5s/SE sizes */}
         <div className="flex-1 md:flex-initial flex justify-start md:justify-center">
-          <span className="text-2xl sm:text-3xl font-black tracking-widest text-white uppercase select-none">
-            AXION
-          </span>
+          <a href="/" className="relative block h-16 w-32 xs:w-40 sm:w-48 md:w-56 select-none transition-transform duration-200 hover:scale-[1.02]">
+            <Image
+              src="/logo.png"
+              alt="Axion Logistics Logo"
+              fill
+              priority
+              className="object-contain object-left md:object-center"
+              sizes="(max-w-320px) 128px, (max-w-768px) 160px, 224px"
+            />
+          </a>
         </div>
 
-        {/* RIGHT NAV & LANGUAGE SWITCHER */}
-        <div className="flex items-center gap-4 sm:gap-6">
+        {/* RIGHT NAV & CONTROLS */}
+        <div className="flex items-center gap-2 sm:gap-6">
           <a 
             href="/contact-us" 
-            className="hidden md:block text-white font-medium text-sm lg:text-base hover:text-gray-300 transition-colors duration-200"
+            className="hidden md:block text-brand-light font-medium text-sm lg:text-base hover:text-brand-accent transition-colors duration-200"
           >
             Contact Us
           </a>
 
-          {/* Pill-shaped Language Switcher */}
-          <div className="bg-blue-600/40 backdrop-blur-sm p-1 rounded-full flex items-center relative w-20 h-8 select-none border border-white/10">
-            {/* Sliding background element */}
+          {/* Desktop Language Switcher (Hidden on Mobile for screen real estate) */}
+          <div className="hidden sm:flex bg-brand-primary/40 backdrop-blur-md p-1 rounded-full items-center relative w-20 h-8 select-none border border-brand-light/10">
             <div 
-              className={`absolute top-1 bottom-1 w-[34px] bg-white rounded-full transition-all duration-300 ease-out ${
+              className={`absolute top-1 bottom-1 w-[34px] bg-brand-accent rounded-full transition-all duration-300 ease-out ${
                 language === 'EN' ? 'left-1' : 'left-[42px]'
               }`}
             />
             <button
               onClick={() => setLanguage('EN')}
               className={`z-10 flex-1 text-center text-xs font-bold transition-colors duration-200 ${
-                language === 'EN' ? 'text-blue-900' : 'text-white hover:text-gray-200'
+                language === 'EN' ? 'text-brand-dark' : 'text-brand-light hover:text-brand-accent-hover'
               }`}
             >
               EN
@@ -57,52 +65,90 @@ export const Header: React.FC = () => {
             <button
               onClick={() => setLanguage('AR')}
               className={`z-10 flex-1 text-center text-xs font-bold transition-colors duration-200 ${
-                language === 'AR' ? 'text-blue-900' : 'text-white hover:text-gray-200'
+                language === 'AR' ? 'text-brand-dark' : 'text-brand-light hover:text-brand-accent-hover'
               }`}
             >
               AR
             </button>
           </div>
 
-          {/* HAMBURGER TOGGLE (Visible on Mobile/iPhone 5s only) */}
+          {/* PREMIUM HAMBURGER TOGGLE */}
           <button
             onClick={toggleMobileMenu}
-            className="md:hidden text-white hover:text-gray-300 focus:outline-none p-1"
+            className="md:hidden text-brand-light hover:text-brand-accent active:scale-95 focus:outline-none p-2 rounded-xl bg-brand-light/5 border border-brand-light/10 backdrop-blur-sm transition-all"
             aria-label="Toggle Navigation Menu"
           >
-            {isMobileMenuOpen ? <X size={26} /> : <Menu size={26} />}
+            {isMobileMenuOpen ? <X size={22} className="animate-spin-slow" /> : <Menu size={22} />}
           </button>
         </div>
       </div>
 
-      {/* MOBILE DRAWER OVERLAY (Tailored for small devices like iPhone 5s) */}
-      {isMobileMenuOpen && (
-        <div className="fixed inset-0 top-20 bg-black/95 backdrop-blur-md z-40 md:hidden flex flex-col justify-start px-6 py-8 animate-fade-in">
-          <nav className="flex flex-col gap-6 text-xl font-bold text-white tracking-wide">
-            <a 
-              href="#about" 
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="border-b border-white/10 pb-3 active:text-blue-400"
-            >
-              About Us
-            </a>
-            <a 
-              href="#products" 
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="border-b border-white/10 pb-3 active:text-blue-400"
-            >
-              Products
-            </a>
-            <a 
-              href="#contact" 
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="border-b border-white/10 pb-3 active:text-blue-400"
-            >
-              Contact Us
-            </a>
-          </nav>
+      {/* PREMIUM FULL-SCREEN MOBILE DRAWER */}
+      <div 
+        className={`fixed inset-0 bg-brand-dark/98 backdrop-blur-xl z-50 md:hidden flex flex-col justify-between transition-all duration-500 ease-in-out ${
+          isMobileMenuOpen ? 'opacity-100 pointer-events-auto translate-x-0' : 'opacity-0 pointer-events-none translate-x-full'
+        }`}
+      >
+        {/* Mobile Menu Header */}
+        <div className="h-24 px-3 flex items-center justify-between border-b border-brand-light/5">
+          <div className="relative h-12 w-32">
+            <Image src="/logo.png" alt="Logo" fill className="object-contain object-left" />
+          </div>
+          <button
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="text-brand-light p-2 rounded-xl bg-brand-light/5 border border-brand-light/10"
+          >
+            <X size={22} />
+          </button>
         </div>
-      )}
+
+        {/* Navigation Links with Premium Indicators */}
+        <nav className="flex flex-col gap-2 px-6 py-4 overflow-y-auto hierarchy-links">
+          {[
+            { label: 'About Us', href: '/about-us' },
+            { label: 'Products', href: '#products' },
+            { label: 'Contact Us', href: '/contact-us' }
+          ].map((link, idx) => (
+            <a 
+              key={idx}
+              href={link.href} 
+              onClick={() => setIsMobileMenuOpen(false)}
+              className="flex items-center justify-between py-4 text-lg font-semibold text-brand-light border-b border-brand-light/5 active:text-brand-accent transition-colors group"
+            >
+              <span>{link.label}</span>
+              <ArrowRight size={18} className="text-brand-accent opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-300" />
+            </a>
+          ))}
+        </nav>
+
+        {/* Premium Mobile Menu Bottom Panel */}
+        <div className="p-6 bg-brand-primary/10 border-t border-brand-light/5 flex flex-col gap-4">
+          {/* Integrated Language Switcher for Mobile UI */}
+          <div className="flex items-center justify-between">
+            <span className="text-xs font-bold text-brand-light/60 tracking-wider uppercase flex items-center gap-1.5">
+              <Globe size={14} className="text-brand-accent" /> Language / لغة
+            </span>
+            <div className="bg-brand-dark p-0.5 rounded-lg flex border border-brand-light/10">
+              <button 
+                onClick={() => setLanguage('EN')}
+                className={`px-3 py-1 text-xs font-bold rounded-md transition-all ${language === 'EN' ? 'bg-brand-accent text-brand-dark' : 'text-brand-light/70'}`}
+              >
+                EN
+              </button>
+              <button 
+                onClick={() => setLanguage('AR')}
+                className={`px-3 py-1 text-xs font-bold rounded-md transition-all ${language === 'AR' ? 'bg-brand-accent text-brand-dark' : 'text-brand-light/70'}`}
+              >
+                AR
+              </button>
+            </div>
+          </div>
+          
+          <div className="text-center text-[10px] text-brand-light/40 tracking-widest uppercase mt-2">
+            © Axion Logistics Global
+          </div>
+        </div>
+      </div>
     </header>
   );
 };
