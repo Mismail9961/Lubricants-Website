@@ -14,9 +14,13 @@ const STYLE_PALETTE = [
   { gradientFrom: '#52371E', gradientTo: '#7D5531', accentWave: '#D68FAF' },
 ];
 
-// Pulls a short "grade" label from standards or typicalProperties["SAE Grade"],
-// falling back to the product name if neither exists.
+// Pulls a short "grade" label — prefers an explicit gradeLabel override,
+// then the SAE Grade from typicalProperties, then standards,
+// falling back to the product name if none exist.
 function getGradeLabel(product: Product): string {
+  if (product.gradeLabel) {
+    return product.gradeLabel;
+  }
   if (product.typicalProperties?.["SAE Grade"]) {
     return `SAE ${product.typicalProperties["SAE Grade"]}`;
   }
@@ -110,6 +114,7 @@ export const AxionPremiumSlider: React.FC = () => {
           {products.map((product, index) => {
             const style = STYLE_PALETTE[index % STYLE_PALETTE.length];
             const grade = getGradeLabel(product);
+            const keyBenefitCount = product.keyBenefits?.length ?? 0;
 
             return (
               <div
@@ -129,13 +134,17 @@ export const AxionPremiumSlider: React.FC = () => {
 
                   <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1200 ease-out" />
 
-                  <div className="text-center z-10">
-                    <span className="text-[9px] font-bold text-gray-300/80 tracking-widest uppercase block">
-                      Petropec
-                    </span>
-                    <span className="text-lg font-black text-white tracking-wide block leading-tight mt-1.5 drop-shadow-[0_1px_2px_rgba(0,0,0,0.3)] px-1">
-                      {product.name}
-                    </span>
+                  <span className="text-[9px] font-bold text-gray-300/80 tracking-widest uppercase block text-center z-10">
+                    Petropec
+                  </span>
+
+                  {/* Actual product image */}
+                  <div className="flex-1 flex items-center justify-center z-10 min-h-0">
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      className="max-h-[130px] sm:max-h-[150px] w-auto object-contain drop-shadow-[0_8px_16px_rgba(0,0,0,0.45)] transition-transform duration-500 group-hover:scale-105"
+                    />
                   </div>
 
                   <div className="text-center bg-white/10 backdrop-blur-md py-1.5 px-2 rounded-md border border-white/10 mx-1 z-10 shadow-inner">
@@ -162,9 +171,32 @@ export const AxionPremiumSlider: React.FC = () => {
                   />
                 </div>
 
-                <span className="text-[11px] font-bold text-gray-600 bg-gray-50 border border-gray-100 px-3 py-0.5 rounded-full mb-5">
-                  {grade}
-                </span>
+                {/* Required product details: quick description + compatibility context */}
+                <p className="text-[11px] text-gray-500 text-center leading-snug line-clamp-2 mb-3 px-1 min-h-[28px]">
+                  {product.tagline}
+                </p>
+
+                {product.compatibleBrandsCategory && (
+                  <p className="text-[10px] text-gray-400 text-center leading-snug mb-3 px-1">
+                    Compatible: {product.compatibleBrandsCategory}
+                  </p>
+                )}
+
+                <div className="flex flex-wrap items-center justify-center gap-1.5 mb-5">
+                  <span className="text-[11px] font-bold text-gray-600 bg-gray-50 border border-gray-100 px-3 py-0.5 rounded-full">
+                    {grade}
+                  </span>
+                  {product.standards && (
+                    <span className="text-[10px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-100 px-2.5 py-0.5 rounded-full">
+                      {product.standards}
+                    </span>
+                  )}
+                  {keyBenefitCount > 0 && (
+                    <span className="text-[10px] font-bold text-gray-500 bg-gray-50 border border-gray-100 px-2.5 py-0.5 rounded-full">
+                      {keyBenefitCount} key benefit{keyBenefitCount > 1 ? 's' : ''}
+                    </span>
+                  )}
+                </div>
 
                 <Link
                   href={`/products/${product.slug}`}

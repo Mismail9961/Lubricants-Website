@@ -19,7 +19,7 @@ export const Header: React.FC = () => {
           <a href="/about-us" className="hover:text-brand-accent transition-colors duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 hover:after:w-full after:bg-brand-accent after:transition-all after:duration-300">
             About Us
           </a>
-          <a href="#products" className="hover:text-brand-accent transition-colors duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 hover:after:w-full after:bg-brand-accent after:transition-all after:duration-300">
+          <a href="/products" className="hover:text-brand-accent transition-colors duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 hover:after:w-full after:bg-brand-accent after:transition-all after:duration-300">
             Products
           </a>
         </nav>
@@ -106,7 +106,7 @@ export const Header: React.FC = () => {
         <nav className="flex flex-col gap-2 px-6 py-4 overflow-y-auto hierarchy-links">
           {[
             { label: 'About Us', href: '/about-us' },
-            { label: 'Products', href: '#products' },
+            { label: 'Products', href: '/products' },
             { label: 'Contact Us', href: '/contact-us' }
           ].map((link, idx) => (
             <a 

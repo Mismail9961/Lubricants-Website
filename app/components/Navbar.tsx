@@ -87,7 +87,7 @@ export const Header: React.FC = () => {
               About Us
             </a>
             <a 
-              href="#products" 
+              href="/products" 
               onClick={() => setIsMobileMenuOpen(false)}
               className="border-b border-white/10 pb-3 active:text-blue-400"
             >
