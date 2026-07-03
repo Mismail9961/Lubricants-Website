@@ -2,7 +2,7 @@ import Image from "next/image";
 import BannerDropSection from "../components/BannerDropSection";
 import { Footer } from "../components/Footer";
 import Header from "../components/Header";
-import BannerSection from "../components/BannerSection";
+import ProductBannerDropSection from "../components/ProductBannerDropSection";
 import AxionLegacy from "../components/AxionLegacySection";
 import AxionCommitment from "../components/AxionCommitmentSection";
 import AixonValuesSection from "../components/AixonValuesSection";
@@ -13,7 +13,7 @@ export default function Product() {
   return (
     <div >
       <Header/>
-      <BannerDropSection />
+      <ProductBannerDropSection />
       <AxionProductGroup/>
       <AxionProductSlider/>
       <AxionLegacy/>

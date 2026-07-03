@@ -2,7 +2,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-export const ContactBannerDropSection: React.FC = () => {
+export const ProductBannerDropSection: React.FC = () => {
   return (
     <section className="w-full bg-black overflow-hidden select-none">
       {/* 
@@ -15,12 +15,12 @@ export const ContactBannerDropSection: React.FC = () => {
         {/* Background Image Asset Layer */}
         <div className="absolute inset-0 w-full h-full">
           <img 
-            src="https://axionlubricants.com/Images/ContactUsBanner.webp" 
-            alt="Power in Motion banner visual background" 
+            src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1600" 
+            alt="Engineered fleet performance luxury sports car side profile" 
             className="w-full h-full object-cover object-center filter brightness-[0.75] contrast-[1.05]"
             onError={(e) => {
-              // Safety fallback structure mirroring the core color palette of image_264f21.jpg
-              e.currentTarget.src = "https://axionlubricants.com/Images/ContactUsBanner.webp?q=80&w=1600";
+              // Safety fallback asset matching high-performance automotive lineup aesthetic
+              e.currentTarget.src = "https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?q=80&w=1600";
             }}
           />
           {/* Subtle gradient overlay to enhance typography readability on high-exposure spots */}
@@ -46,9 +46,9 @@ export const ContactBannerDropSection: React.FC = () => {
               - Standard tailwind screens take over for modern larger breakpoints.
             */}
             <h2 className="text-white text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight leading-[1.15] text-left drop-shadow-md">
-              Start Your Journey.<br />
-              Driven by<br />
-              Innovation.
+              Uncompromising Power.<br />
+              Engineered for<br />
+              The Track.
             </h2>
           </motion.div>
         </div>
@@ -58,4 +58,4 @@ export const ContactBannerDropSection: React.FC = () => {
   );
 };
 
-export default ContactBannerDropSection;
+export default ProductBannerDropSection;

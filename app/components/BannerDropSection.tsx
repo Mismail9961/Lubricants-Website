@@ -46,9 +46,9 @@ export const BannerDropSection: React.FC = () => {
               - Standard tailwind screens take over for modern larger breakpoints.
             */}
             <h2 className="text-white text-xl xs:text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold tracking-tight leading-[1.15] text-left drop-shadow-md">
-              Power in Motion.<br />
-              Confidence in<br />
-              Every Drop.
+              Pure Performance.<br />
+              Precision in<br />
+              Every Turn.
             </h2>
           </motion.div>
         </div>
