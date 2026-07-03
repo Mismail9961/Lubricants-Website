@@ -3,17 +3,6 @@ import React, { useRef, useEffect, useState } from 'react';
 import Link from 'next/link';
 import { products, Product } from '../data/products';
 
-// Fixed style palette cycled across cards — since your real product data
-// has no color/gradient fields, this keeps the visual design consistent
-// without inventing per-product branding.
-const STYLE_PALETTE = [
-  { gradientFrom: '#15163E', gradientTo: '#24297A', accentWave: '#4F33A3' },
-  { gradientFrom: '#11102E', gradientTo: '#1E222A', accentWave: '#40288F' },
-  { gradientFrom: '#083D53', gradientTo: '#066B7A', accentWave: '#00E1B1' },
-  { gradientFrom: '#3A1E10', gradientTo: '#663520', accentWave: '#B5884C' },
-  { gradientFrom: '#52371E', gradientTo: '#7D5531', accentWave: '#D68FAF' },
-];
-
 // Pulls a short "grade" label — prefers an explicit gradeLabel override,
 // then the SAE Grade from typicalProperties, then standards,
 // falling back to the product name if none exist.
@@ -48,7 +37,7 @@ export const AxionPremiumSlider: React.FC = () => {
           behavior: 'smooth',
         });
       }
-    }, 2000);
+    }, 2500);
 
     return () => clearInterval(interval);
   }, [isPaused]);
@@ -65,15 +54,15 @@ export const AxionPremiumSlider: React.FC = () => {
   };
 
   return (
-    <section className="w-full bg-white font-sans py-12 px-4 sm:px-8 md:px-16 overflow-hidden">
-      <div className="w-full mx-auto max-w-[1440px]">
+    <section className="w-full font-sans py-12 px-4 sm:px-8 md:px-16 bg-white relative">
+      <div className="w-full mx-auto max-w-[1440px] relative z-10">
 
         <div className="flex justify-between items-end mb-4 px-1">
           <div className="space-y-1">
             <h3 className="text-xs font-bold text-gray-400 tracking-widest uppercase">
               Our Lineup
             </h3>
-            <h2 className="text-lg sm:text-2xl font-bold text-gray-800 tracking-tight">
+            <h2 className="text-lg sm:text-2xl font-bold text-gray-900 tracking-tight">
               All Products
             </h2>
           </div>
@@ -81,14 +70,14 @@ export const AxionPremiumSlider: React.FC = () => {
           <div className="flex gap-2 mb-1">
             <button
               onClick={() => scroll('left')}
-              className="w-8 h-8 flex items-center justify-center rounded-full border border-gray-200 bg-white text-gray-600 hover:border-gray-400 hover:text-gray-900 active:scale-95 transition-all text-xs shadow-xs"
+              className="w-8 h-8 flex items-center justify-center rounded-full border border-gray-200 bg-white text-gray-700 hover:bg-gray-50 active:scale-95 transition-all text-xs shadow-sm"
               aria-label="Previous products"
             >
               &#9664;
             </button>
             <button
               onClick={() => scroll('right')}
-              className="w-8 h-8 flex items-center justify-center rounded-full border border-gray-200 bg-white text-gray-600 hover:border-gray-400 hover:text-gray-900 active:scale-95 transition-all text-xs shadow-xs"
+              className="w-8 h-8 flex items-center justify-center rounded-full border border-gray-200 bg-white text-gray-700 hover:bg-gray-50 active:scale-95 transition-all text-xs shadow-sm"
               aria-label="Next products"
             >
               &#9654;
@@ -104,109 +93,55 @@ export const AxionPremiumSlider: React.FC = () => {
           onMouseLeave={() => setIsPaused(false)}
           onTouchStart={() => setIsPaused(true)}
           onTouchEnd={() => setIsPaused(false)}
-          className="flex gap-7 overflow-x-auto snap-x snap-mandatory pb-8 scroll-smooth"
+          className="flex gap-10 overflow-x-auto snap-x snap-mandatory pb-8 scroll-smooth"
           style={{
             scrollbarWidth: 'none',
             msOverflowStyle: 'none',
             WebkitOverflowScrolling: 'touch',
           }}
         >
-          {products.map((product, index) => {
-            const style = STYLE_PALETTE[index % STYLE_PALETTE.length];
+          {products.map((product) => {
             const grade = getGradeLabel(product);
-            const keyBenefitCount = product.keyBenefits?.length ?? 0;
 
             return (
               <div
                 key={product.slug}
-                className="min-w-[260px] sm:min-w-[296px] md:min-w-[312px] flex flex-col items-center snap-start bg-white rounded-2xl p-6 border border-gray-100/80 shadow-xs hover:shadow-xl hover:border-gray-200/50 transition-all duration-500 transform hover:-translate-y-1.5 group"
+                className="w-[240px] sm:w-[260px] h-[560px] flex-shrink-0 flex flex-col items-center snap-start group bg-white"
               >
-                <h4 className="text-xs sm:text-sm font-bold text-gray-500 text-center mb-6 tracking-wide group-hover:text-gray-900 transition-colors duration-300">
+                {/* Product name — fixed height so 1 or 2 line names line up the same */}
+                <h4 className="w-full h-[56px] flex items-center justify-center text-lg sm:text-xl font-extrabold text-gray-900 text-center leading-tight tracking-tight uppercase px-1">
                   {product.name}
                 </h4>
 
-                <div
-                  className="relative w-[176px] h-[246px] sm:w-[196px] sm:h-[276px] rounded-xl shadow-md group-hover:shadow-2xl overflow-hidden flex flex-col justify-between p-4 mb-5 transition-all duration-500 group-hover:scale-[1.03]"
-                  style={{ background: `linear-gradient(135deg, ${style.gradientFrom} 0%, ${style.gradientTo} 100%)` }}
-                >
-                  <div className="absolute top-0 left-1/2 -translate-x-1/2 w-10 h-1.5 bg-gradient-to-b from-gray-200 to-gray-400 rounded-t-xs -mt-1" />
-                  <div className="absolute top-[-4px] right-8 w-6 h-1.5 bg-gray-300 rounded-t-xs" />
-
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1200 ease-out" />
-
-                  <span className="text-[9px] font-bold text-gray-300/80 tracking-widest uppercase block text-center z-10">
-                    Petropec
-                  </span>
-
-                  {/* Actual product image */}
-                  <div className="flex-1 flex items-center justify-center z-10 min-h-0">
-                    <img
-                      src={product.image}
-                      alt={product.name}
-                      className="max-h-[130px] sm:max-h-[150px] w-auto object-contain drop-shadow-[0_8px_16px_rgba(0,0,0,0.45)] transition-transform duration-500 group-hover:scale-105"
-                    />
-                  </div>
-
-                  <div className="text-center bg-white/10 backdrop-blur-md py-1.5 px-2 rounded-md border border-white/10 mx-1 z-10 shadow-inner">
-                    <span className="text-[10px] text-white font-extrabold block tracking-tight">{grade}</span>
-                    {product.standards && (
-                      <span className="text-[8px] text-emerald-300 font-bold block uppercase tracking-wider mt-0.5">
-                        {product.standards}
-                      </span>
-                    )}
-                  </div>
-
-                  {product.availableFormats && (
-                    <div className="text-[9px] text-gray-300/90 space-y-0.5 font-medium pl-0.5 z-10">
-                      <div>{product.availableFormats.join(' / ')}</div>
-                    </div>
-                  )}
-
-                  <div
-                    className="absolute bottom-0 right-0 left-0 h-16 opacity-35 pointer-events-none transition-transform duration-700 group-hover:scale-y-110"
-                    style={{
-                      background: `linear-gradient(0deg, ${style.accentWave} 0%, transparent 100%)`,
-                      clipPath: 'ellipse(85% 55% at 50% 100%)'
-                    }}
+                {/* Product image — fixed box, all bottles align the same size */}
+                <div className="w-[200px] h-[300px] flex items-center justify-center mt-4 mb-4 transition-transform duration-500 group-hover:scale-[1.04]">
+                  <img
+                    src={product.image}
+                    alt={product.name}
+                    className="max-h-full max-w-full object-contain"
                   />
                 </div>
 
-                {/* Required product details: quick description + compatibility context */}
-                <p className="text-[11px] text-gray-500 text-center leading-snug line-clamp-2 mb-3 px-1 min-h-[28px]">
-                  {product.tagline}
+                {/* Grade */}
+                <p className="h-[24px] text-sm font-semibold text-gray-700 mb-5 tracking-wide">
+                  {grade}
                 </p>
 
-                {product.compatibleBrandsCategory && (
-                  <p className="text-[10px] text-gray-400 text-center leading-snug mb-3 px-1">
-                    Compatible: {product.compatibleBrandsCategory}
-                  </p>
-                )}
-
-                <div className="flex flex-wrap items-center justify-center gap-1.5 mb-5">
-                  <span className="text-[11px] font-bold text-gray-600 bg-gray-50 border border-gray-100 px-3 py-0.5 rounded-full">
-                    {grade}
-                  </span>
-                  {product.standards && (
-                    <span className="text-[10px] font-bold text-emerald-700 bg-emerald-50 border border-emerald-100 px-2.5 py-0.5 rounded-full">
-                      {product.standards}
-                    </span>
-                  )}
-                  {keyBenefitCount > 0 && (
-                    <span className="text-[10px] font-bold text-gray-500 bg-gray-50 border border-gray-100 px-2.5 py-0.5 rounded-full">
-                      {keyBenefitCount} key benefit{keyBenefitCount > 1 ? 's' : ''}
-                    </span>
-                  )}
-                </div>
-
+                {/* View Details button with gradient border */}
                 <Link
                   href={`/products/${product.slug}`}
-                  className="w-full max-w-[155px] flex items-center justify-between gap-2 pl-4 pr-1 py-1.5 border border-gray-200 rounded-full bg-white hover:border-gray-900 active:scale-95 transition-all duration-300"
+                  className="relative w-full max-w-[190px] p-[1.5px] rounded-full transition-transform duration-300 active:scale-95 mt-auto"
+                  style={{
+                    background: 'linear-gradient(90deg, #d94f8c 0%, #6a5fd6 50%, #2fb6d9 100%)',
+                  }}
                 >
-                  <span className="text-[11px] font-bold text-gray-700 group-hover:text-gray-900 transition-colors tracking-wide">
-                    View Details
-                  </span>
-                  <span className="w-5 h-5 bg-gray-900 group-hover:bg-gray-800 rounded-full flex items-center justify-center text-white text-[9px] font-bold transition-all transform group-hover:translate-x-0.5">
-                    ➔
+                  <span className="flex items-center justify-between gap-2 pl-5 pr-1.5 py-1.5 rounded-full bg-white w-full h-full">
+                    <span className="text-sm font-bold text-gray-900 tracking-wide">
+                      View Details
+                    </span>
+                    <span className="w-7 h-7 bg-gray-900 rounded-full flex items-center justify-center text-white text-xs font-bold transition-transform duration-300 group-hover:translate-x-0.5 shrink-0">
+                      ➔
+                    </span>
                   </span>
                 </Link>
 

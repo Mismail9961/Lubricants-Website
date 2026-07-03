@@ -56,7 +56,7 @@ export default function ContactSection() {
         {/* --- Top Header Bar --- */}
         <div className="w-full pb-4 mb-10 md:mb-16 border-b border-gray-300">
           <h1 className="text-lg md:text-xl font-bold text-[#555555] tracking-wide">
-            AXION <span className="font-medium text-[#777777]">Contact Us</span>
+            PRIME <span className="font-medium text-[#777777]">Get in Touch</span>
           </h1>
         </div>
 
@@ -72,20 +72,20 @@ export default function ContactSection() {
           {/* Left Column: Context Content */}
           <motion.div variants={itemVariants} className="lg:col-span-5 space-y-4 md:space-y-6">
             <h2 className="text-3xl xs:text-4xl md:text-[54px] font-bold tracking-tight text-[#2d2d2d] leading-none">
-              Contact Us
+              Connect With Us
             </h2>
             <h3 className="text-xl xs:text-2xl md:text-3xl font-normal tracking-tight text-[#4a4a4a] leading-tight pt-1">
-              Have Something in <br className="hidden lg:inline" /> Your Mind
+              Let's Build Something <br className="hidden lg:inline" /> Prime Together
             </h3>
             <div className="space-y-4 text-xs xs:text-sm md:text-[15px] text-[#4a4a4a] leading-relaxed max-w-[460px] pt-2">
               <p>
-                Our dedicated customer support team is here to assist you Monday to Friday, 
-                from 9:00 AM to 5:00 PM. Whether you have questions, need guidance, or require 
-                assistance, we're just a message away.
+                Our premier support and consultation team is available Monday through Friday, 
+                from 9:00 AM to 5:00 PM. Whether you are exploring new solutions, scaling your operations, 
+                or seeking specialized guidance, we are ready to assist.
               </p>
               <p>
-                We take pride in delivering exceptional service and are always ready to help. 
-                We look forward to connecting with you soon.
+                We focus on precision, quality, and exceptional experiences. Drop us a line, and a 
+                dedicated partner relations expert will get back to you shortly.
               </p>
             </div>
           </motion.div>
@@ -166,7 +166,7 @@ export default function ContactSection() {
 
             {/* Help Request Textarea */}
             <div className="flex flex-col gap-1.5 md:gap-2">
-              <label htmlFor="message" className="text-xs xs:text-sm md:text-[15px] font-normal text-[#1a1a1a]">How may We help you?</label>
+              <label htmlFor="message" className="text-xs xs:text-sm md:text-[15px] font-normal text-[#1a1a1a]">How may we help you?</label>
               <textarea
                 id="message"
                 name="message"
@@ -212,11 +212,11 @@ export default function ContactSection() {
           {/* Abu Dhabi Column */}
           <div className="space-y-3">
             <h4 className="text-xl md:text-2xl font-bold text-[#2d2d2d]">
-              Carmetra Abu Dubai
+              Prime Corporate Abu Dhabi
             </h4>
             <div className="text-xs xs:text-sm md:text-[15px] text-[#4a4a4a] leading-relaxed space-y-1.5 pt-1">
               <p>Al Hiraf Street 08, building 127, Office 05,</p>
-              <p>Musaffah Sector M11, Abu Dhabi ,UAE</p>
+              <p>Musaffah Sector M11, Abu Dhabi, UAE</p>
               <p className="pt-2 font-medium text-[#1a1a1a]">
                 <span className="font-bold">P:</span> +971 52 992 1998
               </p>
@@ -226,7 +226,7 @@ export default function ContactSection() {
           {/* Dubai Column */}
           <div className="space-y-3">
             <h4 className="text-xl md:text-2xl font-bold text-[#2d2d2d]">
-              Carmetra Dubai
+              Prime Corporate Dubai
             </h4>
             <div className="text-xs xs:text-sm md:text-[15px] text-[#4a4a4a] leading-relaxed space-y-1.5 pt-1">
               <p>Meydan Grandstand, 6th floor, Meydan Road, Nad</p>

@@ -1,157 +1,165 @@
 "use client";
-import React, { useState, useRef } from 'react';
+import React from 'react';
 import { motion, Variants } from 'framer-motion';
-import { ArrowUpRight } from 'lucide-react';
+import { ArrowUpRight, ShieldCheck, Zap, Layers } from 'lucide-react';
 
 export const ProductGroup: React.FC = () => {
-  // State for tracking mouse position inside the banner for the custom cursor badge
-  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
-  const [isHovered, setIsHovered] = useState(false);
-  const bannerRef = useRef<HTMLDivElement>(null);
-
-  // Smooth entry variants for the grid headers
+  // Smooth sequential cascading entries
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: { staggerChildren: 0.15, delayChildren: 0.1 }
+      transition: { staggerChildren: 0.12, delayChildren: 0.1 }
     }
   };
 
-  const itemVariants: Variants = {
-    hidden: { opacity: 0, y: 15 },
+  const cardVariants: Variants = {
+    hidden: { opacity: 0, y: 30 },
     visible: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] }
+      transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] }
     }
   };
 
-  // Track cursor position relative to the banner bounding box
-  const handleMouseMove = (e: React.MouseEvent) => {
-    if (!bannerRef.current) return;
-    const rect = bannerRef.current.getBoundingClientRect();
-    setMousePos({
-      x: e.clientX - rect.left,
-      y: e.clientY - rect.top
-    });
-  };
+  const productCategories = [
+    {
+      title: "Engine Oils",
+      desc: "Low-drag molecular structures providing unmatched thermal protection.",
+      icon: <Zap className="w-5 h-5 text-[#D4AF37]" />,
+      image: "https://i0.wp.com/gandharoil.com/wp-content/uploads/2021/11/Unknown-2-10.png?resize=800%2C600&ssl=1?q=80&w=600",
+      tag: "PX-1 Core"
+    },
+    {
+      title: "Industrial Greases",
+      desc: "Formulated with anti-wear technology to withstand high stress parameters.",
+      icon: <ShieldCheck className="w-5 h-5 text-[#D4AF37]" />,
+      image: "https://www.telko.com/hubfs/Pictures/Industry-Lubricants/industry-industrial-greases.jpeg?q=80&w=600",
+      tag: "Heavy Duty"
+    },
+    {
+      title: "Advanced Fluids",
+      desc: "Coolants and specialized lubricants designed for long-lasting peak performance.",
+      icon: <Layers className="w-5 h-5 text-[#D4AF37]" />,
+      image: "https://newsroom.aaa.com/wp-content/uploads/2014/10/Advanced-fluids-simplify-car-care-reinforce-the-importance-of-safety-checks.jpg?q=80&w=600",
+      tag: "Synthesis"
+    }
+  ];
 
   return (
-    <section className="w-full bg-white py-16 px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 font-sans overflow-hidden select-none">
+    <section className="w-full bg-[#f8fafc] py-14 sm:py-20 px-3 sm:px-6 md:px-10 lg:px-16 xl:px-20 font-sans overflow-hidden select-none">
+      {/* Container stripped of max-w constraints to enable true fluid full-width layout */}
       <div className="w-full">
         
-        {/* --- Top Layout Grid --- */}
+        {/* --- Section Header Layout --- */}
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-y-4 md:gap-x-12 mb-10 sm:mb-14 items-end">
+          <div className="md:col-span-5">
+            <div className="flex items-center gap-2 mb-2 tracking-[0.2em] text-[10px] uppercase font-bold text-[#0A4D34]">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]" />
+              Elite Formulations
+            </div>
+            <h2 className="text-[28px] xs:text-[34px] sm:text-[42px] xl:text-[48px] font-black tracking-tight text-[#111] leading-[1.05]">
+              Product Lineup
+            </h2>
+          </div>
+
+          <div className="md:col-span-7">
+            <p className="text-[13px] sm:text-[15px] xl:text-[17px] text-gray-600 font-light leading-relaxed max-w-[64ch]">
+              PRIME engineers high-performance engine lubricants, coolants, and core greases matching strict industrial standards to protect hardware under absolute load.
+            </p>
+          </div>
+        </div>
+
+        {/* --- Category Grid: Fluid Full-Width Matrix --- */}
         <motion.div 
-          className="grid grid-cols-1 md:grid-cols-12 gap-y-6 md:gap-x-12 mb-12 lg:mb-16 items-start"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 w-full"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: "-80px" }}
+          viewport={{ once: true, margin: "-40px" }}
         >
-          <motion.div variants={itemVariants} className="md:col-span-4">
-            <h2 className="text-[32px] sm:text-[40px] xl:text-[48px] font-black tracking-tight text-[#222] leading-[1.1]">
-              Product<br />Group
-            </h2>
-          </motion.div>
+          {productCategories.map((cat, index) => (
+            <motion.a
+              key={index}
+              href="/products"
+              variants={cardVariants}
+              whileHover={{ y: -6 }}
+              className="group relative rounded-2xl sm:rounded-3xl bg-white border border-gray-100 p-4 sm:p-5 flex flex-col justify-between shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden min-h-[340px] xs:min-h-[380px] sm:min-h-[400px] w-full block cursor-pointer"
+            >
+              {/* Media Container Box */}
+              <div className="relative w-full h-44 sm:h-56 xl:h-64 rounded-xl sm:rounded-2xl overflow-hidden bg-gray-900 mb-4 sm:mb-5">
+                <img 
+                  src={cat.image} 
+                  alt={cat.title} 
+                  className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105 filter brightness-95"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
+                
+                {/* Upper Glassmorphism Floating Tag */}
+                <span className="absolute top-3 left-3 bg-white/90 backdrop-blur-md text-[9px] tracking-widest uppercase font-bold text-[#0A4D34] px-2.5 py-1 rounded-md shadow-xs">
+                  {cat.tag}
+                </span>
+              </div>
 
-          <motion.div variants={itemVariants} className="md:col-span-4">
-            <p className="text-[14px] sm:text-[15px] xl:text-[17px] text-[#555] font-normal leading-[1.6] md:pt-1">
-              AXION delivers high-performance engine oils, lubricants, coolants, and greases 
-              designed for modern vehicles and heavy-duty machinery.
-            </p>
-          </motion.div>
+              {/* Text Block content */}
+              <div className="flex-1 flex flex-col items-start">
+                <div className="flex items-center gap-2.5 mb-2">
+                  <div className="w-8 h-8 rounded-lg bg-[#0A4D34]/5 flex items-center justify-center transition-colors group-hover:bg-[#0A4D34]">
+                    <span className="transition-colors group-hover:text-white flex items-center justify-center">
+                      {React.cloneElement(cat.icon, { 
+                        className: "w-4 h-4 text-[#0A4D34] group-hover:text-[#E5C158] transition-colors" 
+                      })}
+                    </span>
+                  </div>
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 tracking-tight">
+                    {cat.title}
+                  </h3>
+                </div>
+                <p className="text-xs sm:text-sm text-gray-500 leading-relaxed font-light mb-5">
+                  {cat.desc}
+                </p>
+              </div>
 
-          <motion.div variants={itemVariants} className="md:col-span-4">
-            <p className="text-[14px] sm:text-[15px] xl:text-[17px] text-[#555] font-normal leading-[1.6] md:pt-1">
-              Built on innovation and reliability, our products ensure smooth operation, 
-              maximum protection, and long-lasting performance.
-            </p>
-          </motion.div>
+              {/* Interactive Row Bottom Line */}
+              <div className="w-full pt-3 border-t border-gray-50 flex items-center justify-between mt-auto">
+                <span className="text-[10px] sm:text-xs font-semibold tracking-wider uppercase text-[#0A4D34] group-hover:text-[#D4AF37] transition-colors">
+                  Explore Metrics
+                </span>
+                <div className="w-7 h-7 rounded-full bg-gray-50 flex items-center justify-center text-gray-400 group-hover:bg-[#0A4D34] group-hover:text-[#E5C158] transition-all duration-300 transform group-hover:rotate-45">
+                  <ArrowUpRight className="w-4 h-4" />
+                </div>
+              </div>
+            </motion.a>
+          ))}
         </motion.div>
 
-        {/* --- Lower Media Section --- */}
-        <div className="space-y-5 w-full">
-          <h3 className="text-xs sm:text-sm xl:text-base font-bold tracking-normal text-[#444] px-0.5">
-            Our Engine Oils
-          </h3>
-
-          {/* Media Wrapper with tracking rules — updates cursor behavior on desktop */}
-          <div 
-            ref={bannerRef}
-            onMouseMove={handleMouseMove}
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
-            className="relative rounded-[24px] sm:rounded-[32px] overflow-hidden bg-[#0c0d0f] shadow-xl aspect-[320/215] sm:aspect-[16/10] md:aspect-[16/9] w-full max-h-[720px] sm:cursor-none"
-          >
-            
-            {/* High-Contrast Local Image Asset */}
-            <img 
-              src="/BannerSection.png" 
-              alt="AXION Commercial Fleet Lineup" 
-              className="w-full h-full object-cover object-center filter brightness-[0.82] contrast-[1.08] pointer-events-none"
-              onError={(e) => {
-                // Fallback architecture in case file structure changes down the road
-                e.currentTarget.src = "https://images.unsplash.com/photo-1616422285623-13ff0162193c?q=80&w=1400";
-              }}
-            />
-
-            <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-black/10 pointer-events-none" />
-
-            {/* --- Custom Follower Badge (Replaces Cursor) --- */}
-            {/* Hidden on small touch screens (under 640px) to prevent broken mobile touches */}
-            <motion.div 
-              className="absolute hidden sm:flex left-0 top-0 w-24 h-24 md:w-28 md:h-28 rounded-full bg-[#1433D6] items-center justify-center pointer-events-none z-30 shadow-lg shadow-[#1433D6]/30 mix-blend-normal"
-              animate={{
-                x: mousePos.x - (typeof window !== 'undefined' && window.innerWidth >= 768 ? 56 : 48),
-                y: mousePos.y - (typeof window !== 'undefined' && window.innerWidth >= 768 ? 56 : 48),
-                scale: isHovered ? 1 : 0,
-                opacity: isHovered ? 1 : 0
-              }}
-              transition={{
-                type: "spring",
-                stiffness: 400,
-                damping: 28,
-                mass: 0.4, // Lower mass makes it follow the mouse instantly with zero lag
-                scale: { duration: 0.2 }
-              }}
-            >
-              <svg 
-                className="w-full h-full animate-[spin_16s_linear_infinite]" 
-                viewBox="0 0 100 100"
-              >
-                <path
-                  id="badgeTextPath"
-                  d="M 50, 50 m -36, 0 a 36,36 0 1,1 72,0 a 36,36 0 1,1 -72,0"
-                  fill="none"
-                />
-                <text className="fill-white text-[8.5px] font-bold tracking-[2.4px] uppercase">
-                  <textPath href="#badgeTextPath" startOffset="0%">
-                    AXION • VIEW ALL OF OUR PRODUCTS •
-                  </textPath>
-                </text>
-              </svg>
-            </motion.div>
-
-            {/* Premium Cut-Corner Action Button */}
-            <div className="absolute bottom-5 left-5 sm:bottom-8 sm:left-8 z-40">
-              <motion.button
-                className="relative flex items-center gap-2.5 bg-[#1433D6] text-white pl-5 pr-4 py-2.5 sm:py-3 text-[11px] sm:text-xs font-bold uppercase tracking-wider transition-colors duration-300 sm:cursor-pointer group"
-                style={{
-                  clipPath: 'polygon(0 0, 100% 0, 100% calc(100% - 7px), calc(100% - 7px) 100%, 0 100%)'
-                }}
-                whileHover={{ backgroundColor: '#000c7b' }}
-                whileTap={{ scale: 0.98 }}
-              >
-                <span className="translate-y-[0.5px]">Explore Now</span>
-                <div className="w-4 h-4 rounded-full bg-white/10 flex items-center justify-center overflow-hidden">
-                  <ArrowUpRight className="w-3 h-3 text-white transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-                </div>
-              </motion.button>
-            </div>
-
+        {/* --- Quick Action Banner Area --- */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.3 }}
+          className="w-full mt-8 sm:mt-12 bg-[#0A4D34] rounded-2xl p-5 sm:p-8 flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4 relative overflow-hidden"
+        >
+          <div className="absolute top-0 right-0 w-32 h-32 bg-[#D4AF37]/5 rounded-full blur-2xl pointer-events-none" />
+          
+          <div className="z-10">
+            <h4 className="text-white text-base sm:text-lg font-bold tracking-tight mb-1">
+              Need custom technical specifications?
+            </h4>
+            <p className="text-gray-300 text-xs sm:text-sm font-light max-w-[54ch]">
+              Access full viscosity parameter documentation blueprints and chemical compatibility analyses.
+            </p>
           </div>
-        </div>
+
+          <motion.button
+            whileTap={{ scale: 0.97 }}
+            className="z-10 bg-[#D4AF37] hover:bg-[#E5C158] text-[#0A4D34] font-bold text-[10px] sm:text-xs uppercase tracking-wider px-4 sm:px-5 py-2.5 rounded-lg flex items-center gap-2 transition-colors duration-300 shadow-md shadow-black/10 whitespace-nowrap"
+          >
+            <span>Download Catalog</span>
+            <ArrowUpRight className="w-3.5 h-3.5" />
+          </motion.button>
+        </motion.div>
 
       </div>
     </section>

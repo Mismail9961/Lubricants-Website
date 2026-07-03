@@ -2,12 +2,12 @@
 
 import { motion } from "framer-motion";
 
-export default function AxionSection() {
+export default function PrimeSection() {
   return (
     <section className="w-full bg-[#f3f3f3] py-4 md:py-8">
       <div className="mx-auto max-w-[1500px] px-3 md:px-6">
 
-        {/* Desktop Layout */}
+        {/* Desktop Layout Grid */}
         <div
           className="
             grid gap-4 md:gap-6
@@ -48,7 +48,7 @@ export default function AxionSection() {
                   <br />
                   Journey with
                   <br />
-                  AXION
+                  PRIME
                 </h1>
               </div>
             </div>
@@ -90,7 +90,7 @@ export default function AxionSection() {
             <div className="mb-8 md:mb-12 h-[60px] w-[60px] md:h-[95px] md:w-[95px] rounded-full bg-[#ff0055]" />
 
             <p className="mb-6 text-[14px] md:text-[18px] leading-relaxed text-[#444]">
-              Choosing AXION means choosing reliability,
+              Choosing PRIME means choosing reliability,
               performance, and innovation.
             </p>
 
@@ -120,7 +120,7 @@ export default function AxionSection() {
           >
             <p className="max-w-[470px] text-[14px] md:text-[18px] leading-relaxed text-[#444] relative z-10">
               With a commitment to quality and a forward-thinking
-              approach, AXION keeps you moving — today and into
+              approach, PRIME keeps you moving — today and into
               the future.
             </p>
 

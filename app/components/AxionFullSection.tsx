@@ -16,9 +16,9 @@ interface ProductCard {
 
 const products: ProductCard[] = [
   {
-    id: 'ax-104',
-    name: 'AXION',
-    subName: 'AX-104 - PRECISION',
+    id: 'px-104',
+    name: 'PRIME',
+    subName: 'PX-104 - PRECISION',
     description: 'Heavy-duty diesel engine oil offering superior performance under high loads and extreme temperatures for demanding conditions.',
     sae: 'SAE 15W-40',
     api: 'API CK-4',
@@ -26,9 +26,9 @@ const products: ProductCard[] = [
     accentLine: 'bg-emerald-500',
   },
   {
-    id: 'ax-21',
-    name: 'AXION',
-    subName: 'AX-21 - ULTIMA',
+    id: 'px-21',
+    name: 'PRIME',
+    subName: 'PX-21 - ULTIMA',
     typeBadge: 'MULTIGRADE MINERAL',
     description: 'Provides strong engine protection and sludge resistance for a wide range of older petrol and diesel vehicles, ensuring cleaner operation.',
     sae: 'SAE 20W-50',
@@ -37,9 +37,9 @@ const products: ProductCard[] = [
     accentLine: 'bg-amber-600',
   },
   {
-    id: 'ax-1',
-    name: 'AXION',
-    subName: 'AX-1 - PREMIUM',
+    id: 'px-1',
+    name: 'PRIME',
+    subName: 'PX-1 - PREMIUM',
     typeBadge: 'Fully Synthetic',
     description: 'Provides exceptional fuel economy, low-temperature fluidity, and wear protection. Suitable for ultra-efficient modern engines.',
     sae: 'SAE 0W-16',
@@ -48,9 +48,9 @@ const products: ProductCard[] = [
     accentLine: 'bg-indigo-600',
   },
   {
-    id: 'ax-103',
-    name: 'AXION',
-    subName: 'AX-103 - PRECISION',
+    id: 'px-103',
+    name: 'PRIME',
+    subName: 'PX-103 - PRECISION',
     description: 'Heavy-duty diesel engine oil offering superior fuel economy, wear protection, and cold start performance for advanced engine systems.',
     sae: 'SAE 5W-30',
     api: 'API CK-4',
@@ -59,7 +59,7 @@ const products: ProductCard[] = [
   },
 ];
 
-export const AxionFullSection: React.FC = () => {
+export const PrimeFullSection: React.FC = () => {
   // Statically typed variants to eliminate any TS evaluation errors
   const fadeInUp: Variants = {
     hidden: { opacity: 0, y: 30 },
@@ -90,7 +90,7 @@ export const AxionFullSection: React.FC = () => {
         className="text-center max-w-2xl z-10 mb-4"
       >
         <h2 className="text-2xl sm:text-4xl font-extrabold text-black tracking-tight">
-          AXION is Built for Performance
+          PRIME is Built for Performance
         </h2>
         <p className="text-xs sm:text-base font-medium text-gray-600 mt-2 tracking-wide px-2">
           trusted on every road, in every condition, by every vehicle.
@@ -121,7 +121,7 @@ export const AxionFullSection: React.FC = () => {
 
               <div>
                 <span className="text-[8px] sm:text-[9px] uppercase tracking-widest text-gray-400 block mb-0.5">
-                  Advance Formula
+                  Advanced Formula
                 </span>
                 <h3 className="text-lg sm:text-2xl font-black tracking-wider text-gray-100">
                   {product.name}
@@ -190,7 +190,7 @@ export const AxionFullSection: React.FC = () => {
           }}
         >
           <span className="bg-gradient-to-r from-gray-800 to-black bg-clip-text text-transparent font-bold">
-            Download AXION Profile
+            Download PRIME Profile
           </span>
         </button>
       </motion.div>
@@ -199,4 +199,4 @@ export const AxionFullSection: React.FC = () => {
   );
 };
 
-export default AxionFullSection;
+export default PrimeFullSection;

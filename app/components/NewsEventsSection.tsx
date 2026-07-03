@@ -29,7 +29,7 @@ export const NewsEventsSection: React.FC = () => {
           {/* RIGHT SIDE: News Cards Grid */}
           <div className="lg:col-span-9 grid grid-cols-1 sm:grid-cols-2 gap-8 md:gap-12">
             
-            {/* CARD 1: AXION AutoCare */}
+            {/* CARD 1: PRIME AutoCare */}
             <motion.article 
               initial="hidden"
               whileInView="visible"
@@ -39,11 +39,11 @@ export const NewsEventsSection: React.FC = () => {
             >
               <div className="overflow-hidden rounded-2xl bg-gray-100 aspect-[16/10] w-full mb-5 shadow-sm">
                 <img 
-                  src="https://axionlubricants.com/Images/IndustrialGreaseNewsImage.webp" 
-                  alt="AXION AutoCare facility exterior at night" 
+                  src="https://images.unsplash.com/photo-1625047509248-ec889cbff17f?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
+                  alt="PRIME AutoCare facility exterior at night" 
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103"
                   onError={(e) => {
-                    e.currentTarget.src = "https://images.unsplash.com/photo-1617886322238-b379fe082c78?auto=format&fit=crop&q=80&w=1200";
+                    e.currentTarget.src = "https://images.unsplash.com/photo-1625047509248-ec889cbff17f?q=80&w=1932&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D?auto=format&fit=crop&q=80&w=1200";
                   }}
                 />
               </div>
@@ -51,16 +51,16 @@ export const NewsEventsSection: React.FC = () => {
                 16-7-25
               </time>
               <h3 className="text-black font-bold text-lg sm:text-xl xl:text-2xl mb-3 group-hover:text-red-600 transition-colors">
-                AXION AutoCare
+                PRIME AutoCare
               </h3>
               <p className="text-gray-600 text-sm sm:text-base xl:text-lg leading-relaxed">
-                Experience premium oil change services at AXION Autocare — where advanced facilities, expert care, 
+                Experience premium oil change services at PRIME Autocare — where advanced facilities, expert care, 
                 and high-performance lubricants keep your engine running at its best. Fast, reliable, and designed for 
                 today's vehicles.
               </p>
             </motion.article>
 
-            {/* CARD 2: AXION Industrial Grease */}
+            {/* CARD 2: PRIME Industrial Grease */}
             <motion.article 
               initial="hidden"
               whileInView="visible"
@@ -70,11 +70,11 @@ export const NewsEventsSection: React.FC = () => {
             >
               <div className="overflow-hidden rounded-2xl bg-gray-100 aspect-[16/10] w-full mb-5 shadow-sm">
                 <img 
-                  src="https://axionlubricants.com/Images/AutoCareNewsImage.webp" 
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWOocJ7giYSM59P6_4yA2aIeopRPrqKHGJjdCf8pj9SYyY5vRhChlZrPZH&s=10" 
                   alt="Industrial ball bearing with blue grease coating" 
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-103"
                   onError={(e) => {
-                    e.currentTarget.src = "https://axionlubricants.com/Images/AutoCareNewsImage.webp?auto=format&fit=crop&q=80&w=1200";
+                    e.currentTarget.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWOocJ7giYSM59P6_4yA2aIeopRPrqKHGJjdCf8pj9SYyY5vRhChlZrPZH&s=10?auto=format&fit=crop&q=80&w=1200";
                   }}
                 />
               </div>
@@ -82,11 +82,11 @@ export const NewsEventsSection: React.FC = () => {
                 16-7-25
               </time>
               <h3 className="text-black font-bold text-lg sm:text-xl xl:text-2xl mb-3 group-hover:text-red-600 transition-colors">
-                AXION Industrial Grease
+                PRIME Industrial Grease
               </h3>
               <div className="space-y-4 text-gray-600 text-sm sm:text-base xl:text-lg leading-relaxed">
                 <p>
-                  AXION proudly launches its high-performance Industrial Grease, developed to meet 
+                  PRIME proudly launches its high-performance Industrial Grease, developed to meet 
                   the rigorous demands of heavy-duty machinery and industrial applications.
                 </p>
                 <p>
@@ -107,7 +107,7 @@ export const NewsEventsSection: React.FC = () => {
             target="_blank" 
             rel="noopener noreferrer" 
             className="text-black hover:text-blue-600 transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 rounded-md p-1"
-            aria-label="Follow AXION on Facebook"
+            aria-label="Follow PRIME on Facebook"
           >
             <svg 
               className="w-6 h-6 fill-current" 

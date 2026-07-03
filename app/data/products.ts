@@ -25,116 +25,6 @@ export type Product = {
 };
 
 export const products: Product[] = [
-  {
-    slug: "protect-synthetic-20w-50",
-    name: "PROTECT SYNTHETIC 20W-50 PREMIUM MOTOR OIL",
-    tagline:
-      "SYNTHETIC 20W-50 is a multipurpose premium grade engine oil of API SM, and it is designed to provide faster and cleaner engine protection to make sure of longer engine life.",
-    standards: "API SM",
-    generalCharacteristics: [
-      "SYNTHETIC 20W-50 contains highly purified base oil and additives to meet API SM performance grade ensuring engines against deposit and wear problem.",
-      "SYNTHETIC 20W-50 is applicable to Gasoline and CNG/LPG fueled engines.",
-    ],
-    usageRecommendations:
-      "Recommended for gasoline and CNG/LPG-fueled passenger vehicles operating under normal to severe conditions, including high ambient temperatures. Suitable for both older and newer engines requiring API SM performance.",
-    usageInstructions:
-      "Drain old oil while the engine is warm, replace the oil filter, and refill to the manufacturer-specified level with PROTECT SYNTHETIC 20W-50. Check the level after a short run and top up as needed. Follow the vehicle manufacturer's recommended drain interval.",
-    specifications:
-      "Meets or exceeds engine oil specifications of major car manufacturers.",
-    typicalProperties: {
-      "SAE Grade": "20W-50",
-      API: "SM",
-      "Specific Gravity 15°C": "0.86",
-      "Kinematic Viscosity cSt 40°C": "155.5",
-      "Kinematic Viscosity cSt 100°C": "17.7",
-      "Viscosity Index": "195",
-      "Flash Point, °C": "246",
-      "Pour Point, °C": "-27.5",
-    },
-    image: "https://axionlubricants.com/Images/SinglePageProduct/ax-23-20w-50-1L.webp",
-  },
-  {
-    slug: "mobil-1-0w-20",
-    name: "Mobil 1™ 0W-20 Full Synthetic Motor Oil",
-    tagline:
-      "A growing list of automakers recommend 0W-20 low viscosity oils for their vehicles in an effort to optimize fuel economy. Likewise, the Mobil 1™, Mobil™ and Mobil Super™ lineup of 0W-20 oils has expanded to include choices for high mileage vehicles, trucks and SUVs, and coverage for those of you interested in extended drain oils.",
-    generalCharacteristics: [
-      "0W-20 motor oils can also be used where 5W-20 is recommended. The low‐viscosity, advanced full synthetic formulation of Mobil 1 0W-20 oils can help to increase engine efficiency and improve fuel economy versus higher viscosity oils.",
-      "Many of our 0W-20 oils carry the dexos®1 approval specified for General Motors vehicles. Mobil 1™ ESP X2 0W-20 carries the dexosD™ approval for diesel engines. The dexos® specification and trademark are exclusive to General Motors, LLC.",
-      "What do the numbers in 0W-20 mean? The numbers refer to the weight and thickness, or viscosity, of the oil. Motor oil gets thicker when it's cold and thinner when it heats up. The first number indicates the viscosity of the oil at a cold temperature, and the second number indicates the viscosity at operating temperatures.",
-      "Compare to see different levels of protection these products offer and choose the one that meets your needs.",
-    ],
-    usageRecommendations:
-      "Recommended for gasoline and hybrid passenger vehicles, including those requiring dexos1-approved oils, where the manufacturer specifies a 0W-20 or 5W-20 viscosity grade for improved fuel economy.",
-    usageInstructions:
-      "Warm the engine briefly, then drain the old oil completely, replace the oil filter, and refill with Mobil 1 0W-20 to the level shown on the dipstick. Verify the level after the first few minutes of running and top up if required.",
-    specifications:
-      "Meets or exceeds original equipment manufacturer requirements for 0W-20 viscosity motor oils, including dexos1-approved applications.",
-    image: "https://axionlubricants.com/Images/SinglePageProduct/ax-23-20w-50-1L.webp",
-  },
-  {
-    slug: "mobil-10w-30",
-    name: "Mobil™ 10W-30 Motor Oil",
-    tagline:
-      "The 10W-30 viscosity has all but disappeared as a primary recommendation for vehicles except for certain diesel engines, and today serves as a viscosity alternate choice.",
-    generalCharacteristics: [
-      "Many manufacturers have transitioned to 5W-30 motor oil viscosity, and 5W-30 or 0W-30 oil can be used in applications requiring a 10W-30 grade motor oil.",
-      "We offer a variety of Mobil™ 10W-30 viscosity motor oils, including products designed for high mileage vehicles, and for those of you looking for an extended drain motor oil.",
-      "What do the numbers in 10W-30 mean? The numbers refer to the weight and thickness, or viscosity, of the oil. Motor oil gets thicker when it's cold and thinner when it heats up. The first number indicates the viscosity of the oil at a cold temperature, and the second number indicates the viscosity at operating temperatures.",
-      "Compare to see different levels of protection these products offer and choose the one that meets your needs.",
-    ],
-    usageRecommendations:
-      "Suited to vehicles, including certain diesel applications, where the manufacturer specifies a 10W-30 viscosity grade, or as an alternate where 5W-30 or 0W-30 is recommended.",
-    usageInstructions:
-      "Drain the old oil with the engine warm, fit a new oil filter, and refill with Mobil 10W-30 to the correct level. Recheck the level once the oil has settled and top up as necessary.",
-    specifications:
-      "Meets or exceeds engine oil specifications for vehicles calling for a 10W-30 viscosity grade, including select diesel applications.",
-    image: "https://axionlubricants.com/Images/SinglePageProduct/ax-23-20w-50-1L.webp",
-  },
-  {
-    slug: "mobil-10w-40",
-    name: "Mobil™ 10W-40 Motor Oil",
-    tagline:
-      "The 10W-40 viscosity has all but disappeared as a primary recommendation for newer vehicles, and today serves as an alternate choice. Higher viscosity oil such as a 10W-40 can be useful for older engines burning or leaking oil.",
-    generalCharacteristics: [
-      "We offer Mobil™ 10W-40 high viscosity motor oils for use in vehicles with more than 75,000 miles, and a synthetic blend oil when cost is a consideration.",
-      "What do the numbers in 10W-40 mean? The numbers refer to the weight and thickness, or viscosity, of the oil. Motor oil gets thicker when it's cold and thinner when it heats up. The first number indicates the viscosity of the oil at a cold temperature, and the second number indicates the viscosity at operating temperatures.",
-      "Compare to see different levels of protection these products offer and choose the one that meets your needs.",
-    ],
-    usageRecommendations:
-      "Best suited to older engines, high-mileage vehicles (over 75,000 miles), or engines that consume or leak oil and benefit from the added film strength of a higher-viscosity 10W-40 oil.",
-    usageInstructions:
-      "Drain the used oil while the engine is warm, replace the filter, and refill with Mobil 10W-40 to the specified level. Run the engine briefly, check for leaks, and top up the oil level as needed.",
-    specifications:
-      "Meets or exceeds engine oil specifications for high-mileage and older vehicles calling for a 10W-40 viscosity grade.",
-    image: "https://axionlubricants.com/Images/SinglePageProduct/ax-23-20w-50-1L.webp",
-  },
-  {
-    slug: "petropec-dexron-iii-fully-synthetic",
-    name: "Petropec Dexron III Fully Synthetic",
-    tagline:
-      "Petropec Dexron III Fully Synthetic is a top-tier automatic transmission fluid engineered for superior performance and protection. Crafted with cutting-edge synthetic technology, it surpasses the stringent Dexron III specifications, delivering exceptional lubrication and smooth gear transitions.",
-    generalCharacteristics: [
-      "This advanced formula offers outstanding resistance to oxidation, wear, and foaming, ensuring long-lasting transmission efficiency and extending the lifespan of your vehicle's transmission system.",
-      "Petropec Dexron III Fully Synthetic also provides enhanced protection against rust and corrosion, maintaining critical transmission components in peak condition.",
-      "Perfect for both modern and older vehicles, it guarantees consistent, high-quality performance across diverse driving conditions, making it an essential choice for maintaining optimal transmission health.",
-    ],
-    usageRecommendations:
-      "Recommended for automatic transmissions in both modern and older vehicles that call for a Dexron III specification fluid, across a wide range of driving conditions.",
-    usageInstructions:
-      "With the vehicle level and the transmission at operating temperature, drain the old fluid, replace the filter or pan gasket if applicable, and refill with Petropec Dexron III to the level indicated on the dipstick or fill plug. Check the level again after a short drive.",
-    specifications: "Exceeds Dexron III performance specifications for automatic transmission fluids.",
-    typicalProperties: {
-      Appearance: "Red",
-      "Kinematic Viscosity @ 40 °C (cSt)": "39.85",
-      "Kinematic Viscosity @ 100 °C (cSt)": "7.64",
-      "Flash Point COC °C": "200",
-      "Pour Point °C": "-36",
-      "Viscosity Index": "164",
-      "Specific Gravity @ 85 °F Kg/l": "0.8440",
-    },
-    image: "https://axionlubricants.com/Images/SinglePageProduct/ax-23-20w-50-1L.webp",
-  },
 
   // ---------------------------------------------------------------------
   // PRIME LUBETECH — "PROTECT" range, sourced from Product Test Reports
@@ -165,24 +55,24 @@ export const products: Product[] = [
       "Sulphated Ash, Wt.%": "0.1",
       "Phosphorus": "0.08",
     },
-    image: "https://axionlubricants.com/Images/SinglePageProduct/ax-23-20w-50-1L.webp",
+    image: "/10W-40.png",
   },
   {
-    slug: "protect-5w-30",
-    name: "PROTECT 5W-30 MOTOR OIL",
+    slug: "protect-10w-30",
+    name: "PROTECT 10W-30 MOTOR OIL",
     tagline:
-      "PROTECT 5W-30 is a low-viscosity engine oil designed to improve cold-start protection and support fuel efficiency in modern gasoline engines.",
+      "PROTECT 10W-30 is a low-viscosity engine oil designed to improve cold-start protection and support fuel efficiency in modern gasoline engines.",
     generalCharacteristics: [
-      "A low-viscosity 5W-30 formulation with a viscosity index of 169 for quick cold-start lubrication and consistent protection at operating temperature.",
+      "A low-viscosity 10W-30 formulation with a viscosity index of 169 for quick cold-start lubrication and consistent protection at operating temperature.",
       "A pour point of -32°C supports reliable oil flow in cold-weather conditions.",
     ],
     usageRecommendations:
-      "Recommended for modern gasoline engines where the manufacturer specifies a 5W-30 viscosity grade for improved fuel efficiency.",
+      "Recommended for modern gasoline engines where the manufacturer specifies a 10W-30 viscosity grade for improved fuel efficiency.",
     usageInstructions:
-      "Drain the old oil with the engine warm, fit a new filter, and refill with PROTECT 5W-30 to the manufacturer-specified level.",
+      "Drain the old oil with the engine warm, fit a new filter, and refill with PROTECT 10W-30 to the manufacturer-specified level.",
     specifications: "Lab Ref: PL/LAB/0065 — Test Date: 5.8.2025",
     typicalProperties: {
-      "SAE Grade": "5W-30",
+      "SAE Grade": "10W-30",
       "Specific Gravity @ 60/60°F": "0.85",
       "Kinematic Viscosity cSt @ 100°C": "10.6",
       "Kinematic Viscosity cSt @ 40°C": "60",
@@ -192,7 +82,7 @@ export const products: Product[] = [
       "Sulphated Ash, Wt.%": "0.1",
       "Phosphorus": "0.08",
     },
-    image: "https://axionlubricants.com/Images/SinglePageProduct/ax-23-20w-50-1L.webp",
+    image: "/10W-30.png",
   },
   {
     slug: "protect-0w-20",
@@ -219,7 +109,7 @@ export const products: Product[] = [
       "Sulphated Ash, Wt.%": "0.1",
       "Phosphorus": "0.08",
     },
-    image: "https://axionlubricants.com/Images/SinglePageProduct/ax-23-20w-50-1L.webp",
+    image: "/0W-20.png",
   },
   {
     slug: "protect-10w-30",
@@ -245,7 +135,7 @@ export const products: Product[] = [
       "Sulphated Ash, Wt.%": "0.1",
       "Phosphorus": "0.08",
     },
-    image: "https://axionlubricants.com/Images/SinglePageProduct/ax-23-20w-50-1L.webp",
+    image: "/10W-30.png",
   },
   {
     slug: "protect-20w-50",
@@ -272,7 +162,7 @@ export const products: Product[] = [
       "Sulphated Ash, Wt.%": "0.1",
       "Phosphorus": "0.08",
     },
-    image: "https://axionlubricants.com/Images/SinglePageProduct/ax-23-20w-50-1L.webp",
+    image: "/20W-50.png",
   },
   {
     slug: "protect-cvt",
@@ -295,7 +185,7 @@ export const products: Product[] = [
       "Flash Point (COC), °C": "200",
       "Pour Point, °C": "-51",
     },
-    image: "https://axionlubricants.com/Images/SinglePageProduct/ax-23-20w-50-1L.webp",
+    image: "/Flow-Dex-3.png",
   },
   {
     slug: "protect-atf-dex-iii",
@@ -317,7 +207,7 @@ export const products: Product[] = [
       "Viscosity Index": "188",
       "Flash Point (COC), °C": "216",
     },
-    image: "https://axionlubricants.com/Images/SinglePageProduct/ax-23-20w-50-1L.webp",
+    image: "/Flow-Dex-3.png",
   },
   {
     slug: "protect-4t-sj-20w-50",
@@ -345,7 +235,7 @@ export const products: Product[] = [
       "Pour Point, °C": "-9",
       "Total Base Number, mgKOH/g": "8",
     },
-    image: "https://axionlubricants.com/Images/SinglePageProduct/ax-23-20w-50-1L.webp",
+    image: "/20W-50.png",
   },
 
   // ---------------------------------------------------------------------
@@ -380,6 +270,6 @@ export const products: Product[] = [
       { test: "Viscosity Index", method: "ASTM D 2270", unit: "—", value: "127" },
       { test: "Total Base Number (TBN)", method: "ASTM D 2896", unit: "mg KOH/g", value: "6.0" },
     ],
-    image: "https://axionlubricants.com/Images/SinglePageProduct/ax-23-20w-50-1L.webp",
+    image: "/20W-50.png",
   },
 ];

@@ -2,7 +2,7 @@
 
 import { motion, Transition } from "framer-motion";
 
-export default function AixonValuesSection() {
+export default function PrimeValuesSection() {
   // Defining transition strictly as a Framer Motion Transition type to solve the Easing type error
   const transitionConfig: Transition = { 
     duration: 0.6, 
@@ -51,10 +51,10 @@ export default function AixonValuesSection() {
               <h3 className="text-2xl font-bold mb-6 text-black">Vision</h3>
               
               <p className="text-[16px] sm:text-[17px] leading-relaxed text-[#444] font-normal">
-                Aixon Group strives to be a leading global enterprise, delivering
-                innovative and sustainable solutions across industries. By focusing on
-                quality, reliability, and progress, we aim to drive excellence, improve
-                lives, and build a better, more sustainable future.
+                Prime Group strives to be a premier global enterprise, delivering 
+                high-performance, sustainable solutions across industries. By focusing on 
+                uncompromising quality, absolute reliability, and strategic progress, we aim to 
+                drive excellence and set new standards for a progressive future.
               </p>
             </div>
           </motion.div>
@@ -69,10 +69,10 @@ export default function AixonValuesSection() {
           >
             <div className="relative z-10">
               <p className="text-[16px] sm:text-[17px] leading-relaxed text-[#444]">
-                Our <span className="font-bold text-black">mission</span> is to provide superior products
-                and services that meet the evolving needs of our customers across the automotive and
-                industrial sectors. We are committed to innovation, customer satisfaction, and
-                sustainable growth while maintaining the highest standards of integrity and quality.
+                Our <span className="font-bold text-black">mission</span> is to provide premier products 
+                and world-class services that perfectly match the evolving demands of our clients across 
+                the automotive and industrial sectors. We are fiercely committed to innovation, exceptional 
+                satisfaction, and sustainable growth.
               </p>
             </div>
 
@@ -107,11 +107,11 @@ export default function AixonValuesSection() {
 
             <div className="absolute inset-0 p-8 sm:p-10 flex flex-col justify-start z-10">
               <h3 className="text-white font-bold leading-[1.15] text-[32px] sm:text-[38px] tracking-tight max-w-[280px] sm:max-w-[340px]">
-                Power in Motion.
+                Prime Performance.
                 <br />
                 Confidence in
                 <br />
-                Every Drop.
+                Every Choice.
               </h3>
             </div>
           </motion.div>

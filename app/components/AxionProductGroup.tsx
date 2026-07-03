@@ -1,13 +1,13 @@
 import React from 'react';
 
-export const AxionProductSection: React.FC = () => {
+export const PrimeProductSection: React.FC = () => {
   return (
     <section className="w-full bg-white text-[#4A4A4A] font-sans py-12 px-4 sm:px-8 md:px-16">
       <div className="w-full mx-auto max-w-[1440px]">
         
         {/* Top Header Label */}
         <div className="text-[12px] sm:text-xs md:text-[14px] font-bold tracking-wide text-[#5A5A5A] uppercase mb-4">
-          AXION Lubricants - Our Product
+          PRIME Solutions - Our Product
         </div>
 
         {/* Top Divider Line */}
@@ -26,14 +26,14 @@ export const AxionProductSection: React.FC = () => {
 
           {/* Column 2: First Paragraph block */}
           <div className="md:col-span-4 text-[16px] md:text-[19px] leading-relaxed text-[#4A4A4A] font-normal">
-            AXION delivers high-performance engine oils, lubricants, coolants, and 
-            greases designed for modern vehicles and heavy-duty machinery.
+            PRIME delivers high-performance industrial formulations, advanced lubricants, 
+            and premium fluids precision-engineered for modern machinery and fleets.
           </div>
 
           {/* Column 3: Second Paragraph block */}
           <div className="md:col-span-5 text-[16px] md:text-[19px] leading-relaxed text-[#4A4A4A] font-normal">
-            Built on innovation and reliability, our products ensure smooth operation, 
-            maximum protection, and long-lasting performance.
+            Built on unmatched engineering and supreme quality standards, our products 
+            ensure seamless operation, maximum endurance, and optimal performance.
           </div>
           
         </div>
@@ -46,4 +46,4 @@ export const AxionProductSection: React.FC = () => {
   );
 };
 
-export default AxionProductSection;
+export default PrimeProductSection;
