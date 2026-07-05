@@ -25,19 +25,19 @@ export const Footer: React.FC = () => {
             {/* Navigation Links - Golden hover states matching the star in logo.jpeg */}
             <nav className="flex items-center gap-6 sm:gap-8 text-sm sm:text-base font-medium text-gray-200">
               <a 
-                href="#about" 
+                href="/about-us" 
                 className="hover:text-[#E5C158] transition-colors duration-200 focus:outline-none focus:underline"
               >
                 About Us
               </a>
               <a 
-                href="#products" 
+                href="/products" 
                 className="hover:text-[#E5C158] transition-colors duration-200 focus:outline-none focus:underline"
               >
                 Products
               </a>
               <a 
-                href="#contact" 
+                href="/contact-us" 
                 className="hover:text-[#E5C158] transition-colors duration-200 focus:outline-none focus:underline"
               >
                 Contact Us
