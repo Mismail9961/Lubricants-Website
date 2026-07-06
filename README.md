@@ -1,36 +1,67 @@
-This is a Logistic Website project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Logistic Website
+
+A modern logistics and transport website built with Next.js, React, TypeScript, and Tailwind CSS. The project showcases company services, product offerings, about-us information, contact details, and featured news/events sections.
+
+## Features
+
+- Responsive landing page for a logistics brand
+- Dedicated pages for products, about us, and contact us
+- Animated UI sections using Framer Motion
+- Product detail views with dynamic routing
+- Clean component-based structure with reusable sections
+
+## Tech Stack
+
+- Next.js 16
+- React 19
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- Lucide React
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+- Node.js 18 or newer
+- npm
+
+### Installation
+
+```bash
+npm install
+```
+
+### Run locally
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Then open http://localhost:3000 in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Available Scripts
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run dev     # start the development server
+npm run build   # create a production build
+npm run start   # start the production server
+npm run lint    # run ESLint checks
+```
 
-## Learn More
+## Project Structure
 
-To learn more about Next.js, take a look at the following resources:
+```text
+app/                  # App router pages and layouts
+app/components/       # Reusable UI sections and layout components
+app/data/             # Static data for products and content
+public/               # Static assets
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Deployment
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+This project is ready to be deployed on Vercel or any Node.js hosting platform. For Vercel, the standard Next.js deployment flow applies.
 
-## Deploy on Vercel
+## License
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project is for internal or client use unless otherwise specified.
