@@ -45,28 +45,23 @@ export const Footer: React.FC = () => {
             </nav>
           </div>
 
-          {/* Right Elements: Carmetra Parent Product Identity */}
-          <div className="flex flex-col items-center md:items-end select-none">
-            {/* Graphic Representation of Carmetra Logo */}
-            <div className="flex flex-col items-center">
-              {/* Swoosh Wave Line - Gold Accent */}
-              <div className="relative w-36 h-3 overflow-visible">
-                <svg viewBox="0 0 144 12" fill="none" className="w-full h-full">
-                  <path d="M2 10C40 1 100 13 142 2" stroke="#D4AF37" strokeWidth="2" strokeLinecap="round" />
-                  <path d="M12 9C50 -1 110 11 142 1" stroke="white" strokeWidth="1.5" strokeLinecap="round" />
-                </svg>
-              </div>
-              
-              {/* Carmetra Wordmark */}
-              <span className="text-xl sm:text-2xl font-black tracking-wider text-white uppercase mt-0.5">
-                CARMETRA
-              </span>
-              
-              {/* Sub-label text */}
-              <span className="text-[10px] uppercase tracking-wide text-gray-300 mt-0.5">
-                A Product of Carmetra
-              </span>
+          {/* Right Elements: Product Logo Identity */}
+          {/* Note: Changed to items-center and text-center to keep the text perfectly aligned with the image center */}
+          <div className="flex flex-col items-center text-center select-none">
+            {/* Product Image Logo */}
+            <div className="relative w-54 h-19">
+              <Image
+                src="/productimg.png"
+                alt="Product Logo"
+                fill
+                className="object-contain"
+              />
             </div>
+            
+            {/* Sub-label text */}
+            <span className="text-[10px] sm:text-xs uppercase tracking-widest text-gray-300 mt-1.5 font-medium">
+              A Product of Protect
+            </span>
           </div>
 
         </div>
