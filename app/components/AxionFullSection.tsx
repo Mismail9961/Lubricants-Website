@@ -40,7 +40,7 @@ export const PrimeFullSection: React.FC = () => {
         className="text-center max-w-2xl z-10 mb-6"
       >
         <h2 className="text-xl min-[360px]:text-2xl sm:text-4xl font-extrabold text-[#0B4A2D] tracking-tight leading-tight">
-          PRIME is Built for <span className="text-[#D4AF37]">Performance</span>
+          PROTECT is Built for <span className="text-[#D4AF37]">Performance</span>
         </h2>
         <p className="text-[11px] sm:text-base font-semibold text-black mt-1.5 tracking-wide px-1">
           trusted on every road, in every condition, by every vehicle.

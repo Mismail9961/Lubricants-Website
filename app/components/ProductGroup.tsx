@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
 import { motion, Variants } from 'framer-motion';
-import { ArrowUpRight, ShieldCheck, Zap, Layers } from 'lucide-react';
+import { ArrowUpRight, ShieldCheck, ShieldAlert, Layers } from 'lucide-react';
 
 export const ProductGroup: React.FC = () => {
   // Smooth sequential cascading entries
@@ -24,25 +24,25 @@ export const ProductGroup: React.FC = () => {
 
   const productCategories = [
     {
-      title: "Engine Oils",
-      desc: "Low-drag molecular structures providing unmatched thermal protection.",
-      icon: <Zap className="w-5 h-5 text-[#D4AF37]" />,
-      image: "https://i0.wp.com/gandharoil.com/wp-content/uploads/2021/11/Unknown-2-10.png?resize=800%2C600&ssl=1?q=80&w=600",
-      tag: "PX-1 Core"
-    },
-    {
-      title: "Industrial Greases",
-      desc: "Formulated with anti-wear technology to withstand high stress parameters.",
-      icon: <ShieldCheck className="w-5 h-5 text-[#D4AF37]" />,
-      image: "https://www.telko.com/hubfs/Pictures/Industry-Lubricants/industry-industrial-greases.jpeg?q=80&w=600",
-      tag: "Heavy Duty"
-    },
-    {
-      title: "Advanced Fluids",
-      desc: "Coolants and specialized lubricants designed for long-lasting peak performance.",
+      title: "Barrier Coatings",
+      desc: "Advanced molecular skin formulas providing total surface isolation and oxide resistance.",
       icon: <Layers className="w-5 h-5 text-[#D4AF37]" />,
+      image: "https://www.telko.com/hubfs/Pictures/Industry-Lubricants/industry-industrial-greases.jpeg?q=80&w=600",
+      tag: "PT-X Shield"
+    },
+    {
+      title: "Extreme Environment Seals",
+      desc: "High-stress compound treatments engineered to defend hardware under extreme load parameters.",
+      icon: <ShieldCheck className="w-5 h-5 text-[#D4AF37]" />,
+      image: "https://i0.wp.com/gandharoil.com/wp-content/uploads/2021/11/Unknown-2-10.png?resize=800%2C600&ssl=1?q=80&w=600",
+      tag: "Armor Grade"
+    },
+    {
+      title: "Corrosion Inhibitors",
+      desc: "Specialized defensive layers designed for permanent moisture displacement and peak asset preservation.",
+      icon: <ShieldAlert className="w-5 h-5 text-[#D4AF37]" />,
       image: "https://newsroom.aaa.com/wp-content/uploads/2014/10/Advanced-fluids-simplify-car-care-reinforce-the-importance-of-safety-checks.jpg?q=80&w=600",
-      tag: "Synthesis"
+      tag: "Absolute Defense"
     }
   ];
 
@@ -56,16 +56,16 @@ export const ProductGroup: React.FC = () => {
           <div className="md:col-span-5">
             <div className="flex items-center gap-2 mb-2 tracking-[0.2em] text-[10px] uppercase font-bold text-[#0A4D34]">
               <span className="w-1.5 h-1.5 rounded-full bg-[#D4AF37]" />
-              Elite Formulations
+              Industrial Defense
             </div>
             <h2 className="text-[28px] xs:text-[34px] sm:text-[42px] xl:text-[48px] font-black tracking-tight text-[#111] leading-[1.05]">
-              Product Lineup
+              Protection Lineup
             </h2>
           </div>
 
           <div className="md:col-span-7">
             <p className="text-[13px] sm:text-[15px] xl:text-[17px] text-gray-600 font-light leading-relaxed max-w-[64ch]">
-              PRIME engineers high-performance engine lubricants, coolants, and core greases matching strict industrial standards to protect hardware under absolute load.
+              PRIME engineers high-performance protective coatings, hardware shields, and corrosion inhibitors matching strict industrial defense standards to guarantee asset survival under heavy operational stress.
             </p>
           </div>
         </div>
@@ -148,7 +148,7 @@ export const ProductGroup: React.FC = () => {
               Need custom technical specifications?
             </h4>
             <p className="text-gray-300 text-xs sm:text-sm font-light max-w-[54ch]">
-              Access full viscosity parameter documentation blueprints and chemical compatibility analyses.
+              Access full material safety datasheets, barrier integrity parameters, and chemical compatibility blueprints.
             </p>
           </div>
 

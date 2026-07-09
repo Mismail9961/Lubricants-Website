@@ -38,7 +38,7 @@ const PrimeBannerSection: React.FC = () => {
           className="flex flex-col"
         >
           <span className="text-xs font-black tracking-wider uppercase text-gray-500 sm:text-sm">
-            PRIME <span className="font-normal text-gray-400">Fluids</span>
+            PRIME <span className="font-normal text-gray-400">Protect</span>
           </span>
           <hr className="mt-3 border-t border-gray-200" />
         </motion.div>
@@ -57,8 +57,8 @@ const PrimeBannerSection: React.FC = () => {
           {/* Main Typography Header */}
           <motion.div variants={fadeInUpVariants} className="lg:col-span-6">
             <h1 className="text-[34px] font-bold leading-[1.1] tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
-              Power Meets
-              <span className="block text-gray-500 font-medium mt-1">Precision</span>
+              Defense Meets
+              <span className="block text-gray-500 font-medium mt-1">Durability</span>
             </h1>
           </motion.div>
 
@@ -68,11 +68,12 @@ const PrimeBannerSection: React.FC = () => {
             className="flex flex-col justify-center space-y-4 lg:col-span-6 lg:pl-4"
           >
             <p className="text-sm font-bold leading-relaxed sm:text-base md:text-lg">
-              At PRIME, we fluidize more than machinery — we engineer momentum, 
-              optimizing today and shaping the synthetic energy of tomorrow...
+              At PRIME, we do more than shield machinery — we engineer resilience. 
+              Our advanced Protect formulas establish an impenetrable barrier, mitigating 
+              wear today and safeguarding your high-value assets for tomorrow...
             </p>
             <p className="text-xs text-gray-600 leading-relaxed sm:text-sm md:text-base">
-              so every component moves seamlessly. Always.
+              so your operations remain uncompromised. Under any condition.
             </p>
           </motion.div>
 
@@ -97,7 +98,7 @@ const PrimeBannerSection: React.FC = () => {
               viewport={{ once: true }}
               transition={{ duration: 1.2, ease: "easeOut" }}
               src="/banner.png" 
-              alt="PRIME Core Power Banner"
+              alt="PRIME Protect Advanced Shielding Banner"
               className="h-full w-full object-cover object-center mix-blend-screen transition-transform duration-700 ease-out group-hover:scale-105"
             />
             {/* Dark overlay gradient to guarantee readable text on tiny screens */}
@@ -116,8 +117,8 @@ const PrimeBannerSection: React.FC = () => {
                 variants={fadeInUpVariants}
                 className="text-xl font-bold tracking-tight text-white min-[320px]:text-2xl sm:text-3xl md:text-4xl"
               >
-                Velocity Perfected.
-                <span className="block mt-1">Confidence in Every Cycle.</span>
+                Ultimate Shielding.
+                <span className="block mt-1">Confidence in Extreme Environments.</span>
               </motion.h2>
               
               <motion.div variants={fadeInUpVariants}>
@@ -125,7 +126,7 @@ const PrimeBannerSection: React.FC = () => {
                   href="#learn-more"
                   className="inline-block mt-5 text-[11px] font-semibold uppercase tracking-widest text-gray-300 hover:text-white transition-colors duration-200 border-b border-transparent hover:border-white pb-0.5"
                 >
-                  Discover the Engineering.
+                  Explore Total Protection.
                 </a>
               </motion.div>
             </motion.div>

@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { Menu, X, ArrowRight, Globe } from 'lucide-react';
 
@@ -9,17 +9,29 @@ export const Header: React.FC = () => {
 
   const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
 
+  // Hook layout lock rule to prevent the master document frame from scrolling while overlay is up
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMobileMenuOpen]);
+
   return (
-    <header className="absolute top-0 left-0 w-full z-50 bg-[#0A4D34]/30 backdrop-blur-md border-b border-white/5 font-sans selection:bg-[#0A4D34] selection:text-[#E5C158]">
+    <header className="fixed top-0 left-0 w-full z-50 bg-[#0A4D34]/30 backdrop-blur-md border-b border-white/5 font-sans selection:bg-[#0A4D34] selection:text-[#E5C158]">
       {/* Responsive padding: tighter on tiny screens like iPhone 5s (px-3) to prevent overlapping */}
       <div className="max-w-7xl mx-auto px-3 sm:px-6 md:px-8 h-24 flex items-center justify-between relative">
         
         {/* LEFT NAV LINKS (Desktop) */}
         <nav className="hidden md:flex items-center gap-8 text-white font-medium text-sm lg:text-base">
-          <a href="/about-us" className="hover:text-[#E5C158] transition-colors duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 hover:after:w-full after:bg-[#E5C158] after:transition-all after:duration-300">
+          <a href="/about-us" className="hover:text-[#E5C158] transition-colors duration-200 relative after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-[#E5C158] after:transition-all after:duration-300">
             About Us
           </a>
-          <a href="/products" className="hover:text-[#E5C158] transition-colors duration-200 relative after:absolute after:bottom-[-4px] after:left-0 after:h-[2px] after:w-0 hover:after:w-full after:bg-[#E5C158] after:transition-all after:duration-300">
+          <a href="/products" className="hover:text-[#E5C158] transition-colors duration-200 relative after:absolute after:-bottom-1 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-[#E5C158] after:transition-all after:duration-300">
             Products
           </a>
         </nav>
@@ -75,7 +87,7 @@ export const Header: React.FC = () => {
           {/* PREMIUM HAMBURGER TOGGLE */}
           <button
             onClick={toggleMobileMenu}
-            className="md:hidden text-white hover:text-[#E5C158] active:scale-95 focus:outline-none p-2 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm transition-all"
+            className="md:hidden text-white hover:text-[#E5C158] active:scale-95 focus:outline-none p-2 rounded-xl bg-white/5 border border-white/10 backdrop-blur-sm transition-all z-50 relative"
             aria-label="Toggle Navigation Menu"
           >
             {isMobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
@@ -85,25 +97,22 @@ export const Header: React.FC = () => {
 
       {/* PREMIUM FULL-SCREEN MOBILE DRAWER */}
       <div 
-        className={`fixed inset-0 bg-[#0A4D34]/98 backdrop-blur-xl z-50 md:hidden flex flex-col justify-between transition-all duration-500 ease-in-out ${
+        className={`fixed inset-0 bg-[#0A4D34]/98 backdrop-blur-xl z-40 md:hidden flex flex-col justify-between transition-all duration-500 ease-in-out ${
           isMobileMenuOpen ? 'opacity-100 pointer-events-auto translate-x-0' : 'opacity-0 pointer-events-none translate-x-full'
         }`}
+        style={{ height: '100dvh' }} // FIXED: Removed duplicate height property that broke the TypeScript compiler
       >
         {/* Mobile Menu Header */}
-        <div className="h-24 px-3 flex items-center justify-between border-b border-white/5">
+        <div className="h-24 px-4 flex items-center justify-between border-b border-white/5">
           <div className="relative h-12 w-32">
             <Image src="/logo.png" alt="Logo" fill className="object-contain object-left" />
           </div>
-          <button
-            onClick={() => setIsMobileMenuOpen(false)}
-            className="text-white p-2 rounded-xl bg-white/5 border border-white/10"
-          >
-            <X size={22} />
-          </button>
+          {/* Spacer block container layout aligns the structural exit trigger close to the hamburger footprint layout */}
+          <div className="w-10 h-10" /> 
         </div>
 
         {/* Navigation Links with Premium Indicators */}
-        <nav className="flex flex-col gap-2 px-6 py-4 overflow-y-auto hierarchy-links">
+        <nav className="flex flex-col gap-2 px-6 py-4 overflow-y-auto hierarchy-links flex-1">
           {[
             { label: 'About Us', href: '/about-us' },
             { label: 'Products', href: '/products' },
@@ -116,7 +125,7 @@ export const Header: React.FC = () => {
               className="flex items-center justify-between py-4 text-lg font-semibold text-white border-b border-white/5 active:text-[#E5C158] transition-colors group"
             >
               <span>{link.label}</span>
-              <ArrowRight size={18} className="text-[#E5C158] opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all duration-300" />
+              <ArrowRight size={18} className="text-[#E5C158] opacity-100 sm:opacity-0 group-hover:opacity-100 translate-x-0 sm:-translate-x-2 sm:group-hover:translate-x-0 transition-all duration-300" />
             </a>
           ))}
         </nav>
