@@ -6,7 +6,6 @@ export default function PrimeSection() {
   return (
     <section className="w-full bg-[#f3f3f3] py-4 md:py-8">
       <div className="mx-auto max-w-[1500px] px-3 md:px-6">
-
         {/* Desktop Layout Grid */}
         <div
           className="
@@ -44,11 +43,11 @@ export default function PrimeSection() {
             <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/30 to-transparent">
               <div className="absolute bottom-4 left-4 md:bottom-8 md:left-8">
                 <h1 className="max-w-[180px] sm:max-w-[320px] text-white font-bold leading-[0.95] text-[28px] sm:text-[42px] lg:text-[58px]">
-                  Protect What
+                  Built to
                   <br />
-                  Matters with
+                  Protect Every
                   <br />
-                  PRIME
+                  Mile
                 </h1>
               </div>
             </div>
@@ -99,8 +98,8 @@ export default function PrimeSection() {
                 Our Protect formula
               </span>{" "}
               is engineered to meet the strictest protection standards,
-              delivering a protective barrier that keeps components and
-              heavy machinery safe across every environment.
+              delivering a protective barrier that keeps components and heavy
+              machinery safe across every environment.
             </p>
           </motion.div>
 
