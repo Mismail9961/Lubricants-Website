@@ -51,10 +51,10 @@ export default function PrimeValuesSection() {
               <h3 className="text-2xl font-bold mb-6 text-black">Vision</h3>
               
               <p className="text-[16px] sm:text-[17px] leading-relaxed text-[#444] font-normal">
-                Prime Group strives to be a premier global enterprise, delivering 
-                high-performance, sustainable solutions across industries. By focusing on 
-                uncompromising quality, absolute reliability, and strategic progress, we aim to 
-                drive excellence and set new standards for a progressive future.
+                PRIME Group strives to be the global leader in protection, delivering
+                high-performance solutions that protect assets across every industry. By
+                focusing on uncompromising quality and dependable protection, we aim to
+                set new standards for a safer, more protected future.
               </p>
             </div>
           </motion.div>
@@ -69,10 +69,10 @@ export default function PrimeValuesSection() {
           >
             <div className="relative z-10">
               <p className="text-[16px] sm:text-[17px] leading-relaxed text-[#444]">
-                Our <span className="font-bold text-black">mission</span> is to provide premier products 
-                and world-class services that perfectly match the evolving demands of our clients across 
-                the automotive and industrial sectors. We are fiercely committed to innovation, exceptional 
-                satisfaction, and sustainable growth.
+                Our <span className="font-bold text-black">mission</span> is to protect what
+                matters most, providing premier protective products and world-class service that
+                match the evolving demands of our clients across the automotive and industrial
+                sectors. We are fiercely committed to protection, innovation, and sustainable growth.
               </p>
             </div>
 
@@ -99,7 +99,7 @@ export default function PrimeValuesSection() {
           >
             <img
               src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1400" 
-              alt="Power in Motion"
+              alt="Protection in Motion"
               className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
             />
             
@@ -107,7 +107,7 @@ export default function PrimeValuesSection() {
 
             <div className="absolute inset-0 p-8 sm:p-10 flex flex-col justify-start z-10">
               <h3 className="text-white font-bold leading-[1.15] text-[32px] sm:text-[38px] tracking-tight max-w-[280px] sm:max-w-[340px]">
-                Prime Performance.
+                Prime Protection.
                 <br />
                 Confidence in
                 <br />

@@ -56,7 +56,7 @@ export default function ProductDetailClient({ product }: { product: Product }) {
           {/* Breadcrumb */}
           <div className="border-b border-gray-200 py-3 sm:py-4">
             <span className="text-[11px] xs:text-xs sm:text-sm font-semibold text-gray-500 break-words">
-              AXION Lubricants - Our Product - {product.name}
+              PROTECT Lubricants - Our Product - {product.name}
             </span>
           </div>
 
@@ -66,7 +66,7 @@ export default function ProductDetailClient({ product }: { product: Product }) {
               {gradeHeadline}
             </h1>
             <button className="self-start xs:self-auto border border-red-200 text-gray-900 bg-white rounded-full px-3 sm:px-5 py-1.5 sm:py-2.5 text-[11px] xs:text-xs sm:text-sm font-semibold whitespace-nowrap hover:border-red-300 transition-colors">
-              Download AXION Profile
+              Download PROTECT Profile
             </button>
           </div>
 

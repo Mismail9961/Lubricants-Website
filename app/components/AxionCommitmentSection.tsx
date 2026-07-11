@@ -30,7 +30,7 @@ export default function PrimeCommitment() {
                         <div className="w-full h-auto overflow-hidden rounded-bl-[16px] rounded-br-[16px] rounded-tl-[16px] rounded-tr-[40px] sm:rounded-tr-[64px] shadow-lg md:shadow-xl">
                             <img
                                 src="https://media.istockphoto.com/id/1347150429/photo/professional-mechanic-working-on-the-engine-of-the-car-in-the-garage.jpg?s=612x612&w=0&k=20&c=5zlDGgLNNaWsp_jq_L1AsGT85wrzpdl3kVH-75S-zTU="
-                                alt="PRIME Modern Storefront Showroom"
+                                alt="PRIME Protect Modern Storefront Showroom"
                                 className="w-full h-auto object-cover max-h-[300px] xs:max-h-[360px] sm:max-h-[480px] md:max-h-[520px]"
                             />
                         </div>
@@ -40,13 +40,13 @@ export default function PrimeCommitment() {
                     <div className="col-span-1 md:col-span-6 lg:col-span-6 flex flex-col gap-6 md:gap-8 opacity-0 animate-slide-right-variant [animation-delay:0.2s]">
                         <div className="flex flex-col gap-4">
                             <p className="text-[15px] xs:text-[16px] sm:text-[18px] lg:text-[20px] xl:text-[22px] leading-relaxed text-gray-800 font-normal tracking-wide">
-                                PRIME isn’t just a product; it’s a commitment to endurance. Every formulation is crafted with meticulous attention to detail, tested under extreme conditions, and fine-tuned to protect systems in the world’s toughest environments. Whether you are optimizing city logistics or off-road infrastructure, PRIME is built to keep your equipment cleaner, cooler, and stronger—for longer.
+                                PRIME Protect isn't just a product; it's a commitment to protection. Every formulation is engineered to protect, tested under extreme conditions, and fine-tuned to protect systems in the world's toughest environments. Whether you are optimizing city logistics or off-road infrastructure, Protect is built to keep your equipment cleaner, cooler, and better protected—for longer.
                             </p>
                         </div>
 
                         <div className="flex flex-col gap-4">
                             <p className="text-[15px] xs:text-[16px] sm:text-[18px] lg:text-[20px] xl:text-[22px] leading-relaxed text-gray-800 font-normal tracking-wide">
-                                Driven by engineering excellence and guided by the principles of persistence, local innovation, and purposeful progress, PRIME continues the mission of enabling absolute efficiency, durability, and confidence across every industrial pathway.
+                                Driven by engineering excellence and guided by the principles of protection, local innovation, and purposeful progress, PRIME continues its mission to protect—delivering absolute efficiency, durability, and protected confidence across every industrial pathway.
                             </p>
                         </div>
                     </div>

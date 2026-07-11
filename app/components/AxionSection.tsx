@@ -37,16 +37,16 @@ export default function PrimeSection() {
           >
             <img
               src="https://media.istockphoto.com/id/1126926765/photo/engine-start-and-stop-button.jpg?s=612x612&w=0&k=20&c=3cQ7-nXlz-K0P6EMYJ3BShsM6T05QBXOsH0W4gMZtf0="
-              alt="PRIME Industrial Defense Activation"
+              alt="PRIME Protect Activation"
               className="h-full w-full object-cover"
             />
 
             <div className="absolute inset-0 bg-gradient-to-r from-black/75 via-black/30 to-transparent">
               <div className="absolute bottom-4 left-4 md:bottom-8 md:left-8">
                 <h1 className="max-w-[180px] sm:max-w-[320px] text-white font-bold leading-[0.95] text-[28px] sm:text-[42px] lg:text-[58px]">
-                  Secure Your
+                  Protect What
                   <br />
-                  Assets with
+                  Matters with
                   <br />
                   PRIME
                 </h1>
@@ -71,7 +71,7 @@ export default function PrimeSection() {
           >
             <img
               src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?q=80&w=1200"
-              alt="Heavy Equipment Maintenance"
+              alt="Protect Heavy Equipment"
               className="h-full w-full object-cover"
             />
           </motion.div>
@@ -90,17 +90,17 @@ export default function PrimeSection() {
             <div className="mb-8 md:mb-12 h-[60px] w-[60px] md:h-[95px] md:w-[95px] rounded-full bg-[#0A4D34]" />
 
             <p className="mb-6 text-[14px] md:text-[18px] leading-relaxed text-[#444]">
-              Choosing PRIME means choosing unyielding structural integrity, 
-              longevity, and advanced physical defense.
+              Choosing PRIME means choosing a product built to protect —
+              structural integrity, longevity, and lasting physical protection.
             </p>
 
             <p className="text-[14px] md:text-[18px] leading-relaxed text-[#444]">
               <span className="font-semibold text-black">
-                Our treatments
+                Our Protect formula
               </span>{" "}
-              are engineered to meet the strictest defensive metrics,
-              ensuring an impenetrable barrier and absolute safety for
-              components and heavy machinery across environments.
+              is engineered to meet the strictest protection standards,
+              delivering a protective barrier that keeps components and
+              heavy machinery safe across every environment.
             </p>
           </motion.div>
 
@@ -119,14 +119,14 @@ export default function PrimeSection() {
             "
           >
             <p className="max-w-[470px] text-[14px] md:text-[18px] leading-relaxed text-[#444] relative z-10">
-              With a commitment to zero-failure tolerances and a forward-thinking
-              approach to shielding, PRIME keeps your assets uncompromised — today 
-              and into the future.
+              With a commitment to zero-failure protection and a
+              forward-thinking approach to safeguarding, PRIME Protect keeps
+              your assets protected — today and into the future.
             </p>
 
             <img
               src="https://axionlubricants.com/Images/JounreyDiv4.webp"
-              alt="Barrier Treatment Silhouette"
+              alt="Protect Barrier Treatment Silhouette"
               className="
                 absolute
                 right-[-10px]
@@ -158,14 +158,14 @@ export default function PrimeSection() {
           >
             <img
               src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1400"
-              alt="High-Stress Machinery Protection"
+              alt="Protect Machinery Under Stress"
               className="h-full w-full object-cover"
             />
 
             <div className="absolute inset-0 bg-black/35">
               <div className="absolute top-5 left-5 md:top-8 md:left-8">
                 <h2 className="text-white font-bold leading-[1.05] text-[28px] sm:text-[42px] lg:text-[58px]">
-                  Total Shielding.
+                  Total Protection.
                   <br />
                   Confidence in
                   <br />

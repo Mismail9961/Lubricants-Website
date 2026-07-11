@@ -45,25 +45,6 @@ export const Footer: React.FC = () => {
             </nav>
           </div>
 
-          {/* Right Elements: Product Logo Identity */}
-          {/* Note: Changed to items-center and text-center to keep the text perfectly aligned with the image center */}
-          <div className="flex flex-col items-center text-center select-none">
-            {/* Product Image Logo */}
-            <div className="relative w-54 h-19">
-              <Image
-                src="/productimg.png"
-                alt="Product Logo"
-                fill
-                className="object-contain"
-              />
-            </div>
-            
-            {/* Sub-label text */}
-            <span className="text-[10px] sm:text-xs uppercase tracking-widest text-gray-300 mt-1.5 font-medium">
-              A Product of Protect
-            </span>
-          </div>
-
         </div>
       </div>
 
