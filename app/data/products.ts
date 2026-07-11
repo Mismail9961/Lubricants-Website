@@ -55,7 +55,7 @@ export const products: Product[] = [
       "Sulphated Ash, Wt.%": "0.1",
       "Phosphorus": "0.08",
     },
-    image: "/10W-40.png",
+    image: "/P3.png",
   },
   {
     slug: "protect-10w-30",
@@ -82,7 +82,7 @@ export const products: Product[] = [
       "Sulphated Ash, Wt.%": "0.1",
       "Phosphorus": "0.08",
     },
-    image: "/10W-30.png",
+    image: "/P5.png",
   },
   {
     slug: "protect-0w-20",
@@ -109,7 +109,7 @@ export const products: Product[] = [
       "Sulphated Ash, Wt.%": "0.1",
       "Phosphorus": "0.08",
     },
-    image: "/0W-20.png",
+    image: "/P2.png",
   },
   {
     slug: "protect-10w-30",
@@ -135,7 +135,7 @@ export const products: Product[] = [
       "Sulphated Ash, Wt.%": "0.1",
       "Phosphorus": "0.08",
     },
-    image: "/10W-30.png",
+    image: "/P5.png",
   },
   {
     slug: "protect-20w-50",
@@ -162,7 +162,7 @@ export const products: Product[] = [
       "Sulphated Ash, Wt.%": "0.1",
       "Phosphorus": "0.08",
     },
-    image: "/20W-50.png",
+    image: "/P4.png",
   },
   {
     slug: "protect-cvt",
@@ -185,7 +185,7 @@ export const products: Product[] = [
       "Flash Point (COC), °C": "200",
       "Pour Point, °C": "-51",
     },
-    image: "/Flow-Dex-3.png",
+    image: "/P6.png",
   },
   {
     slug: "protect-atf-dex-iii",
@@ -207,7 +207,7 @@ export const products: Product[] = [
       "Viscosity Index": "188",
       "Flash Point (COC), °C": "216",
     },
-    image: "/Flow-Dex-3.png",
+    image: "/P6.png",
   },
   {
     slug: "protect-4t-sj-20w-50",
@@ -235,7 +235,7 @@ export const products: Product[] = [
       "Pour Point, °C": "-9",
       "Total Base Number, mgKOH/g": "8",
     },
-    image: "/20W-50.png",
+    image: "/P1.png",
   },
 
   // ---------------------------------------------------------------------
@@ -270,6 +270,6 @@ export const products: Product[] = [
       { test: "Viscosity Index", method: "ASTM D 2270", unit: "—", value: "127" },
       { test: "Total Base Number (TBN)", method: "ASTM D 2896", unit: "mg KOH/g", value: "6.0" },
     ],
-    image: "/20W-50.png",
+    image: "/P1.png",
   },
 ];
