@@ -107,7 +107,7 @@ export default function PrimeValuesSection() {
 
             <div className="absolute inset-0 p-8 sm:p-10 flex flex-col justify-start z-10">
               <h3 className="text-white font-bold leading-[1.15] text-[32px] sm:text-[38px] tracking-tight max-w-[280px] sm:max-w-[340px]">
-                Prime Protection.
+                Protect.
                 <br />
                 Confidence in
                 <br />

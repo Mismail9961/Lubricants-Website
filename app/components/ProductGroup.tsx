@@ -65,7 +65,7 @@ export const ProductGroup: React.FC = () => {
 
           <div className="md:col-span-7">
             <p className="text-[13px] sm:text-[15px] xl:text-[17px] text-gray-600 font-light leading-relaxed max-w-[64ch]">
-              PRIME engineers high-performance protective coatings, hardware shields, and corrosion inhibitors matching strict industrial defense standards to guarantee asset survival under heavy operational stress.
+              PROTECT engineers high-performance protective coatings, hardware shields, and corrosion inhibitors matching strict industrial defense standards to guarantee asset survival under heavy operational stress.
             </p>
           </div>
         </div>

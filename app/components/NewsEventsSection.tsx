@@ -51,10 +51,10 @@ export const NewsEventsSection: React.FC = () => {
                 16-7-25
               </time>
               <h3 className="text-black font-bold text-lg sm:text-xl xl:text-2xl mb-3 group-hover:text-[#0A4D34] transition-colors">
-                PRIME ShieldCare Hubs
+                PROTECT ShieldCare Hubs
               </h3>
               <p className="text-gray-600 text-sm sm:text-base xl:text-lg leading-relaxed">
-                Experience premium surface defense services at PRIME ShieldCare Hubs — where advanced application 
+                Experience premium surface defense services at PROTECT ShieldCare Hubs — where advanced application 
                 facilities, diagnostic integrity mapping, and high-performance molecular coatings protect hardware 
                 from environmental damage. Fast, durable, and engineered for heavy asset preservation.
               </p>
@@ -82,11 +82,11 @@ export const NewsEventsSection: React.FC = () => {
                 16-7-25
               </time>
               <h3 className="text-black font-bold text-lg sm:text-xl xl:text-2xl mb-3 group-hover:text-[#0A4D34] transition-colors">
-                PRIME ArmorShell Coatings
+                PROTECT ArmorShell Coatings
               </h3>
               <div className="space-y-4 text-gray-600 text-sm sm:text-base xl:text-lg leading-relaxed">
                 <p>
-                  PRIME proudly launches its ArmorShell industrial coating lineup, developed to meet 
+                  PROTECT proudly launches its ArmorShell industrial coating lineup, developed to meet 
                   the rigorous protection demands of heavy machinery and exposed infrastructure surfaces.
                 </p>
                 <p>

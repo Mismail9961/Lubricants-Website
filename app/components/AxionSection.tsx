@@ -90,7 +90,7 @@ export default function PrimeSection() {
             <div className="mb-8 md:mb-12 h-[60px] w-[60px] md:h-[95px] md:w-[95px] rounded-full bg-[#0A4D34]" />
 
             <p className="mb-6 text-[14px] md:text-[18px] leading-relaxed text-[#444]">
-              Choosing PRIME means choosing a product built to protect —
+              Choosing PROTECT means choosing a product built to protect —
               structural integrity, longevity, and lasting physical protection.
             </p>
 

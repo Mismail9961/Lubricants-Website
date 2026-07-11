@@ -93,7 +93,7 @@ export const PrimeFullSection: React.FC = () => {
           onClick={() => alert('Downloading Profile...')}
           className="w-full py-3 px-4 rounded-full border-2 border-black bg-black text-[#D4AF37] font-bold text-xs sm:text-sm tracking-wider uppercase transition-all duration-200 hover:bg-[#0B4A2D] hover:border-[#0B4A2D] active:scale-95 shadow-md"
         >
-          Download PRIME Profile
+          Download PROTECT Profile
         </button>
       </motion.div>
 

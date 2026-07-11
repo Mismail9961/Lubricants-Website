@@ -38,7 +38,7 @@ const PrimeBannerSection: React.FC = () => {
           className="flex flex-col"
         >
           <span className="text-xs font-black tracking-wider uppercase text-gray-500 sm:text-sm">
-            PRIME <span className="font-normal text-gray-400">Protect</span>
+            PROTECT
           </span>
           <hr className="mt-3 border-t border-gray-200" />
         </motion.div>
@@ -68,7 +68,7 @@ const PrimeBannerSection: React.FC = () => {
             className="flex flex-col justify-center space-y-4 lg:col-span-6 lg:pl-4"
           >
             <p className="text-sm font-bold leading-relaxed sm:text-base md:text-lg">
-              At PRIME, we do more than protect machinery — we engineer resilience.
+              At PROTECT, we do more than protect machinery — we engineer resilience.
               Our advanced Protect formulas establish a protective barrier that keeps
               you protected today and safeguards your high-value assets for tomorrow...
             </p>
@@ -126,7 +126,7 @@ const PrimeBannerSection: React.FC = () => {
                   href="#learn-more"
                   className="inline-block mt-5 text-[11px] font-semibold uppercase tracking-widest text-gray-300 hover:text-white transition-colors duration-200 border-b border-transparent hover:border-white pb-0.5"
                 >
-                  Explore PRIME Protect.
+                  Explore Protect.
                 </a>
               </motion.div>
             </motion.div>
