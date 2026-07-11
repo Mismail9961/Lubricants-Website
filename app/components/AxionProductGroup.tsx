@@ -7,7 +7,7 @@ export const PrimeProductSection: React.FC = () => {
         
         {/* Top Header Label */}
         <div className="text-[12px] sm:text-xs md:text-[14px] font-bold tracking-wide text-[#5A5A5A] uppercase mb-4">
-          PRIME Solutions - Our Product
+          PROTECT Solutions - Our Product
         </div>
 
         {/* Top Divider Line */}
@@ -26,7 +26,7 @@ export const PrimeProductSection: React.FC = () => {
 
           {/* Column 2: First Paragraph block */}
           <div className="md:col-span-4 text-[16px] md:text-[19px] leading-relaxed text-[#4A4A4A] font-normal">
-            PRIME delivers high-performance industrial formulations, advanced lubricants, 
+            PROTECT delivers high-performance industrial formulations, advanced lubricants, 
             and premium fluids precision-engineered for modern machinery and fleets.
           </div>
 
