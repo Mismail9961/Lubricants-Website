@@ -3,7 +3,7 @@ import React, { useEffect, useState, useRef, CSSProperties } from "react";
 
 const ASSETS = {
   background: "https://axionlubricants.com/assets/LandingHerBg-vVSY4-_O.webp",
-  product: "/mainheadeban.png",
+  product: "/P1.png",
   car: "/car.png", 
 };
 

@@ -5,7 +5,7 @@ import { motion, Variants } from 'framer-motion';
 const productImages = [
   { id: '0w20', src: '/P1.png', alt: 'PRIME 0W-20 Engine Oil' },
   { id: '10w30', src: '/P5.png', alt: 'PRIME 10W-30 Engine Oil' },
-  { id: '10w40', src: '/P3.png', alt: 'PRIME 10W-40 Engine Oil' },
+  { id: '10w40', src: '/P7.png', alt: 'PRIME 10W-40 Engine Oil' },
   { id: '20w50', src: '/P4.png', alt: 'PRIME 20W-50 Engine Oil' },
   { id: 'flowdex3', src: '/P2.png', alt: 'PRIME Flow-Dex-3' },
 ];

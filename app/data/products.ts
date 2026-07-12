@@ -112,32 +112,6 @@ export const products: Product[] = [
     image: "/P2.png",
   },
   {
-    slug: "protect-10w-30",
-    name: "PROTECT 10W-30 MOTOR OIL",
-    tagline:
-      "PROTECT 10W-30 is a versatile multigrade motor oil suited to a broad range of gasoline engines requiring reliable year-round protection.",
-    generalCharacteristics: [
-      "A versatile 10W-30 formulation with a viscosity index of 150, providing dependable protection across a broad temperature range for year-round use.",
-    ],
-    usageRecommendations:
-      "Suitable for a wide range of gasoline engines in passenger cars and light-duty vehicles operating in normal conditions.",
-    usageInstructions:
-      "Drain the old oil with the engine warm, replace the filter, and refill with PROTECT 10W-30 to the specified level.",
-    specifications: "Lab Ref: PL/LAB/0067 — Test Date: 5.8.2025",
-    typicalProperties: {
-      "SAE Grade": "10W-30",
-      "Specific Gravity @ 60/60°F": "0.86",
-      "Kinematic Viscosity cSt @ 100°C": "10.5",
-      "Kinematic Viscosity cSt @ 40°C": "65",
-      "Viscosity Index": "150",
-      "Flash Point (COC), °C": "232",
-      "Pour Point, °C": "-26",
-      "Sulphated Ash, Wt.%": "0.1",
-      "Phosphorus": "0.08",
-    },
-    image: "/P5.png",
-  },
-  {
     slug: "protect-20w-50",
     name: "PROTECT 20W-50 MOTOR OIL",
     tagline:
@@ -271,5 +245,32 @@ export const products: Product[] = [
       { test: "Total Base Number (TBN)", method: "ASTM D 2896", unit: "mg KOH/g", value: "6.0" },
     ],
     image: "/P1.png",
+  },
+    {
+    slug: "protect-5w-30",
+    name: "PROTECT 5W-30 MOTOR OIL",
+    tagline:
+      "PROTECT 5W-30 is a low-viscosity engine oil designed to improve cold-start protection and support fuel efficiency in modern gasoline engines.",
+    generalCharacteristics: [
+      "A low-viscosity 5W-30 formulation with a viscosity index of 169 for quick cold-start lubrication and consistent protection at operating temperature.",
+      "A pour point of -32°C supports reliable oil flow in cold-weather conditions.",
+    ],
+    usageRecommendations:
+      "Recommended for modern gasoline engines where the manufacturer specifies a 5W-30 viscosity grade for improved fuel efficiency.",
+    usageInstructions:
+      "Drain the old oil with the engine warm, fit a new filter, and refill with PROTECT 5W-30 to the manufacturer-specified level.",
+    specifications: "Lab Ref: PL/LAB/0065 — Test Date: 5.8.2025",
+    typicalProperties: {
+      "SAE Grade": "5W-30",
+      "Specific Gravity @ 60/60°F": "0.85",
+      "Kinematic Viscosity cSt @ 100°C": "10.6",
+      "Kinematic Viscosity cSt @ 40°C": "60",
+      "Viscosity Index": "169",
+      "Flash Point (COC), °C": "232",
+      "Pour Point, °C": "-32",
+      "Sulphated Ash, Wt.%": "0.1",
+      "Phosphorus": "0.08",
+    },
+    image: "/P7.png",
   },
 ];
