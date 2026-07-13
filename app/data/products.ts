@@ -55,7 +55,7 @@ export const products: Product[] = [
       "Sulphated Ash, Wt.%": "0.1",
       "Phosphorus": "0.08",
     },
-    image: "/P3.png",
+    image: "/P5.png",
   },
   {
     slug: "protect-10w-30",
@@ -82,7 +82,7 @@ export const products: Product[] = [
       "Sulphated Ash, Wt.%": "0.1",
       "Phosphorus": "0.08",
     },
-    image: "/P5.png",
+    image: "/P4.png",
   },
   {
     slug: "protect-0w-20",
@@ -136,7 +136,7 @@ export const products: Product[] = [
       "Sulphated Ash, Wt.%": "0.1",
       "Phosphorus": "0.08",
     },
-    image: "/P4.png",
+    image: "/P1.png",
   },
   {
     slug: "protect-cvt",
@@ -147,6 +147,7 @@ export const products: Product[] = [
       "A CVT-specific fluid with a viscosity index of 180, engineered for smooth power transfer between transmission components.",
       "A pour point of -51°C provides consistent fluidity in cold conditions.",
     ],
+    availableFormats: ["1L"],
     usageRecommendations:
       "Recommended for vehicles equipped with continuously variable transmissions (CVT) that call for a dedicated CVT fluid.",
     usageInstructions:
@@ -159,20 +160,21 @@ export const products: Product[] = [
       "Flash Point (COC), °C": "200",
       "Pour Point, °C": "-51",
     },
-    image: "/P6.png",
+    image: "/P8.png",
   },
   {
     slug: "protect-atf-dex-iii",
-    name: "PROTECT ATF DEX III",
+    name: "PROTECT FLOW DEX III ATF",
     tagline:
-      "PROTECT ATF DEX III is an automatic transmission fluid meeting Dexron III performance requirements for smooth shifting and reliable transmission protection.",
+      "PROTECT FLOW DEX III is an automatic transmission fluid meeting Dexron III performance requirements for smooth shifting and reliable transmission protection.",
     generalCharacteristics: [
       "An automatic transmission fluid with a viscosity index of 188, formulated to meet Dexron III performance requirements for smooth shifting and consistent protection.",
     ],
+    availableFormats: ["4L"],
     usageRecommendations:
       "Recommended for automatic transmissions specifying a Dexron III fluid.",
     usageInstructions:
-      "Drain the old fluid at operating temperature and refill with PROTECT ATF DEX III to the level indicated on the dipstick or fill plug.",
+      "Drain the old fluid at operating temperature and refill with PROTECT FLOW DEX III to the level indicated on the dipstick or fill plug.",
     specifications: "Lab Ref: PL/LAB/0069 — Test Date: 5.8.2025",
     typicalProperties: {
       "Specific Gravity @ 60/60°F": "0.85",
@@ -181,22 +183,23 @@ export const products: Product[] = [
       "Viscosity Index": "188",
       "Flash Point (COC), °C": "216",
     },
-    image: "/P6.png",
+    image: "/P11.png",
   },
   {
     slug: "protect-4t-sj-20w-50",
-    name: "PROTECT 4T SJ 20W-50 MOTORCYCLE OIL",
+    name: "PROTECT SUPER 4T MO 20W-50 MOTORCYCLE OIL",
     tagline:
-      "PROTECT 4T SJ 20W-50 is a premium 4-stroke motorcycle engine oil of API SJ quality, formulated for strong wear protection and stable performance under demanding riding conditions.",
+      "PROTECT SUPER 4T MO 20W-50 is a premium 4-stroke motorcycle engine oil of API SJ quality, formulated for strong wear protection and stable performance under demanding riding conditions.",
     standards: "API SJ",
     generalCharacteristics: [
       "A 4-stroke motorcycle oil of API SJ quality with a 20W-50 viscosity grade for stable performance under demanding riding conditions.",
       "A total base number of 8 mgKOH/g supports sustained wear protection over the service interval.",
     ],
+    availableFormats: ["700ML", "800ML"],
     usageRecommendations:
       "Recommended for 4-stroke motorcycles requiring an API SJ, 20W-50 engine oil.",
     usageInstructions:
-      "Drain the old oil while the engine is warm, replace the oil filter (if fitted), and refill with PROTECT 4T SJ 20W-50 to the level specified in the owner's manual.",
+      "Drain the old oil while the engine is warm, replace the oil filter (if fitted), and refill with PROTECT SUPER 4T MO 20W-50 to the level specified in the owner's manual.",
     specifications: "Lab Ref: PL/LAB/0070 — Test Date: 5.8.2025",
     typicalProperties: {
       "SAE Grade": "20W-50",
@@ -209,44 +212,10 @@ export const products: Product[] = [
       "Pour Point, °C": "-9",
       "Total Base Number, mgKOH/g": "8",
     },
-    image: "/P1.png",
+    image: "/P9.png",
   },
 
-  // ---------------------------------------------------------------------
-  // AX-23 — ULTIMA (matches the reference test-report UI/UX)
-  // ---------------------------------------------------------------------
   {
-    slug: "ax-23-ultima",
-    name: "AX-23 - ULTIMA",
-    gradeLabel: "20W-50",
-    tagline:
-      "High-performance 4-stroke engine oil designed for motorcycles requiring superior protection, smooth operation, and thermal stability.",
-    standards: "API SL",
-    compatibleBrandsCategory: "Motorcycles in high-load engine use",
-    compatibleBrands: ["Honda CB150R", "Yamaha FZ", "Suzuki GR150"],
-    keyBenefits: [
-      "Defends against wear and thermal degradation",
-      "Enhances clutch life and shifting feel",
-      "Ideal for hot climates and long trips",
-    ],
-    availableFormats: ["1L", "0.7L"],
-    usageRecommendations:
-      "Recommended for 4-stroke motorcycles requiring an API SL, 20W-50 engine oil, particularly in hot climates or under sustained high-load riding conditions.",
-    usageInstructions:
-      "Drain the old oil while the engine is warm, replace the oil filter (if fitted), and refill with AX-23 - ULTIMA to the level specified in the owner's manual. Check the level after a short ride and top up if required.",
-    testSpecifications: [
-      { test: "SAE Viscosity Grade", method: "SAE J 300", unit: "—", value: "20W50" },
-      { test: "Density @ 15°C", method: "ASTM D 4052", unit: "kg/L", value: "0.878" },
-      { test: "Flash Point", method: "ASTM D 92 / D93", unit: "°C", value: "248" },
-      { test: "Pour Point", method: "ASTM D 97", unit: "°C", value: "-18" },
-      { test: "Kinematic Viscosity @ 40°C", method: "ASTM D 445", unit: "cSt", value: "183.2" },
-      { test: "Kinematic Viscosity @ 100°C", method: "ASTM D 445", unit: "cSt", value: "20.01" },
-      { test: "Viscosity Index", method: "ASTM D 2270", unit: "—", value: "127" },
-      { test: "Total Base Number (TBN)", method: "ASTM D 2896", unit: "mg KOH/g", value: "6.0" },
-    ],
-    image: "/P1.png",
-  },
-    {
     slug: "protect-5w-30",
     name: "PROTECT 5W-30 MOTOR OIL",
     tagline:

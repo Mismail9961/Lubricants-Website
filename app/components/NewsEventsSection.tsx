@@ -103,7 +103,7 @@ export const NewsEventsSection: React.FC = () => {
       <footer className="w-full border-t border-gray-300 py-6">
         <div className="w-full px-4 sm:px-6 md:px-10 lg:px-16 xl:px-24 flex justify-end">
           <a 
-            href="https://facebook.com" 
+            href="https://www.facebook.com/primelubetech?mibextid=ZbWKwL" 
             target="_blank" 
             rel="noopener noreferrer" 
             className="text-black hover:text-[#0A4D34] transition-colors focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0A4D34] rounded-md p-1"

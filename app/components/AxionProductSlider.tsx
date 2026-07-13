@@ -113,14 +113,18 @@ export const AxionPremiumSlider: React.FC = () => {
                   {product.name}
                 </h4>
 
-                {/* Product image — fixed box, all bottles align the same size */}
-                <div className="w-[200px] h-[300px] flex items-center justify-center mt-4 mb-4 transition-transform duration-500 group-hover:scale-[1.04]">
+                {/* Product image — fixed box, all bottles align the same size, clicking goes to product detail page */}
+                <Link
+                  href={`/products/${product.slug}`}
+                  aria-label={`View details for ${product.name}`}
+                  className="w-[200px] h-[300px] flex items-center justify-center mt-4 mb-4 transition-transform duration-500 group-hover:scale-[1.04] cursor-pointer"
+                >
                   <img
                     src={product.image}
                     alt={product.name}
                     className="max-h-full max-w-full object-contain"
                   />
-                </div>
+                </Link>
 
                 {/* Grade */}
                 <p className="h-[24px] text-sm font-semibold text-gray-700 mb-5 tracking-wide">
