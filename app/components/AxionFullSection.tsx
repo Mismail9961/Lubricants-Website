@@ -1,5 +1,6 @@
 "use client";
 import React from 'react';
+import Link from 'next/link';
 import { motion, Variants } from 'framer-motion';
 
 const productImages = [
@@ -63,14 +64,20 @@ export const PrimeFullSection: React.FC = () => {
               key={product.id}
               variants={fadeInUp}
               whileHover={{ scale: 1.04, transition: { duration: 0.2 } }}
-              className="bg-white p-0 flex items-center justify-center aspect-[2/3] overflow-hidden cursor-pointer"
+              className="bg-white p-0 flex items-center justify-center aspect-[2/3] overflow-hidden"
             >
-              <img 
-                src={product.src} 
-                alt={product.alt}
-                className="w-full h-full object-contain mix-blend-multiply bg-white"
-                loading="lazy"
-              />
+              <Link
+                href="/products"
+                aria-label={`View ${product.alt} in products`}
+                className="w-full h-full flex items-center justify-center cursor-pointer"
+              >
+                <img 
+                  src={product.src} 
+                  alt={product.alt}
+                  className="w-full h-full object-contain mix-blend-multiply bg-white"
+                  loading="lazy"
+                />
+              </Link>
             </motion.div>
           ))}
         </motion.div>

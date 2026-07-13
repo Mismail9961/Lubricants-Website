@@ -25,7 +25,6 @@ export type Product = {
 };
 
 export const products: Product[] = [
-
   // ---------------------------------------------------------------------
   // PRIME LUBETECH — "PROTECT" range, sourced from Product Test Reports
   // ---------------------------------------------------------------------
@@ -53,7 +52,7 @@ export const products: Product[] = [
       "Flash Point (COC), °C": "232",
       "Pour Point, °C": "-26",
       "Sulphated Ash, Wt.%": "0.1",
-      "Phosphorus": "0.08",
+      Phosphorus: "0.08",
     },
     image: "/P5.png",
   },
@@ -80,7 +79,7 @@ export const products: Product[] = [
       "Flash Point (COC), °C": "232",
       "Pour Point, °C": "-32",
       "Sulphated Ash, Wt.%": "0.1",
-      "Phosphorus": "0.08",
+      Phosphorus: "0.08",
     },
     image: "/P4.png",
   },
@@ -107,7 +106,7 @@ export const products: Product[] = [
       "Flash Point (COC), °C": "232",
       "Pour Point, °C": "-32",
       "Sulphated Ash, Wt.%": "0.1",
-      "Phosphorus": "0.08",
+      Phosphorus: "0.08",
     },
     image: "/P2.png",
   },
@@ -134,7 +133,7 @@ export const products: Product[] = [
       "Flash Point (COC), °C": "238",
       "Pour Point, °C": "-9",
       "Sulphated Ash, Wt.%": "0.1",
-      "Phosphorus": "0.08",
+      Phosphorus: "0.08",
     },
     image: "/P1.png",
   },
@@ -238,8 +237,52 @@ export const products: Product[] = [
       "Flash Point (COC), °C": "232",
       "Pour Point, °C": "-32",
       "Sulphated Ash, Wt.%": "0.1",
-      "Phosphorus": "0.08",
+      Phosphorus: "0.08",
     },
     image: "/P7.png",
+  },
+  {
+    slug: "protect-coolant-red",
+    name: "PROTECT PREMIUM LONG LIFE COOLANT (RED)",
+    tagline:
+      "PROTECT Premium Long Life Coolant is a 100% concentrated formula that protects the cooling system from freezing, boil-over, and corrosion year-round.",
+    generalCharacteristics: [
+      "A 100% concentrate long-life coolant offering freeze protection down to around -37°C and boil-over protection up to around +135°C when diluted per manufacturer guidelines.",
+      "Red-dyed formulation for easy identification and leak detection in the cooling system.",
+    ],
+    availableFormats: ["1L"],
+    usageRecommendations:
+      "Recommended for passenger car and light commercial vehicle cooling systems; dilute with water per the vehicle manufacturer's recommended ratio before use.",
+    usageInstructions:
+      "With the engine cold, drain the old coolant, flush the system if required, and refill with PROTECT Premium Long Life Coolant diluted to the recommended ratio. Bleed the system and top up as needed once the engine reaches operating temperature.",
+    typicalProperties: {
+      Concentration: "100% Concentrate",
+      "Freeze Protection": "-37°C (diluted)",
+      "Boil-Over Protection": "+135°C (diluted, pressurized)",
+      Color: "Red",
+    },
+    image: "/P12.png",
+  },
+  {
+    slug: "protect-coolant-green",
+    name: "PROTECT PREMIUM LONG LIFE COOLANT (GREEN)",
+    tagline:
+      "PROTECT Premium Long Life Coolant is a 100% concentrated formula that protects the cooling system from freezing, boil-over, and corrosion year-round.",
+    generalCharacteristics: [
+      "A 100% concentrate long-life coolant offering freeze protection down to around -37°C and boil-over protection up to around +135°C when diluted per manufacturer guidelines.",
+      "Green-dyed formulation for easy identification and leak detection in the cooling system.",
+    ],
+    availableFormats: ["1L"],
+    usageRecommendations:
+      "Recommended for passenger car and light commercial vehicle cooling systems; dilute with water per the vehicle manufacturer's recommended ratio before use.",
+    usageInstructions:
+      "With the engine cold, drain the old coolant, flush the system if required, and refill with PROTECT Premium Long Life Coolant diluted to the recommended ratio. Bleed the system and top up as needed once the engine reaches operating temperature.",
+    typicalProperties: {
+      Concentration: "100% Concentrate",
+      "Freeze Protection": "-37°C (diluted)",
+      "Boil-Over Protection": "+135°C (diluted, pressurized)",
+      Color: "Green",
+    },
+    image: "/P13.png",
   },
 ];
