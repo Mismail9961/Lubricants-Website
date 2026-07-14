@@ -11,6 +11,8 @@ interface FormData {
   message: string;
 }
 
+type SubmitStatus = 'idle' | 'loading' | 'success' | 'error';
+
 export default function ContactSection() {
   const [formData, setFormData] = useState<FormData>({
     firstName: '',
@@ -20,15 +22,45 @@ export default function ContactSection() {
     address: '',
     message: '',
   });
+  const [status, setStatus] = useState<SubmitStatus>('idle');
+  const [errorMsg, setErrorMsg] = useState('');
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form Submitted:', formData);
+    setStatus('loading');
+    setErrorMsg('');
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok || !data.success) {
+        throw new Error(data.error || 'Something went wrong.');
+      }
+
+      setStatus('success');
+      setFormData({
+        firstName: '',
+        lastName: '',
+        workEmail: '',
+        phoneNumber: '',
+        address: '',
+        message: '',
+      });
+    } catch (err) {
+      setStatus('error');
+      setErrorMsg(err instanceof Error ? err.message : 'Something went wrong.');
+    }
   };
 
   // Smooth staggered viewport entry animations
@@ -179,12 +211,13 @@ export default function ContactSection() {
             </div>
 
             {/* Pill Submit Button */}
-            <div className="pt-2 md:pt-4">
+            <div className="pt-2 md:pt-4 flex items-center gap-4">
               <motion.button
                 type="submit"
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="relative inline-flex items-center justify-center px-10 md:px-12 h-11 md:h-12 text-sm md:text-base font-bold text-[#2d2d2d] bg-white rounded-full overflow-hidden border border-transparent transition-shadow duration-300"
+                disabled={status === 'loading'}
+                whileHover={{ scale: status === 'loading' ? 1 : 1.02 }}
+                whileTap={{ scale: status === 'loading' ? 1 : 0.98 }}
+                className="relative inline-flex items-center justify-center px-10 md:px-12 h-11 md:h-12 text-sm md:text-base font-bold text-[#2d2d2d] bg-white rounded-full overflow-hidden border border-transparent transition-shadow duration-300 disabled:opacity-60 disabled:cursor-not-allowed"
                 style={{
                   backgroundImage: 'linear-gradient(white, white), linear-gradient(135deg, #3b82f6, #818cf8, #f87171, #f59e0b)',
                   backgroundOrigin: 'border-box',
@@ -192,8 +225,19 @@ export default function ContactSection() {
                   borderWidth: '1.5px'
                 }}
               >
-                Submit
+                {status === 'loading' ? 'Sending...' : 'Submit'}
               </motion.button>
+
+              {status === 'success' && (
+                <span className="text-sm text-green-600 font-medium">
+                  Message sent! We'll be in touch shortly.
+                </span>
+              )}
+              {status === 'error' && (
+                <span className="text-sm text-red-600 font-medium">
+                  {errorMsg}
+                </span>
+              )}
             </div>
           </motion.form>
         </motion.div>
