@@ -9,10 +9,11 @@ export type Product = {
   slug: string;
   name: string;
   tagline: string;
-  gradeLabel?: string; // exact headline override, e.g. "20W-50"
+  category: "Lubricants" | "ATF/GearOil" | "Special Products";
+  gradeLabel?: string;
   standards?: string;
-  compatibleBrandsCategory?: string; // e.g. "Motorcycles in high-load engine use"
-  compatibleBrands?: string[]; // e.g. ["Honda CB150R", "Yamaha FZ", "Suzuki GR150"]
+  compatibleBrandsCategory?: string;
+  compatibleBrands?: string[];
   generalCharacteristics?: string[];
   keyBenefits?: string[];
   availableFormats?: string[];
@@ -20,7 +21,7 @@ export type Product = {
   usageInstructions?: string;
   specifications?: string;
   typicalProperties?: Record<string, string>;
-  testSpecifications?: TestSpecification[]; // detailed lab test report table
+  testSpecifications?: TestSpecification[];
   image: string;
 };
 
@@ -33,6 +34,7 @@ export const products: Product[] = [
     name: "PROTECT SN 10W-40 MOTOR OIL",
     tagline:
       "PROTECT SN 10W-40 is a premium grade multigrade engine oil formulated to deliver reliable protection and performance across a wide operating temperature range.",
+    category: "Lubricants",
     standards: "API SN",
     generalCharacteristics: [
       "Formulated with a 10W-40 viscosity grade and a viscosity index of 163 for stable film strength across a wide temperature range.",
@@ -61,6 +63,7 @@ export const products: Product[] = [
     name: "PROTECT 10W-30 MOTOR OIL",
     tagline:
       "PROTECT 10W-30 is a low-viscosity engine oil designed to improve cold-start protection and support fuel efficiency in modern gasoline engines.",
+    category: "Lubricants",
     generalCharacteristics: [
       "A low-viscosity 10W-30 formulation with a viscosity index of 169 for quick cold-start lubrication and consistent protection at operating temperature.",
       "A pour point of -32°C supports reliable oil flow in cold-weather conditions.",
@@ -88,6 +91,7 @@ export const products: Product[] = [
     name: "PROTECT 0W-20 MOTOR OIL",
     tagline:
       "PROTECT 0W-20 is an ultra-low viscosity synthetic motor oil engineered for optimized fuel economy and fast cold-weather lubrication.",
+    category: "Lubricants",
     generalCharacteristics: [
       "An ultra-low viscosity 0W-20 synthetic formulation with a viscosity index of 169, designed for rapid cold-start lubrication and optimized fuel economy.",
       "A pour point of -32°C ensures reliable flow even in cold ambient conditions.",
@@ -115,6 +119,7 @@ export const products: Product[] = [
     name: "PROTECT 20W-50 MOTOR OIL",
     tagline:
       "PROTECT 20W-50 is a heavy-duty, high-viscosity motor oil formulated for strong film strength and dependable protection under high-temperature, high-load conditions.",
+    category: "Lubricants",
     generalCharacteristics: [
       "A heavy-duty 20W-50 formulation with strong film strength, a flash point of 238°C, and a pour point of -9°C.",
       "Suited to high-temperature and high-load operating conditions where a heavier oil film is beneficial.",
@@ -142,6 +147,7 @@ export const products: Product[] = [
     name: "PROTECT CVT FLUID",
     tagline:
       "PROTECT CVT is a specially formulated fluid for continuously variable transmissions, providing smooth power transfer and excellent low-temperature fluidity.",
+    category: "ATF/GearOil",
     generalCharacteristics: [
       "A CVT-specific fluid with a viscosity index of 180, engineered for smooth power transfer between transmission components.",
       "A pour point of -51°C provides consistent fluidity in cold conditions.",
@@ -166,6 +172,7 @@ export const products: Product[] = [
     name: "PROTECT FLOW DEX III ATF",
     tagline:
       "PROTECT FLOW DEX III is an automatic transmission fluid meeting Dexron III performance requirements for smooth shifting and reliable transmission protection.",
+    category: "ATF/GearOil",
     generalCharacteristics: [
       "An automatic transmission fluid with a viscosity index of 188, formulated to meet Dexron III performance requirements for smooth shifting and consistent protection.",
     ],
@@ -189,6 +196,7 @@ export const products: Product[] = [
     name: "PROTECT SUPER 4T MO 20W-50 MOTORCYCLE OIL",
     tagline:
       "PROTECT SUPER 4T MO 20W-50 is a premium 4-stroke motorcycle engine oil of API SJ quality, formulated for strong wear protection and stable performance under demanding riding conditions.",
+    category: "Lubricants",
     standards: "API SJ",
     generalCharacteristics: [
       "A 4-stroke motorcycle oil of API SJ quality with a 20W-50 viscosity grade for stable performance under demanding riding conditions.",
@@ -213,12 +221,12 @@ export const products: Product[] = [
     },
     image: "/P9.png",
   },
-
   {
     slug: "protect-5w-30",
     name: "PROTECT 5W-30 MOTOR OIL",
     tagline:
       "PROTECT 5W-30 is a low-viscosity engine oil designed to improve cold-start protection and support fuel efficiency in modern gasoline engines.",
+    category: "Lubricants",
     generalCharacteristics: [
       "A low-viscosity 5W-30 formulation with a viscosity index of 169 for quick cold-start lubrication and consistent protection at operating temperature.",
       "A pour point of -32°C supports reliable oil flow in cold-weather conditions.",
@@ -246,6 +254,7 @@ export const products: Product[] = [
     name: "PROTECT PREMIUM LONG LIFE COOLANT (RED)",
     tagline:
       "PROTECT Premium Long Life Coolant is a 100% concentrated formula that protects the cooling system from freezing, boil-over, and corrosion year-round.",
+    category: "Special Products",
     generalCharacteristics: [
       "A 100% concentrate long-life coolant offering freeze protection down to around -37°C and boil-over protection up to around +135°C when diluted per manufacturer guidelines.",
       "Red-dyed formulation for easy identification and leak detection in the cooling system.",
@@ -268,6 +277,7 @@ export const products: Product[] = [
     name: "PROTECT PREMIUM LONG LIFE COOLANT (GREEN)",
     tagline:
       "PROTECT Premium Long Life Coolant is a 100% concentrated formula that protects the cooling system from freezing, boil-over, and corrosion year-round.",
+    category: "Special Products",
     generalCharacteristics: [
       "A 100% concentrate long-life coolant offering freeze protection down to around -37°C and boil-over protection up to around +135°C when diluted per manufacturer guidelines.",
       "Green-dyed formulation for easy identification and leak detection in the cooling system.",
