@@ -111,13 +111,13 @@ export default function ContactSection() {
             </h3>
             <div className="space-y-4 text-xs xs:text-sm md:text-[15px] text-[#4a4a4a] leading-relaxed max-w-[460px] pt-2">
               <p>
-                Our premier support and consultation team is available Monday through Friday, 
-                from 9:00 AM to 5:00 PM. Whether you are exploring new solutions, scaling your operations, 
-                or seeking specialized guidance, we are ready to assist.
+                Our premier support and consultation team is available to assist you. 
+                Whether you are exploring new industrial solutions, scaling your operations, 
+                or seeking specialized guidance, we are ready to partner with you.
               </p>
               <p>
-                We focus on precision, quality, and exceptional experiences. Drop us a line, and a 
-                dedicated partner relations expert will get back to you shortly.
+                We focus on precision, quality, and exceptional industrial products. Drop us a line, and a 
+                dedicated relations expert will get back to you shortly.
               </p>
             </div>
           </motion.div>
@@ -245,7 +245,7 @@ export default function ContactSection() {
         {/* --- Central Divider Line --- */}
         <div className="mt-16 md:mt-24 border-t border-gray-300 w-full" />
 
-        {/* --- Bottom Section: Branch Addresses columns --- */}
+        {/* --- Bottom Section: Office Details & Registration Columns --- */}
         <motion.div 
           className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 text-left w-full"
           initial={{ opacity: 0, y: 10 }}
@@ -253,28 +253,37 @@ export default function ContactSection() {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          {/* Abu Dhabi Column */}
+          {/* Main Address Column */}
           <div className="space-y-3">
             <h4 className="text-xl md:text-2xl font-bold text-[#2d2d2d]">
-              Prime Corporate Abu Dhabi
+              PRIME Head Office
             </h4>
             <div className="text-xs xs:text-sm md:text-[15px] text-[#4a4a4a] leading-relaxed space-y-1.5 pt-1">
-              <p>Al Hiraf Street 08, building 127, Office 05,</p>
-              <p>Musaffah Sector M11, Abu Dhabi, UAE</p>
-              <p className="pt-2 font-medium text-[#1a1a1a]">
-                <span className="font-bold">P:</span> +971 52 992 1998
+              <p className="font-medium text-[#1a1a1a]">Plot No: K 227/A</p>
+              <p>Site Super Highway Phase II</p>
+              <p className="pt-2">
+                <span className="font-bold text-[#1a1a1a]">Email:</span>{" "}
+                <a href="mailto:prime.lubetech75@gmail.com" className="hover:underline text-blue-600">
+                  prime.lubetech75@gmail.com
+                </a>
               </p>
             </div>
           </div>
 
-          {/* Dubai Column */}
+          {/* Registration Details Column */}
           <div className="space-y-3">
             <h4 className="text-xl md:text-2xl font-bold text-[#2d2d2d]">
-              Prime Corporate Dubai
+              Registration & Tax Info
             </h4>
-            <div className="text-xs xs:text-sm md:text-[15px] text-[#4a4a4a] leading-relaxed space-y-1.5 pt-1">
-              <p>Meydan Grandstand, 6th floor, Meydan Road, Nad</p>
-              <p>Al Sheba, Dubai, UAE</p>
+            <div className="text-xs xs:text-sm md:text-[15px] text-[#4a4a4a] leading-relaxed space-y-2 pt-1">
+              <div>
+                <p className="text-xs text-gray-500 uppercase tracking-wider font-semibold">Sales Tax Number</p>
+                <p className="font-mono text-sm md:text-base text-[#1a1a1a] font-medium">3277876161877</p>
+              </div>
+              <div className="pt-1">
+                <p className="text-xs text-gray-500 uppercase tracking-wider font-semibold">NTN Number</p>
+                <p className="font-mono text-sm md:text-base text-[#1a1a1a] font-medium">1558383-0</p>
+              </div>
             </div>
           </div>
         </motion.div>

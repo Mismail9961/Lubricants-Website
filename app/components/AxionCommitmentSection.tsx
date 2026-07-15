@@ -25,7 +25,7 @@ export default function PrimeCommitment() {
             <div className="max-w-[1750px] mx-auto w-full">
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 lg:gap-16 items-center">
                     
-                    {/* Left Column: Imagery Section (With custom top-right rounded corner from image_0b875d.jpg) */}
+                    {/* Left Column: Imagery Section */}
                     <div className="col-span-1 md:col-span-6 lg:col-span-6 opacity-0 animate-slide-left-variant">
                         <div className="w-full h-auto overflow-hidden rounded-bl-[16px] rounded-br-[16px] rounded-tl-[16px] rounded-tr-[40px] sm:rounded-tr-[64px] shadow-lg md:shadow-xl">
                             <img
@@ -40,13 +40,13 @@ export default function PrimeCommitment() {
                     <div className="col-span-1 md:col-span-6 lg:col-span-6 flex flex-col gap-6 md:gap-8 opacity-0 animate-slide-right-variant [animation-delay:0.2s]">
                         <div className="flex flex-col gap-4">
                             <p className="text-[15px] xs:text-[16px] sm:text-[18px] lg:text-[20px] xl:text-[22px] leading-relaxed text-gray-800 font-normal tracking-wide">
-                                Protect isn't just a product; it's a commitment to protection. Every formulation is engineered to protect, tested under extreme conditions, and fine-tuned to protect systems in the world's toughest environments. Whether you are optimizing city logistics or off-road infrastructure, Protect is built to keep your equipment cleaner, cooler, and better protected—for longer.
+                                Supported by a rich backdrop of customer confidence and multiple success stories marketing International Brands and managing complex Blending Operations, we are structured to support your scale. With this focus, we plan to direct our targets on premium Gas Engine Oil, Diesel Engine Oil CI-4, and the complete range of Industrial Lubricants complete with stellar after-sales service.
                             </p>
                         </div>
 
                         <div className="flex flex-col gap-4">
                             <p className="text-[15px] xs:text-[16px] sm:text-[18px] lg:text-[20px] xl:text-[22px] leading-relaxed text-gray-800 font-normal tracking-wide">
-                                Driven by engineering excellence and guided by the principles of protection, local innovation, and purposeful progress, PROTECT continues its mission to protect—delivering absolute efficiency, durability, and protected confidence across every industrial pathway.
+                                All our lubricants are produced using imported, highly advanced quality Base Oil and Additives. Every batch is formulated by a world-class technical team bringing <strong className="font-semibold text-black">more than three decades</strong> of well-reputed expertise in the field of Oil and Additives directly to your operations.
                             </p>
                         </div>
                     </div>
