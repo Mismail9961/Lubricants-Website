@@ -69,7 +69,7 @@ export default function PrimeSection() {
             "
           >
             <img
-              src="https://images.unsplash.com/photo-1487754180451-c456f719a1fc?q=80&w=1200"
+              src="https://repaironeauto.com/wp-content/uploads/2023/07/repair-one-woodlands-july-23-blog-old-motor-oil.jpg?q=80&w=1200"
               alt="Protect Heavy Equipment"
               className="h-full w-full object-cover"
             />
