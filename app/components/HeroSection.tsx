@@ -46,7 +46,7 @@ export default function PrimeHeroPremium() {
   });
 
   return (
-    <section className="relative w-full h-[100svh] min-h-[568px] pt-6 md:pt-9 overflow-hidden bg-[#020d09] select-none font-sans antialiased">
+    <section className="relative w-full h-[100svh] min-h-[568px] pt-9 md:pt-9 overflow-hidden bg-[#020d09] select-none font-sans antialiased">
       <style jsx global>{`
         @keyframes luxuryFloat {
           0%, 100% { transform: translateY(0px) rotate(0deg); }
@@ -94,11 +94,11 @@ export default function PrimeHeroPremium() {
       />
 
       {/* Main Layout Container */}
-      <div className="relative w-full h-full max-w-[1512px] mx-auto px-4 sm:px-10 md:px-16 flex flex-col md:flex-row justify-between items-center md:items-end pb-6 sm:pb-10 md:pb-20 z-20">
+      <div className="relative w-full h-full max-w-[1512px] mx-auto px-4 sm:px-10 md:px-16 flex flex-col md:flex-row justify-between items-center md:items-end pb-6 sm:pb-10 md:pb-16 z-20">
         
-        {/* Layer 4: Front Car - Main Centerpiece Element on Mobile */}
+        {/* Layer 4: Front Car */}
         <div
-          className="absolute md:relative left-1/2 md:left-[-4%] -translate-x-1/2 md:translate-x-0 bottom-[36%] min-[375px]:bottom-[32%] md:bottom-[-2%] w-[94%] sm:w-[85%] md:w-[60vw] max-w-[480px] md:max-w-[940px] transition-all duration-[1200ms] cubic-bezier(0.16, 1, 0.3, 1) z-30 pointer-events-none"
+          className="absolute md:relative left-1/2 md:left-[-4%] -translate-x-1/2 md:translate-x-0 bottom-[36%] min-[375px]:bottom-[32%] md:bottom-[-2%] w-[94%] sm:w-[85%] md:w-[58vw] max-w-[480px] md:max-w-[940px] transition-all duration-[1200ms] cubic-bezier(0.16, 1, 0.3, 1) z-30 pointer-events-none"
           style={getTransitionStyles(350, "60px")}
         >
           <div
@@ -116,12 +116,12 @@ export default function PrimeHeroPremium() {
           </div>
         </div>
 
-        {/* Right Side Stack: Product Background Backdrop & Typography */}
-        <div className="w-full md:w-[38%] flex flex-col items-center md:items-end justify-end h-full md:h-auto mt-12 md:mt-0 z-20">
+        {/* Right Side Stack: Product and Typography */}
+        <div className="w-full md:w-[40%] flex flex-col items-center md:items-start justify-end h-full md:h-auto mt-12 md:mt-0 z-20">
           
-          {/* Product Vessel Image - Layered Directly Behind the Car on Mobile */}
+          {/* Product Vessel Image */}
           <div
-            className="absolute md:relative left-1/2 md:left-auto -translate-x-1/2 md:translate-x-0 top-[6%] min-[375px]:top-[8%] md:top-auto md:mb-4 w-[48%] sm:w-[45%] md:w-[125%] max-w-[170px] min-[375px]:max-w-[200px] md:max-w-[420px] transition-all duration-[1200ms] cubic-bezier(0.16, 1, 0.3, 1) z-20"
+            className="absolute md:relative left-1/2 md:left-auto -translate-x-1/2 md:translate-x-0 top-[6%] min-[375px]:top-[8%] md:top-auto md:mb-6 w-[48%] sm:w-[42%] md:w-[75%] max-w-[170px] min-[375px]:max-w-[190px] md:max-w-[340px] transition-all duration-[1200ms] cubic-bezier(0.16, 1, 0.3, 1) z-20"
             style={getTransitionStyles(550, "40px")}
           >
             <div
