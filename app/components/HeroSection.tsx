@@ -46,7 +46,7 @@ export default function PrimeHeroPremium() {
   });
 
   return (
-    <section className="relative w-full h-[100svh] min-h-[568px] pt-9 md:pt-9 overflow-hidden bg-[#020d09] select-none font-sans antialiased">
+    <section className="relative w-full h-[100svh] min-h-[520px] pt-19 md:pt-9 overflow-hidden bg-[#020d09] select-none font-sans antialiased">
       <style jsx global>{`
         @keyframes luxuryFloat {
           0%, 100% { transform: translateY(0px) rotate(0deg); }
@@ -64,6 +64,17 @@ export default function PrimeHeroPremium() {
         }
         @media (prefers-reduced-motion: reduce) {
           .animate-luxury-float, .animate-premium-glow { animation: none !important; }
+        }
+        /* Custom breakpoint fix for iPhone 5s / SE (1st Gen) */
+        @media (max-width: 320px) {
+          .iphone5s-product-fix {
+            top: 4% !important;
+            width: 52% !important;
+          }
+          .iphone5s-car-fix {
+            bottom: 38% !important;
+            width: 98% !important;
+          }
         }
       `}</style>
 
@@ -94,11 +105,11 @@ export default function PrimeHeroPremium() {
       />
 
       {/* Main Layout Container */}
-      <div className="relative w-full h-full max-w-[1512px] mx-auto px-4 sm:px-10 md:px-16 flex flex-col md:flex-row justify-between items-center md:items-end pb-6 sm:pb-10 md:pb-16 z-20">
+      <div className="relative w-full h-full max-w-[1512px] mx-auto px-4 sm:px-10 md:px-16 flex flex-col md:flex-row justify-between items-center md:items-end pb-4 sm:pb-10 md:pb-16 z-20">
         
         {/* Layer 4: Front Car */}
         <div
-          className="absolute md:relative left-1/2 md:left-[-4%] -translate-x-1/2 md:translate-x-0 bottom-[36%] min-[375px]:bottom-[32%] md:bottom-[-2%] w-[94%] sm:w-[85%] md:w-[58vw] max-w-[480px] md:max-w-[940px] transition-all duration-[1200ms] cubic-bezier(0.16, 1, 0.3, 1) z-30 pointer-events-none"
+          className="iphone5s-car-fix absolute md:relative left-1/2 md:left-[-4%] -translate-x-1/2 md:translate-x-0 bottom-[34%] min-[375px]:bottom-[32%] md:bottom-[-2%] w-[94%] sm:w-[85%] md:w-[58vw] max-w-[480px] md:max-w-[940px] transition-all duration-[1200ms] cubic-bezier(0.16, 1, 0.3, 1) z-30 pointer-events-none"
           style={getTransitionStyles(350, "60px")}
         >
           <div
@@ -117,11 +128,11 @@ export default function PrimeHeroPremium() {
         </div>
 
         {/* Right Side Stack: Product and Typography */}
-        <div className="w-full md:w-[40%] flex flex-col items-center md:items-start justify-end h-full md:h-auto mt-12 md:mt-0 z-20">
+        <div className="w-full md:w-[42%] flex flex-col items-center md:items-start justify-end h-full md:h-auto mt-12 md:mt-0 z-20">
           
           {/* Product Vessel Image */}
           <div
-            className="absolute md:relative left-1/2 md:left-auto -translate-x-1/2 md:translate-x-0 top-[6%] min-[375px]:top-[8%] md:top-auto md:mb-6 w-[48%] sm:w-[42%] md:w-[75%] max-w-[170px] min-[375px]:max-w-[190px] md:max-w-[340px] transition-all duration-[1200ms] cubic-bezier(0.16, 1, 0.3, 1) z-20"
+            className="iphone5s-product-fix absolute md:relative left-1/2 md:left-auto -translate-x-1/2 md:translate-x-0 top-[6%] min-[375px]:top-[8%] md:top-auto md:mb-8 w-[54%] sm:w-[46%] md:w-[85%] max-w-[195px] min-[375px]:max-w-[210px] md:max-w-[420px] transition-all duration-[1200ms] cubic-bezier(0.16, 1, 0.3, 1) z-20"
             style={getTransitionStyles(550, "40px")}
           >
             <div
@@ -138,7 +149,7 @@ export default function PrimeHeroPremium() {
               <img
                 src={ASSETS.product}
                 alt="PRIME PX-1 Fluid Vessel"
-                className="relative w-full h-auto object-contain transition-all duration-500 filter brightness-[1.02] contrast-[1.04] drop-shadow-[0_15px_30px_rgba(0,0,0,0.6)]"
+                className="relative w-full h-auto object-contain transition-all duration-500 filter brightness-[1.02] contrast-[1.04] drop-shadow-[0_15px_35px_rgba(0,0,0,0.65)]"
               />
 
               {/* Anchored Contact Floor Shadow Matrix */}
@@ -155,11 +166,11 @@ export default function PrimeHeroPremium() {
 
           {/* Typography Content Block */}
           <div 
-            className="w-full flex flex-col items-center md:items-start transition-all duration-[1200ms] cubic-bezier(0.16, 1, 0.3, 1) mt-auto md:mt-0 z-40 text-center md:text-left px-2 sm:px-0"
+            className="w-full flex flex-col items-center md:items-start transition-all duration-[1200ms] cubic-bezier(0.16, 1, 0.3, 1) mt-auto md:mt-0 z-40 text-center md:text-left px-2 sm:px-0 pb-2 md:pb-0"
             style={getTransitionStyles(750, "30px")}
           >
             {/* Fine Eyebrow Tag Accent */}
-            <div className="flex items-center gap-1.5 mb-3 tracking-[0.25em] md:tracking-[0.35em] text-[9px] md:text-[10px] uppercase font-bold text-[#E5C158] mix-blend-plus-lighter backdrop-blur-[2px] bg-white/5 py-1 px-2.5 rounded-full border border-white/10">
+            <div className="flex items-center gap-1.5 mb-2.5 tracking-[0.25em] md:tracking-[0.35em] text-[8.5px] md:text-[10px] uppercase font-bold text-[#E5C158] mix-blend-plus-lighter backdrop-blur-[2px] bg-white/5 py-1 px-2.5 rounded-full border border-white/10">
               <span className="w-1.5 h-1.5 rounded-full bg-[#E5C158] animate-pulse" />
               Hyper-Velocity Synthesis
             </div>
@@ -167,7 +178,7 @@ export default function PrimeHeroPremium() {
             <h1
               className="text-white font-black tracking-tighter uppercase whitespace-nowrap"
               style={{ 
-                fontSize: "clamp(34px, 8.5vw, 92px)", 
+                fontSize: "clamp(32px, 8.5vw, 92px)", 
                 lineHeight: 0.85,
                 letterSpacing: "-0.04em"
               }}
@@ -177,7 +188,7 @@ export default function PrimeHeroPremium() {
             </h1>
             
             <p
-              className="text-white/70 font-light leading-relaxed mt-4 md:mt-6 max-w-[30ch] sm:max-w-[40ch] md:max-w-[32ch] border-l-0 md:border-l-2 border-[#D4AF37]/40 pl-0 md:pl-4 text-[12px] min-[375px]:text-[13px] sm:text-base backdrop-blur-[1px]"
+              className="text-white/70 font-light leading-relaxed mt-3 md:mt-6 max-w-[28ch] sm:max-w-[40ch] md:max-w-[32ch] border-l-0 md:border-l-2 border-[#D4AF37]/40 pl-0 md:pl-4 text-[11px] min-[375px]:text-[13px] sm:text-base backdrop-blur-[1px]"
             >
               Formulated with signature low-drag molecular structures for extreme thermal stability, seamless power conversion, and absolute track-proven core engineering.
             </p>
