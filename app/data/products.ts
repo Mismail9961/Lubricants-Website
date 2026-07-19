@@ -295,4 +295,27 @@ export const products: Product[] = [
     },
     image: "/P13.png",
   },
+  {
+    slug: "protect-coolant-blue",
+    name: "PROTECT PREMIUM LONG LIFE COOLANT (BLUE)",
+    tagline:
+      "PROTECT Premium Long Life Coolant is a 100% concentrated formula that protects the cooling system from freezing, boil-over, and corrosion year-round.",
+    category: "Special Products",
+    generalCharacteristics: [
+      "A 100% concentrate long-life coolant offering freeze protection down to around -37°C and boil-over protection up to around +128°C when diluted per manufacturer guidelines.",
+      "Blue-dyed formulation for easy identification and leak detection in the cooling system.",
+    ],
+    availableFormats: ["1L"],
+    usageRecommendations:
+      "Recommended for passenger car and light commercial vehicle cooling systems; dilute with water per the vehicle manufacturer's recommended ratio before use.",
+    usageInstructions:
+      "With the engine cold, drain the old coolant, flush the system if required, and refill with PROTECT Premium Long Life Coolant diluted to the recommended ratio. Bleed the system and top up as needed once the engine reaches operating temperature.",
+    typicalProperties: {
+      Concentration: "100% Concentrate",
+      "Freeze Protection": "-37°C (diluted)",
+      "Boil-Over Protection": "+128°C (diluted, pressurized)",
+      Color: "Blue",
+    },
+    image: "/P14.png",
+  },
 ];
