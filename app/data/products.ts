@@ -318,4 +318,37 @@ export const products: Product[] = [
     },
     image: "/P14.png",
   },
+  {
+    slug: "protect-brake-fluid-dot3",
+    name: "PROTECT HEAVY DUTY BRAKE FLUID DOT-3",
+    tagline:
+      "PROTECT Heavy Duty Brake Fluid DOT-3 is a glycol-ether based fluid engineered to protect the brake system and deliver consistent pedal response under demanding conditions.",
+    category: "Special Products",
+    standards: "DOT-3",
+    generalCharacteristics: [
+      "A DOT-3 rated, glycol-ether based brake fluid formulated for reliable hydraulic performance across a wide range of operating temperatures.",
+      "Heavy-duty formulation designed to protect brake system components from corrosion and wear.",
+    ],
+    keyBenefits: [
+      "Protects brake system components against corrosion",
+      "Maintains consistent pedal feel under heavy braking conditions",
+      "Meets DOT-3 boiling point and viscosity requirements",
+    ],
+    availableFormats: ["350CC"],
+    usageRecommendations:
+      "Recommended for hydraulic brake and clutch systems in passenger cars and light commercial vehicles specifying a DOT-3 fluid.",
+    usageInstructions:
+      "Top up or bleed the brake system with PROTECT Heavy Duty Brake Fluid DOT-3 to the level marked on the reservoir. Avoid mixing with fluids of a different specification and do not allow the container to remain open, as brake fluid absorbs moisture from the air.",
+    specifications: "Lab Ref: PL/LAB/00XX — Test Date: TBD",
+    typicalProperties: {
+      "DOT Rating": "DOT-3",
+      "Dry Boiling Point, °C": "205",
+      "Wet Boiling Point, °C": "140",
+      "Kinematic Viscosity @ -40°C, cSt": "1500 max",
+      "Kinematic Viscosity @ 100°C, cSt": "1.5 min",
+      "pH Value": "7.0–11.5",
+      Color: "Amber/Clear",
+    },
+    image: "/P15.png",
+  },
 ];
