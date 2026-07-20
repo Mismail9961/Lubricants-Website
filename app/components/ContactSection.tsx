@@ -269,23 +269,6 @@ export default function ContactSection() {
               </p>
             </div>
           </div>
-
-          {/* Registration Details Column */}
-          <div className="space-y-3">
-            <h4 className="text-xl md:text-2xl font-bold text-[#2d2d2d]">
-              Registration & Tax Info
-            </h4>
-            <div className="text-xs xs:text-sm md:text-[15px] text-[#4a4a4a] leading-relaxed space-y-2 pt-1">
-              <div>
-                <p className="text-xs text-gray-500 uppercase tracking-wider font-semibold">Sales Tax Number</p>
-                <p className="font-mono text-sm md:text-base text-[#1a1a1a] font-medium">3277876161877</p>
-              </div>
-              <div className="pt-1">
-                <p className="text-xs text-gray-500 uppercase tracking-wider font-semibold">NTN Number</p>
-                <p className="font-mono text-sm md:text-base text-[#1a1a1a] font-medium">1558383-0</p>
-              </div>
-            </div>
-          </div>
         </motion.div>
 
       </div>
