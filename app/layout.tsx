@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import CustomCursor from "./components/CustomCursor"; // Adjust this import path depending on where you saved your component
+import CustomCursor from "./components/CustomCursor";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,7 +14,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Prime",
+  title: "Prime Lube Tech",
   description: "High-Performance Industrial Formulations, Advanced Lubricants, and Premium Fluids for Modern Machinery and Fleets.",
 };
 
@@ -29,7 +29,6 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        {/* The custom cursor is placed here so it overlays all page content */}
         <CustomCursor />
         {children}
       </body>
