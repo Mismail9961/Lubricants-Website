@@ -351,4 +351,60 @@ export const products: Product[] = [
     },
     image: "/P15.png",
   },
+  {
+    slug: "protect-gear-oil-gl-4",
+    name: "PROTECT GEAR OIL GL-4",
+    tagline:
+      "PROTECT Gear Oil GL-4 is a superior quality automotive gear oil delivering excellent performance in manual gear boxes, auxiliary gear boxes, and gear transmission boxes.",
+    category: "ATF/GearOil",
+    gradeLabel: "GL-4",
+    standards: "API GL-4 SAE-140",
+    generalCharacteristics: [
+      "Meets API specification GL-4 SAE-140.",
+      "Meets the automotive gear oil specifications of the major automobile manufacturers.",
+    ],
+    keyBenefits: [
+      "Excellent performance in most gear applications",
+      "Equally satisfactory performance in manual gear boxes, auxiliary gear boxes & gear transmission boxes",
+    ],
+    availableFormats: ["4L"],
+    usageRecommendations:
+      "Recommended for manual gear boxes, auxiliary gear boxes, and gear transmission boxes where an API GL-4, SAE-140 gear oil is specified.",
+    usageInstructions:
+      "Avoid contact with eyes, skin, and clothing; wash thoroughly if contacted. Harmful if swallowed — contact a medical practitioner immediately.",
+    typicalProperties: {
+      "API Specification": "GL-4",
+      "SAE Grade": "140",
+      "Pack Size": "4 Litres",
+    },
+    image: "/P16.png",
+  },
+  {
+    slug: "protect-gear-oil-gl-5",
+    name: "PROTECT GEAR OIL GL-5",
+    tagline:
+      "PROTECT Gear Oil GL-5 is a superior quality automotive gear oil delivering excellent performance in manual gear boxes, auxiliary gear boxes, and gear transmission boxes.",
+    category: "ATF/GearOil",
+    gradeLabel: "GL-5",
+    standards: "API GL-5 SAE-140",
+    generalCharacteristics: [
+      "Meets API specification GL-5 SAE-140.",
+      "Meets the automotive gear oil specifications of the major automobile manufacturers.",
+    ],
+    keyBenefits: [
+      "Excellent performance in most gear applications",
+      "Equally satisfactory performance in manual gear boxes, auxiliary gear boxes & gear transmission boxes",
+    ],
+    availableFormats: ["4L"],
+    usageRecommendations:
+      "Recommended for manual gear boxes, auxiliary gear boxes, and gear transmission boxes where an API GL-5, SAE-140 gear oil is specified.",
+    usageInstructions:
+      "Avoid contact with eyes, skin, and clothing; wash thoroughly if contacted. Harmful if swallowed — contact a medical practitioner immediately.",
+    typicalProperties: {
+      "API Specification": "GL-5",
+      "SAE Grade": "140",
+      "Pack Size": "4 Litres",
+    },
+    image: "/P17.png",
+  },
 ];
