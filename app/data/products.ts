@@ -22,7 +22,9 @@ export type Product = {
   specifications?: string;
   typicalProperties?: Record<string, string>;
   testSpecifications?: TestSpecification[];
-  image: string;
+  stellcanimage?: string;
+  plasticcanimage?: string;
+  image?: string;
 };
 
 export const products: Product[] = [
@@ -57,6 +59,8 @@ export const products: Product[] = [
       Phosphorus: "0.08",
     },
     image: "/P5.png",
+    stellcanimage: "/P5.png",
+    plasticcanimage: "/P5.png",
   },
   {
     slug: "protect-10w-30",
@@ -85,6 +89,8 @@ export const products: Product[] = [
       Phosphorus: "0.08",
     },
     image: "/P4.png",
+    stellcanimage: "/P4.png",
+    plasticcanimage: "/AP4.png",
   },
   {
     slug: "protect-0w-20",
@@ -113,6 +119,8 @@ export const products: Product[] = [
       Phosphorus: "0.08",
     },
     image: "/P2.png",
+    stellcanimage: "/P2.png",
+    plasticcanimage: "/AP2.png",
   },
   {
     slug: "protect-20w-50",
@@ -141,6 +149,8 @@ export const products: Product[] = [
       Phosphorus: "0.08",
     },
     image: "/P1.png",
+    stellcanimage: "/P1.png",
+    plasticcanimage: "/AP1.png",
   },
   {
     slug: "protect-cvt",
@@ -248,6 +258,8 @@ export const products: Product[] = [
       Phosphorus: "0.08",
     },
     image: "/P7.png",
+    stellcanimage: "/P7.png",
+    plasticcanimage: "/AP7.png",
   },
   {
     slug: "protect-coolant-red",
