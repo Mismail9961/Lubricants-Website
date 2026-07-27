@@ -60,7 +60,7 @@ export const products: Product[] = [
     },
     image: "/P5.png",
     stellcanimage: "/P5.png",
-    plasticcanimage: "/P5.png",
+    plasticcanimage: "/AP5.png",
   },
   {
     slug: "protect-10w-30",
