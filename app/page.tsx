@@ -6,12 +6,15 @@ import AxionSection from "./components/AxionSection";
 import NewsEventsSection from "./components/NewsEventsSection";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
+import { VideoSection } from "./components/PrimeVideoSection";
+
 export default function Home() {
   return (
     <div >
       <Header />
       <HeroSection />
       <BannerSection />
+      <VideoSection />
       <ProductGroup />
       <AxionFullSection />
       <AxionSection />

@@ -96,12 +96,15 @@ export const PrimeFullSection: React.FC = () => {
         variants={fadeInUp}
         className="z-30 w-full max-w-xs px-3"
       >
-        <button 
-          onClick={() => alert('Downloading Profile...')}
-          className="w-full py-3 px-4 rounded-full border-2 border-black bg-black text-[#D4AF37] font-bold text-xs sm:text-sm tracking-wider uppercase transition-all duration-200 hover:bg-[#0B4A2D] hover:border-[#0B4A2D] active:scale-95 shadow-md"
+        <a
+          href="/PRIME_PROTECT_Product_Catalogue.pdf"
+          download
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block w-full py-3 px-4 rounded-full border-2 border-black bg-black text-[#D4AF37] font-bold text-xs sm:text-sm tracking-wider uppercase transition-all duration-200 hover:bg-[#0B4A2D] hover:border-[#0B4A2D] active:scale-95 shadow-md text-center"
         >
-          Download PROTECT Profile
-        </button>
+          Download PROTECT Catalogue
+        </a>
       </motion.div>
 
     </section>

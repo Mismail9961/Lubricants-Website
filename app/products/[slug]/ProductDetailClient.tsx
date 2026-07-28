@@ -89,9 +89,15 @@ export default function ProductDetailClient({ product }: { product: Product }) {
                 </div>
               </div>
               
-              <button className="w-full md:w-auto flex-none text-center bg-white border border-gray-300 hover:border-gray-400 text-gray-800 rounded-lg px-4 py-2.5 text-xs sm:text-sm font-bold shadow-2xs transition-all active:scale-[0.98]">
-                Download Profile
-              </button>
+              <a
+                href="/PRIME_PROTECT_Product_Catalogue.pdf"
+                download
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full md:w-auto flex-none text-center bg-white border border-gray-300 hover:border-gray-400 text-gray-800 rounded-lg px-4 py-2.5 text-xs sm:text-sm font-bold shadow-2xs transition-all active:scale-[0.98]"
+              >
+                Download Catalogue
+              </a>
             </div>
 
             {/* Media Showcase & Attributes core layout split */}
