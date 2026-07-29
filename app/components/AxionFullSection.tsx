@@ -9,7 +9,6 @@ const productImages = [
   { id: "0w20", src: "/P1.png", alt: "PRIME 0W-20 Engine Oil" },
   { id: "10w30", src: "/P5.png", alt: "PRIME 10W-30 Engine Oil" },
   { id: "10w40", src: "/P7.png", alt: "PRIME 10W-40 Engine Oil" },
-  { id: "20w50", src: "/P16.png", alt: "PRIME 20W-50 Engine Oil" },
   { id: "flowdex3-1", src: "/P2.png", alt: "PRIME Flow-Dex-3 (Variant 1)" },
   { id: "flowdex3-2", src: "/P4.png", alt: "PRIME Flow-Dex-3 (Variant 2)" },
   { id: "flowdex3-3", src: "/P17.png", alt: "PRIME Flow-Dex-3 (Variant 3)" },
