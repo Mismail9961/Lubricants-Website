@@ -389,6 +389,8 @@ export const products: Product[] = [
       "SAE Grade": "140",
       "Pack Size": "4 Litres",
     },
+    stellcanimage: "/P16.png",
+    plasticcanimage: "/AP16.png",
     image: "/P16.png",
   },
   {
@@ -417,6 +419,8 @@ export const products: Product[] = [
       "SAE Grade": "140",
       "Pack Size": "4 Litres",
     },
+    stellcanimage: "/P17.png",
+    plasticcanimage: "/AP17.png",
     image: "/P17.png",
   },
 ];
