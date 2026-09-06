@@ -79,51 +79,96 @@ export default function PrimeHeroPremium() {
         </div>
       </div>
 
-      {/* ================= MOBILE LAYOUT (Matching Reference) ================= */}
-      <div className="relative w-full h-full flex flex-col pt-40 justify-between md:hidden z-20">
-        
-        {/* Layer Stack: Product + Car */}
-        <div className="relative w-full flex-1 flex flex-col justify-start items-center overflow-hidden">
-          
-          {/* Top Product - Massive Can sizing taking up ~65% of screen height */}
+      {/* ================= MOBILE LAYOUT (Premium) ================= */}
+      <div className="relative w-full h-full flex flex-col md:hidden z-20">
+
+        {/* Visual Stage: Product + Car */}
+        <div className="relative w-full flex-1 flex flex-col items-center pt-24">
+
+          {/* Eyebrow / Category Label */}
           <div
-            className="relative w-[92%] max-w-[380px] pt-2 z-10 transition-all duration-1000"
-            style={getTransitionStyles(200, "10px")}
+            className="flex items-center gap-3 mb-3 px-6 transition-all duration-1000"
+            style={getTransitionStyles(100, "8px")}
+          >
+            <span className="h-px w-7 bg-[#E5C158]/50" />
+            <span className="text-[#E5C158] text-[10px] font-semibold tracking-[0.34em] uppercase whitespace-nowrap">
+              Synthetic Motor Oil
+            </span>
+            <span className="h-px w-7 bg-[#E5C158]/50" />
+          </div>
+
+          {/* Product Can */}
+          <div
+            className="relative w-[76%] max-w-[300px] z-10 transition-all duration-1000"
+            style={getTransitionStyles(250, "12px")}
           >
             <img
               src={ASSETS.product}
               alt="AXION Product Can"
-              className="w-full h-[58vh] max-h-[460px] object-contain object-top drop-shadow-2xl"
+              className="w-full h-[42vh] max-h-[400px] object-contain object-top drop-shadow-[0_25px_45px_rgba(0,0,0,0.55)]"
             />
           </div>
 
-          {/* Overlapping Porsche Car - Attached right below product center */}
+          {/* Overlapping Porsche Car */}
           <div
-            className="absolute top-[32vh] sm:top-[35vh] w-[115%] left-1/2 -translate-x-1/2 z-20 transition-all duration-1000"
-            style={getTransitionStyles(400, "20px")}
+            className="absolute top-[29vh] w-[126%] left-1/2 -translate-x-1/2 z-20 transition-all duration-1000"
+            style={getTransitionStyles(450, "24px")}
           >
             <img
               src={ASSETS.car}
               alt="AXION Porsche"
-              className="w-full h-auto object-contain drop-shadow-[0_20px_25px_rgba(0,0,0,0.9)]"
+              className="w-full h-auto object-contain drop-shadow-[0_24px_30px_rgba(0,0,0,0.85)]"
             />
           </div>
         </div>
 
-        {/* Bottom Text Content Area */}
+        {/* Text Panel */}
         <div
-          className="relative w-full px-6 pb-8 pt-2 z-30 flex flex-col items-start text-left bg-gradient-to-t from-black via-black/90 to-transparent"
+          className="relative w-full px-6 pb-9 pt-8 z-30 flex flex-col items-start text-left bg-gradient-to-t from-black via-black/95 to-transparent"
           style={getTransitionStyles(600, "10px")}
         >
-          <h1 className="text-white text-2xl sm:text-3xl font-black tracking-wide leading-none uppercase">
-            AX-0
-          </h1>
-          <h2 className="text-white text-2xl sm:text-3xl font-black tracking-wide leading-tight uppercase mb-2">
-            0W-8
-          </h2>
-          <p className="text-white/80 text-xs sm:text-sm font-normal leading-relaxed max-w-[36ch]">
-            Ultra-low viscosity for top fuel savings, smooth cold starts, and strong wear protection. Made for next-gen high-efficiency engines.
-          </p>
+          <div className="flex items-end gap-2.5">
+            <h1 className="text-white text-[38px] font-black tracking-tight leading-[0.85] uppercase">
+              AX-0
+            </h1>
+            <span className="text-[#E5C158] text-base font-bold tracking-wide uppercase pb-1">
+              0W-8
+            </span>
+          </div>
+
+          <div className="mt-4 border-l-2 border-[#E5C158]/40 pl-3.5">
+            <p className="text-white/75 text-[13px] font-normal leading-relaxed max-w-[40ch]">
+              Ultra-low viscosity for maximum fuel economy, effortless cold starts, and lasting wear protection — engineered for next-gen engines.
+            </p>
+          </div>
+
+          {/* Spec Chips */}
+          <div className="flex flex-wrap gap-2 mt-4">
+            {["Full Synthetic", "API SP", "Fuel Saving"].map((spec) => (
+              <span
+                key={spec}
+                className="text-white/65 text-[10px] font-medium tracking-[0.12em] uppercase border border-white/15 rounded-full px-2.5 py-1"
+              >
+                {spec}
+              </span>
+            ))}
+          </div>
+
+          {/* CTAs */}
+          <div className="flex items-stretch gap-3 mt-6 w-full">
+            <a
+              href="#products"
+              className="flex-1 text-center bg-[#E5C158] text-[#04170F] text-[12px] font-bold tracking-[0.1em] uppercase rounded-full py-3.5 active:scale-[0.98] transition-transform"
+            >
+              Explore Range
+            </a>
+            <a
+              href="#contact"
+              className="flex items-center justify-center text-white/85 text-[12px] font-semibold tracking-[0.1em] uppercase border border-white/25 rounded-full py-3.5 px-6 active:scale-[0.98] transition-transform"
+            >
+              Contact
+            </a>
+          </div>
         </div>
 
       </div>
