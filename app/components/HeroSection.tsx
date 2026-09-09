@@ -46,7 +46,7 @@ export default function PrimeHeroPremium() {
   });
 
   return (
-    <section className="relative w-full h-[100svh] min-h-[560px] overflow-hidden bg-[#020d09] select-none font-sans antialiased">
+    <section className="relative w-full h-[100svh] min-h-[480px] overflow-hidden bg-[#020d09] select-none font-sans antialiased">
       {/* Background Track */}
       <div
         className="absolute inset-0 bg-cover bg-center scale-105 transition-all duration-[1200ms] ease-out"
@@ -83,7 +83,7 @@ export default function PrimeHeroPremium() {
       <div className="relative w-full h-full flex flex-col md:hidden z-20">
 
         {/* Visual Stage: Product + Car */}
-        <div className="relative w-full flex-1 min-h-0 flex flex-col items-center pt-[84px] pb-2">
+        <div className="relative w-full flex-1 min-h-0 flex flex-col items-center pt-[clamp(100px,16svh,116px)] pb-2">
 
           {/* Eyebrow / Category Label */}
           <div
@@ -105,30 +105,30 @@ export default function PrimeHeroPremium() {
             <img
               src={ASSETS.product}
               alt="AXION Product Can"
-              className="w-full h-full max-h-[320px] object-contain object-top drop-shadow-[0_25px_45px_rgba(0,0,0,0.55)]"
+              className="w-full h-full max-h-[clamp(180px,30svh,320px)] object-contain object-top drop-shadow-[0_25px_45px_rgba(0,0,0,0.55)]"
             />
           </div>
 
           {/* Overlapping Porsche Car */}
           <div
-            className="absolute bottom-0 w-[128%] left-1/2 -translate-x-1/2 z-20 transition-all duration-1000"
+            className="absolute bottom-0 w-[128%] max-w-[420px] left-1/2 -translate-x-1/2 z-20 flex justify-center transition-all duration-1000"
             style={getTransitionStyles(450, "24px")}
           >
             <img
               src={ASSETS.car}
               alt="AXION Porsche"
-              className="w-full h-auto object-contain drop-shadow-[0_24px_30px_rgba(0,0,0,0.85)]"
+              className="w-auto h-[clamp(120px,28svh,190px)] max-w-full object-contain drop-shadow-[0_24px_30px_rgba(0,0,0,0.85)]"
             />
           </div>
         </div>
 
         {/* Text Panel */}
         <div
-          className="relative w-full px-6 pb-[calc(env(safe-area-inset-bottom)+1.25rem)] pt-6 z-30 flex flex-col items-start text-left bg-gradient-to-t from-black via-black/95 to-transparent"
+          className="relative w-full px-6 pb-[calc(env(safe-area-inset-bottom)+1rem)] pt-[clamp(12px,3svh,24px)] z-30 flex flex-col items-start text-left bg-gradient-to-t from-black via-black/95 to-transparent"
           style={getTransitionStyles(600, "10px")}
         >
           <div className="flex items-end gap-2.5">
-            <h1 className="text-white text-[34px] font-black tracking-tight leading-[0.85] uppercase">
+            <h1 className="text-white text-[clamp(26px,7.5svh,34px)] font-black tracking-tight leading-[0.85] uppercase">
               AX-0
             </h1>
             <span className="text-[#E5C158] text-[15px] font-bold tracking-wide uppercase pb-0.5">
@@ -136,14 +136,14 @@ export default function PrimeHeroPremium() {
             </span>
           </div>
 
-          <div className="mt-2.5 border-l-2 border-[#E5C158]/40 pl-3">
+          <div className="mt-2 border-l-2 border-[#E5C158]/40 pl-3">
             <p className="text-white/70 text-[12px] font-normal leading-snug max-w-[42ch]">
               Ultra-low viscosity for maximum fuel economy, effortless cold starts, and lasting wear protection — engineered for next-gen engines.
             </p>
           </div>
 
           {/* Spec Chips */}
-          <div className="flex flex-wrap gap-1.5 mt-3">
+          <div className="flex flex-wrap gap-1.5 mt-2.5">
             {["Full Synthetic", "API SP", "Fuel Saving"].map((spec) => (
               <span
                 key={spec}
@@ -155,7 +155,7 @@ export default function PrimeHeroPremium() {
           </div>
 
           {/* CTAs */}
-          <div className="flex items-stretch gap-2.5 mt-4 w-full">
+          <div className="flex items-stretch gap-2.5 mt-3.5 w-full">
             <a
               href="#products"
               className="flex-1 text-center bg-[#E5C158] text-[#04170F] text-[12px] font-bold tracking-[0.08em] uppercase rounded-full py-3 active:scale-[0.98] transition-transform"

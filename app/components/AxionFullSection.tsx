@@ -102,15 +102,17 @@ export const PrimeFullSection: React.FC = () => {
         variants={fadeInUp}
         className="z-30 w-full max-w-xs px-4 mt-2"
       >
-        <a
-          href="/PRIME_PROTECT_Product_Catalogue.pdf"
-          download
-          target="_blank"
-          rel="noopener noreferrer"
-          className="block w-full py-3.5 px-6 rounded-full bg-black text-[#D4AF37] font-bold text-xs sm:text-sm tracking-widest uppercase transition-all duration-300 hover:bg-[#0B4A2D] hover:text-white active:scale-95 shadow-md hover:shadow-xl hover:shadow-[#0B4A2D]/10 text-center border border-transparent"
-        >
-          Download PROTECT Catalogue
-        </a>
+        <div className="rounded-full p-[1.5px] bg-gradient-to-r from-[#8B1E3F] via-[#6B3FA0] to-[#2EC4E0] shadow-md hover:shadow-xl transition-shadow duration-300">
+          <a
+            href="/PRIME_PROTECT_Product_Catalogue.pdf"
+            download
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block w-full py-3.5 px-6 rounded-full bg-white text-black font-bold text-xs sm:text-sm tracking-wide transition-all duration-300 hover:bg-gray-50 active:scale-95 text-center"
+          >
+            Download PROTECT Catalogue
+          </a>
+        </div>
       </motion.div>
     </section>
   );
