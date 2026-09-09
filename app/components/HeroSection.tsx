@@ -129,11 +129,8 @@ export default function PrimeHeroPremium() {
         >
           <div className="flex items-end gap-2.5">
             <h1 className="text-white text-[clamp(26px,7.5svh,34px)] font-black tracking-tight leading-[0.85] uppercase">
-              AX-0
+              20W-50
             </h1>
-            <span className="text-[#E5C158] text-[15px] font-bold tracking-wide uppercase pb-0.5">
-              0W-8
-            </span>
           </div>
 
           <div className="mt-2 border-l-2 border-[#E5C158]/40 pl-3">
@@ -157,13 +154,13 @@ export default function PrimeHeroPremium() {
           {/* CTAs */}
           <div className="flex items-stretch gap-2.5 mt-3.5 w-full">
             <a
-              href="#products"
+              href="/products"
               className="flex-1 text-center bg-[#E5C158] text-[#04170F] text-[12px] font-bold tracking-[0.08em] uppercase rounded-full py-3 active:scale-[0.98] transition-transform"
             >
               Explore Range
             </a>
             <a
-              href="#contact"
+              href="/contact-us"
               className="flex items-center justify-center text-white/85 text-[12px] font-semibold tracking-[0.08em] uppercase border border-white/25 rounded-full py-3 px-5 active:scale-[0.98] transition-transform"
             >
               Contact
